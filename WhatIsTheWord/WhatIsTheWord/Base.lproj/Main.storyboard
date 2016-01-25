@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="53t-ij-Lld">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Title-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
@@ -16,11 +17,358 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FYB-YC-Btz">
+                                <rect key="frame" x="150" y="296" width="301" height="103"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="103" id="2vU-DC-xHL"/>
+                                    <constraint firstAttribute="width" constant="400" id="v09-u0-XDw">
+                                        <variation key="widthClass=compact" constant="301"/>
+                                    </constraint>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="28"/>
+                                <state key="normal" title="History" backgroundImage="purplebtn.png">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="2vU-DC-xHL"/>
+                                        <exclude reference="v09-u0-XDw"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="2vU-DC-xHL"/>
+                                        <include reference="v09-u0-XDw"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <segue destination="9fH-bD-4Ls" kind="show" id="zIA-cE-0tU"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Guees the" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="9" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1E5-om-qjO">
+                                <rect key="frame" x="168" y="28" width="265" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="265" id="KlE-mC-IbC"/>
+                                    <constraint firstAttribute="height" constant="56" id="WSz-k3-dZ4"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="265" id="gBy-1t-cQT"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="56" id="m5Q-9H-V21"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="53"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="gBy-1t-cQT"/>
+                                        <exclude reference="m5Q-9H-V21"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="gBy-1t-cQT"/>
+                                        <include reference="m5Q-9H-V21"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WORD" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T31-dg-eDd">
+                                <rect key="frame" x="200" y="79" width="201" height="61"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="201" id="6RW-Ez-8N5">
+                                        <variation key="widthClass=compact" constant="233"/>
+                                    </constraint>
+                                    <constraint firstAttribute="height" constant="61" id="IsS-an-yB8"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="201" id="KCo-l2-pfS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="61"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="KCo-l2-pfS"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="KCo-l2-pfS"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XPe-4X-MEm">
+                                <rect key="frame" x="150" y="185" width="301" height="103"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="400" id="4Ct-9u-lFx">
+                                        <variation key="widthClass=compact" constant="301"/>
+                                    </constraint>
+                                    <constraint firstAttribute="height" constant="103" id="xpu-h7-9sC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="28"/>
+                                <state key="normal" title="Start new game" backgroundImage="purplebtn.png">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="4Ct-9u-lFx"/>
+                                        <exclude reference="xpu-h7-9sC"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="4Ct-9u-lFx"/>
+                                        <include reference="xpu-h7-9sC"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <segue destination="2Rm-QK-n4E" kind="show" id="x1G-fM-DkT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tlv-p1-Gjf">
+                                <rect key="frame" x="150" y="413" width="301" height="103"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="103" id="0dB-Wf-QJe"/>
+                                    <constraint firstAttribute="width" constant="400" id="2IF-EE-6ry">
+                                        <variation key="widthClass=compact" constant="301"/>
+                                    </constraint>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="28"/>
+                                <state key="normal" title="Add word" backgroundImage="purplebtn.png">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="0dB-Wf-QJe"/>
+                                        <exclude reference="2IF-EE-6ry"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="0dB-Wf-QJe"/>
+                                        <include reference="2IF-EE-6ry"/>
+                                    </mask>
+                                </variation>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="tlv-p1-Gjf" secondAttribute="trailing" constant="29" id="0fD-vR-m19"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="1E5-om-qjO" secondAttribute="trailing" constant="47" id="1lr-iG-ldP"/>
+                            <constraint firstItem="1E5-om-qjO" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="2rH-kU-uvU"/>
+                            <constraint firstItem="T31-dg-eDd" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="59" id="7hv-C0-TXk">
+                                <variation key="widthClass=compact" constant="56"/>
+                            </constraint>
+                            <constraint firstItem="FYB-YC-Btz" firstAttribute="top" secondItem="XPe-4X-MEm" secondAttribute="bottom" constant="8" id="8wn-zK-177"/>
+                            <constraint firstItem="tlv-p1-Gjf" firstAttribute="top" secondItem="FYB-YC-Btz" secondAttribute="bottom" constant="16" id="B4C-2L-fOD"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="T31-dg-eDd" secondAttribute="trailing" constant="79" id="JWc-RX-AXb">
+                                <variation key="widthClass=compact" constant="63"/>
+                            </constraint>
+                            <constraint firstItem="1E5-om-qjO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="48" id="Jqo-NY-g90"/>
+                            <constraint firstItem="tlv-p1-Gjf" firstAttribute="top" secondItem="FYB-YC-Btz" secondAttribute="bottom" constant="16" id="MGb-M9-ry8"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="XPe-4X-MEm" secondAttribute="trailing" constant="29" id="Mre-Lp-6P4"/>
+                            <constraint firstItem="T31-dg-eDd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="80" id="VfN-Dl-g8Q">
+                                <variation key="widthClass=compact" constant="64"/>
+                            </constraint>
+                            <constraint firstItem="FYB-YC-Btz" firstAttribute="top" secondItem="XPe-4X-MEm" secondAttribute="bottom" constant="8" id="W1m-2p-Ivb"/>
+                            <constraint firstItem="FYB-YC-Btz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="30" id="beJ-oD-jcC"/>
+                            <constraint firstItem="XPe-4X-MEm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="30" id="dTB-h0-Ybg"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="FYB-YC-Btz" secondAttribute="trailing" constant="29" id="vHb-se-Ww1"/>
+                            <constraint firstItem="XPe-4X-MEm" firstAttribute="top" secondItem="T31-dg-eDd" secondAttribute="bottom" constant="45" id="vjP-ha-tr4">
+                                <variation key="widthClass=compact" constant="48"/>
+                            </constraint>
+                            <constraint firstItem="tlv-p1-Gjf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="30" id="zN0-oU-64g"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="1lr-iG-ldP"/>
+                                <exclude reference="2rH-kU-uvU"/>
+                                <exclude reference="Jqo-NY-g90"/>
+                                <exclude reference="7hv-C0-TXk"/>
+                                <exclude reference="JWc-RX-AXb"/>
+                                <exclude reference="VfN-Dl-g8Q"/>
+                                <exclude reference="Mre-Lp-6P4"/>
+                                <exclude reference="dTB-h0-Ybg"/>
+                                <exclude reference="vjP-ha-tr4"/>
+                                <exclude reference="8wn-zK-177"/>
+                                <exclude reference="W1m-2p-Ivb"/>
+                                <exclude reference="beJ-oD-jcC"/>
+                                <exclude reference="vHb-se-Ww1"/>
+                                <exclude reference="0fD-vR-m19"/>
+                                <exclude reference="B4C-2L-fOD"/>
+                                <exclude reference="MGb-M9-ry8"/>
+                                <exclude reference="zN0-oU-64g"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="1lr-iG-ldP"/>
+                                <include reference="2rH-kU-uvU"/>
+                                <include reference="Jqo-NY-g90"/>
+                                <include reference="7hv-C0-TXk"/>
+                                <include reference="JWc-RX-AXb"/>
+                                <include reference="VfN-Dl-g8Q"/>
+                                <include reference="Mre-Lp-6P4"/>
+                                <include reference="dTB-h0-Ybg"/>
+                                <include reference="vjP-ha-tr4"/>
+                                <include reference="8wn-zK-177"/>
+                                <include reference="W1m-2p-Ivb"/>
+                                <include reference="beJ-oD-jcC"/>
+                                <include reference="vHb-se-Ww1"/>
+                                <include reference="0fD-vR-m19"/>
+                                <include reference="B4C-2L-fOD"/>
+                                <include reference="MGb-M9-ry8"/>
+                                <include reference="zN0-oU-64g"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <navigationItem key="navigationItem" title="Title" id="mbQ-ad-uHP"/>
+                    <connections>
+                        <outlet property="startGameButton" destination="XPe-4X-MEm" id="Pt4-D7-yK9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="924" y="-666"/>
+        </scene>
+        <!--Start New Game View Controller-->
+        <scene sceneID="da7-NB-Gie">
+            <objects>
+                <viewController id="2Rm-QK-n4E" customClass="StartNewGameViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0Lz-g5-RZs"/>
+                        <viewControllerLayoutGuide type="bottom" id="COZ-y3-kWG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="WNp-ui-ROz">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add player's name" textAlignment="center" minimumFontSize="17" background="blankbackground.png" disabledBackground="bgstars_category.png" translatesAutoresizingMaskIntoConstraints="NO" id="e2T-Ik-LDT">
+                                <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="79" y="65" width="242" height="30"/>
+                                </variation>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EC3-t7-bk4">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="20"/>
+                                <state key="normal" title="Add player" backgroundImage="purplebtn.png">
+                                    <color key="titleColor" red="0.9649603153824533" green="1" blue="0.98808862918037077" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="70" y="118" width="271" height="83"/>
+                                </variation>
+                            </button>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NwK-tH-KAn">
+                                <rect key="frame" x="-25" y="-15" width="51" height="31"/>
+                                <color key="backgroundColor" red="0.9803922176361084" green="0.99215692281723022" blue="0.98431378602981567" alpha="1" colorSpace="deviceRGB"/>
+                                <color key="tintColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="onTintColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="thumbTintColor" red="0.97402638647623219" green="1" blue="0.96819340344178384" alpha="1" colorSpace="calibratedRGB"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="175" y="382" width="51" height="31"/>
+                                </variation>
+                            </switch>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Players:" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="5es-Ol-EMk">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" red="1" green="0.95623780724208773" blue="0.38675305702286256" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="79" y="209" width="240" height="158"/>
+                                </variation>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="thf-TP-IP2">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="20"/>
+                                <state key="normal" title="Choose category" backgroundImage="purplebtn.png">
+                                    <color key="titleColor" red="0.96496031540000005" green="1" blue="0.98808862919999996" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="70" y="447" width="271" height="83"/>
+                                </variation>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="e2T-Ik-LDT"/>
+                                <exclude reference="EC3-t7-bk4"/>
+                                <exclude reference="NwK-tH-KAn"/>
+                                <exclude reference="5es-Ol-EMk"/>
+                                <exclude reference="thf-TP-IP2"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="e2T-Ik-LDT"/>
+                                <include reference="EC3-t7-bk4"/>
+                                <include reference="NwK-tH-KAn"/>
+                                <include reference="5es-Ol-EMk"/>
+                                <include reference="thf-TP-IP2"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eLV-sZ-ArB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1543" y="-950"/>
+        </scene>
+        <!--History View Controller-->
+        <scene sceneID="c5P-51-ykr">
+            <objects>
+                <viewController id="9fH-bD-4Ls" customClass="HistoryViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="saQ-7e-d2C"/>
+                        <viewControllerLayoutGuide type="bottom" id="8Wm-tY-m8s"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="GUP-lc-seF">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nRD-1J-Ngc">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="11" y="83" width="340" height="180"/>
+                                </variation>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="nRD-1J-Ngc"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="nRD-1J-Ngc"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rZf-bl-79K" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1550" y="-100"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Hbd-0t-wFo">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="53t-ij-Lld" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="sI9-rN-N81">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="NHG-nX-uhN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="H7k-QN-VVk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="312" y="-666"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="bgstars_category.png" width="190" height="190"/>
+        <image name="blankbackground.png" width="846" height="1432"/>
+        <image name="purplebtn.png" width="297" height="207"/>
+    </resources>
 </document>
