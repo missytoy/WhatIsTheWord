@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B569BD761C5ACC02002B13C0 /* StartNewGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B569BD751C5ACC02002B13C0 /* StartNewGameViewController.m */; };
+		B569BD791C5ACC37002B13C0 /* CategoriesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B569BD781C5ACC37002B13C0 /* CategoriesViewController.m */; };
+		B569BD7C1C5ACC74002B13C0 /* HistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B569BD7B1C5ACC74002B13C0 /* HistoryViewController.m */; };
 		B5B69D871C55DD48006B5A29 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B5B69D861C55DD48006B5A29 /* main.m */; };
 		B5B69D8A1C55DD48006B5A29 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B5B69D891C55DD48006B5A29 /* AppDelegate.m */; };
 		B5B69D8D1C55DD49006B5A29 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5B69D8C1C55DD49006B5A29 /* ViewController.m */; };
@@ -59,6 +62,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B569BD741C5ACC02002B13C0 /* StartNewGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartNewGameViewController.h; sourceTree = "<group>"; };
+		B569BD751C5ACC02002B13C0 /* StartNewGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartNewGameViewController.m; sourceTree = "<group>"; };
+		B569BD771C5ACC37002B13C0 /* CategoriesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoriesViewController.h; sourceTree = "<group>"; };
+		B569BD781C5ACC37002B13C0 /* CategoriesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoriesViewController.m; sourceTree = "<group>"; };
+		B569BD7A1C5ACC74002B13C0 /* HistoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistoryViewController.h; sourceTree = "<group>"; };
+		B569BD7B1C5ACC74002B13C0 /* HistoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoryViewController.m; sourceTree = "<group>"; };
 		B5B69D821C55DD48006B5A29 /* WhatIsTheWord.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhatIsTheWord.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5B69D861C55DD48006B5A29 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B5B69D881C55DD48006B5A29 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -126,9 +135,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B569BD731C5ACBC4002B13C0 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B569BD741C5ACC02002B13C0 /* StartNewGameViewController.h */,
+				B569BD751C5ACC02002B13C0 /* StartNewGameViewController.m */,
+				B569BD771C5ACC37002B13C0 /* CategoriesViewController.h */,
+				B569BD781C5ACC37002B13C0 /* CategoriesViewController.m */,
+				B569BD7A1C5ACC74002B13C0 /* HistoryViewController.h */,
+				B569BD7B1C5ACC74002B13C0 /* HistoryViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
 		B5B69D791C55DD48006B5A29 = {
 			isa = PBXGroup;
 			children = (
+				B569BD731C5ACBC4002B13C0 /* Controllers */,
 				B5B69DBA1C55DF34006B5A29 /* pictures */,
 				B5B69D841C55DD48006B5A29 /* WhatIsTheWord */,
 				B5B69D9E1C55DD49006B5A29 /* WhatIsTheWordTests */,
@@ -374,9 +397,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B569BD761C5ACC02002B13C0 /* StartNewGameViewController.m in Sources */,
 				B5B69D8D1C55DD49006B5A29 /* ViewController.m in Sources */,
 				B5B69D8A1C55DD48006B5A29 /* AppDelegate.m in Sources */,
+				B569BD791C5ACC37002B13C0 /* CategoriesViewController.m in Sources */,
 				B5B69D871C55DD48006B5A29 /* main.m in Sources */,
+				B569BD7C1C5ACC74002B13C0 /* HistoryViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -600,6 +626,7 @@
 				B5B69DB11C55DD4A006B5A29 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B5B69DB21C55DD4A006B5A29 /* Build configuration list for PBXNativeTarget "WhatIsTheWordTests" */ = {
 			isa = XCConfigurationList;
@@ -608,6 +635,7 @@
 				B5B69DB41C55DD4A006B5A29 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B5B69DB51C55DD4A006B5A29 /* Build configuration list for PBXNativeTarget "WhatIsTheWordUITests" */ = {
 			isa = XCConfigurationList;
@@ -616,6 +644,7 @@
 				B5B69DB71C55DD4A006B5A29 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
