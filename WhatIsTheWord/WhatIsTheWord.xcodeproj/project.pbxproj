@@ -43,6 +43,8 @@
 		B5B69DE81C55DFD0006B5A29 /* purplebtn.png in Resources */ = {isa = PBXBuildFile; fileRef = B5B69DD01C55DFD0006B5A29 /* purplebtn.png */; };
 		B5B69DE91C55DFD0006B5A29 /* ranking.png in Resources */ = {isa = PBXBuildFile; fileRef = B5B69DD11C55DFD0006B5A29 /* ranking.png */; };
 		B5B69DEA1C55DFD0006B5A29 /* stars_category.png in Resources */ = {isa = PBXBuildFile; fileRef = B5B69DD21C55DFD0006B5A29 /* stars_category.png */; };
+		B5DB4D001C5B8CE2000D4EEB /* LocalData.m in Sources */ = {isa = PBXBuildFile; fileRef = B5DB4CFF1C5B8CE2000D4EEB /* LocalData.m */; };
+		B5DB4D031C5B8D61000D4EEB /* KKCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = B5DB4D021C5B8D61000D4EEB /* KKCategory.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,6 +113,10 @@
 		B5B69DD01C55DFD0006B5A29 /* purplebtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = purplebtn.png; path = "../../ала бала ница/picture/purplebtn.png"; sourceTree = "<group>"; };
 		B5B69DD11C55DFD0006B5A29 /* ranking.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ranking.png; path = "../../ала бала ница/picture/ranking.png"; sourceTree = "<group>"; };
 		B5B69DD21C55DFD0006B5A29 /* stars_category.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = stars_category.png; path = "../../ала бала ница/picture/stars_category.png"; sourceTree = "<group>"; };
+		B5DB4CFE1C5B8CE2000D4EEB /* LocalData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalData.h; sourceTree = "<group>"; };
+		B5DB4CFF1C5B8CE2000D4EEB /* LocalData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalData.m; sourceTree = "<group>"; };
+		B5DB4D011C5B8D61000D4EEB /* KKCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKCategory.h; sourceTree = "<group>"; };
+		B5DB4D021C5B8D61000D4EEB /* KKCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKCategory.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +162,7 @@
 		B5B69D791C55DD48006B5A29 = {
 			isa = PBXGroup;
 			children = (
+				B5DB4CFD1C5B8C7A000D4EEB /* Data */,
 				B569BD731C5ACBC4002B13C0 /* Controllers */,
 				B5B69DBA1C55DF34006B5A29 /* pictures */,
 				B5B69D841C55DD48006B5A29 /* WhatIsTheWord */,
@@ -246,6 +253,17 @@
 				B5B69DD21C55DFD0006B5A29 /* stars_category.png */,
 			);
 			name = pictures;
+			sourceTree = "<group>";
+		};
+		B5DB4CFD1C5B8C7A000D4EEB /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				B5DB4CFE1C5B8CE2000D4EEB /* LocalData.h */,
+				B5DB4CFF1C5B8CE2000D4EEB /* LocalData.m */,
+				B5DB4D011C5B8D61000D4EEB /* KKCategory.h */,
+				B5DB4D021C5B8D61000D4EEB /* KKCategory.m */,
+			);
+			name = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -405,10 +423,12 @@
 				B569BD761C5ACC02002B13C0 /* StartNewGameViewController.m in Sources */,
 				B5B69D8D1C55DD49006B5A29 /* ViewController.m in Sources */,
 				B569BD7F1C5ADC3E002B13C0 /* GameViewController.m in Sources */,
+				B5DB4D001C5B8CE2000D4EEB /* LocalData.m in Sources */,
 				B5B69D8A1C55DD48006B5A29 /* AppDelegate.m in Sources */,
 				B569BD791C5ACC37002B13C0 /* CategoriesViewController.m in Sources */,
 				B5B69D871C55DD48006B5A29 /* main.m in Sources */,
 				B569BD7C1C5ACC74002B13C0 /* HistoryViewController.m in Sources */,
+				B5DB4D031C5B8D61000D4EEB /* KKCategory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
