@@ -13,6 +13,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"blankbackground.png"]];
+    
+//   self.addPlayerNameField.backgroundColor =[UIColor colorWithPatternImage:[UIImage imageNamed:@"backtextbox.png"]];
+    
+//       self.allPlayersTextView.backgroundColor =[UIColor colorWithPatternImage:[UIImage imageNamed:@"backtextbox.png"]];
+    
 }
 
 - (void)didReceiveMemoryWarning {

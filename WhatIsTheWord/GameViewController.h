@@ -1,5 +1,5 @@
 //
-//  CategoriesViewController.h
+//  GameViewController.h
 //  WhatIsTheWord
 //
 //  Created by Konstantina on 1/28/16.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CategoriesViewController : UITableViewController
+@interface GameViewController : UIViewController
 
 @end

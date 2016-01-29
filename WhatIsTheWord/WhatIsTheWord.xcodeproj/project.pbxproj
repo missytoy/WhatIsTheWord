@@ -10,6 +10,7 @@
 		B569BD761C5ACC02002B13C0 /* StartNewGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B569BD751C5ACC02002B13C0 /* StartNewGameViewController.m */; };
 		B569BD791C5ACC37002B13C0 /* CategoriesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B569BD781C5ACC37002B13C0 /* CategoriesViewController.m */; };
 		B569BD7C1C5ACC74002B13C0 /* HistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B569BD7B1C5ACC74002B13C0 /* HistoryViewController.m */; };
+		B569BD7F1C5ADC3E002B13C0 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B569BD7E1C5ADC3E002B13C0 /* GameViewController.m */; };
 		B5B69D871C55DD48006B5A29 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B5B69D861C55DD48006B5A29 /* main.m */; };
 		B5B69D8A1C55DD48006B5A29 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B5B69D891C55DD48006B5A29 /* AppDelegate.m */; };
 		B5B69D8D1C55DD49006B5A29 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5B69D8C1C55DD49006B5A29 /* ViewController.m */; };
@@ -68,6 +69,8 @@
 		B569BD781C5ACC37002B13C0 /* CategoriesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoriesViewController.m; sourceTree = "<group>"; };
 		B569BD7A1C5ACC74002B13C0 /* HistoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistoryViewController.h; sourceTree = "<group>"; };
 		B569BD7B1C5ACC74002B13C0 /* HistoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoryViewController.m; sourceTree = "<group>"; };
+		B569BD7D1C5ADC3E002B13C0 /* GameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
+		B569BD7E1C5ADC3E002B13C0 /* GameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
 		B5B69D821C55DD48006B5A29 /* WhatIsTheWord.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhatIsTheWord.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5B69D861C55DD48006B5A29 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B5B69D881C55DD48006B5A29 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -144,6 +147,8 @@
 				B569BD781C5ACC37002B13C0 /* CategoriesViewController.m */,
 				B569BD7A1C5ACC74002B13C0 /* HistoryViewController.h */,
 				B569BD7B1C5ACC74002B13C0 /* HistoryViewController.m */,
+				B569BD7D1C5ADC3E002B13C0 /* GameViewController.h */,
+				B569BD7E1C5ADC3E002B13C0 /* GameViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -399,6 +404,7 @@
 			files = (
 				B569BD761C5ACC02002B13C0 /* StartNewGameViewController.m in Sources */,
 				B5B69D8D1C55DD49006B5A29 /* ViewController.m in Sources */,
+				B569BD7F1C5ADC3E002B13C0 /* GameViewController.m in Sources */,
 				B5B69D8A1C55DD48006B5A29 /* AppDelegate.m in Sources */,
 				B569BD791C5ACC37002B13C0 /* CategoriesViewController.m in Sources */,
 				B5B69D871C55DD48006B5A29 /* main.m in Sources */,
