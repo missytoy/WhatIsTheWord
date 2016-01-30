@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B52DBEF21C5D23880053AE23 /* RankingController.m in Sources */ = {isa = PBXBuildFile; fileRef = B52DBEF11C5D23880053AE23 /* RankingController.m */; };
 		B569BD761C5ACC02002B13C0 /* StartNewGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B569BD751C5ACC02002B13C0 /* StartNewGameViewController.m */; };
 		B569BD791C5ACC37002B13C0 /* CategoriesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B569BD781C5ACC37002B13C0 /* CategoriesViewController.m */; };
 		B569BD7C1C5ACC74002B13C0 /* HistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B569BD7B1C5ACC74002B13C0 /* HistoryViewController.m */; };
@@ -65,6 +66,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B52DBEF01C5D23870053AE23 /* RankingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RankingController.h; sourceTree = "<group>"; };
+		B52DBEF11C5D23880053AE23 /* RankingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RankingController.m; sourceTree = "<group>"; };
 		B569BD741C5ACC02002B13C0 /* StartNewGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartNewGameViewController.h; sourceTree = "<group>"; };
 		B569BD751C5ACC02002B13C0 /* StartNewGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartNewGameViewController.m; sourceTree = "<group>"; };
 		B569BD771C5ACC37002B13C0 /* CategoriesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoriesViewController.h; sourceTree = "<group>"; };
@@ -155,6 +158,8 @@
 				B569BD7B1C5ACC74002B13C0 /* HistoryViewController.m */,
 				B569BD7D1C5ADC3E002B13C0 /* GameViewController.h */,
 				B569BD7E1C5ADC3E002B13C0 /* GameViewController.m */,
+				B52DBEF01C5D23870053AE23 /* RankingController.h */,
+				B52DBEF11C5D23880053AE23 /* RankingController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -422,6 +427,7 @@
 			files = (
 				B569BD761C5ACC02002B13C0 /* StartNewGameViewController.m in Sources */,
 				B5B69D8D1C55DD49006B5A29 /* ViewController.m in Sources */,
+				B52DBEF21C5D23880053AE23 /* RankingController.m in Sources */,
 				B569BD7F1C5ADC3E002B13C0 /* GameViewController.m in Sources */,
 				B5DB4D001C5B8CE2000D4EEB /* LocalData.m in Sources */,
 				B5B69D8A1C55DD48006B5A29 /* AppDelegate.m in Sources */,

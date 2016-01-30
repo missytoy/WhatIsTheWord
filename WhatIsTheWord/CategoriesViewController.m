@@ -8,6 +8,7 @@
 
 #import "CategoriesViewController.h"
 #import "LocalData.h"
+#import "GameViewController.h"
 
 NSArray * data;
 
@@ -21,6 +22,8 @@ NSArray * data;
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     self.view.backgroundColor = [UIColor colorWithPatternImage:image];
+    
+    //using data(array from localdata)
     LocalData * localdata = [[LocalData alloc]init];
     data=localdata.categories;
     self.categoriesTableView.dataSource = self;    
@@ -62,26 +65,35 @@ NSArray * data;
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *) indexPath {
     
-       NSString *categoryStr = [NSString stringWithFormat:@"%@ clicked", data[indexPath.row]];
     
-    UIAlertController * alert=   [UIAlertController                                  alertControllerWithTitle:categoryStr
-                                  message:@"Category clicked"
-                                  preferredStyle:UIAlertControllerStyleAlert];
     
-    UIAlertAction* yesButton = [UIAlertAction
-                                actionWithTitle:@"OK"
-                                style:UIAlertActionStyleDefault
-                                handler:^(UIAlertAction * action)
-                                {
-                                    //Handel your yes please button action here
-                                    
-                                    
-                                }];
+    NSString *storyBoardId = @"gameViewControllerId";
     
-   [alert addAction:yesButton];
-    //        [alert addAction:noButton];
+    GameViewController *gameVC =
+    [self.storyboard instantiateViewControllerWithIdentifier:storyBoardId];
+    [self.navigationController pushViewController:gameVC animated:YES];
     
-    [self presentViewController:alert animated:YES completion:nil];
+    
+//    NSString *categoryStr = [NSString stringWithFormat:@"%@ clicked", data[indexPath.row]];
+//    
+//    UIAlertController * alert=   [UIAlertController                                  alertControllerWithTitle:categoryStr
+//                                  message:@"Category clicked"
+//                                  preferredStyle:UIAlertControllerStyleAlert];
+//    
+//    UIAlertAction* yesButton = [UIAlertAction
+//                                actionWithTitle:@"OK"
+//                                style:UIAlertActionStyleDefault
+//                                handler:^(UIAlertAction * action)
+//                                {
+//                                    //Handel your yes please button action here
+//                                    
+//                                    
+//                                }];
+//    
+//   [alert addAction:yesButton];
+//    //        [alert addAction:noButton];
+//    
+//    [self presentViewController:alert animated:YES completion:nil];
 }
 
 @end

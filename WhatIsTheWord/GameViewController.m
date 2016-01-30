@@ -7,7 +7,7 @@
 //
 
 #import "GameViewController.h"
-#import "HistoryViewController.h"
+#import "RankingController.h"
 
 int timerCount;
 
@@ -37,11 +37,11 @@ int timerCount;
         self.timerLabel.text= [NSString stringWithFormat:@"60"];
         
         
-        NSString *storyBoardId = @"historyControllerId";
+        NSString *storyBoardId = @"rankingControllerId";
         
-        HistoryViewController *historyVC =
+        RankingController *rankingVC =
         [self.storyboard instantiateViewControllerWithIdentifier:storyBoardId];
-        [self.navigationController pushViewController:historyVC  animated:YES];
+        [self.navigationController pushViewController:rankingVC  animated:YES];
         
     }
 }

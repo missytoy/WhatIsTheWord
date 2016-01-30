@@ -7,43 +7,41 @@
 //
 
 #import "HistoryViewController.h"
+#import "ViewController.h"
 
 @implementation HistoryViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-   // self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"blankbackground.png"]];
+    // self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"blankbackground.png"]];
     UIGraphicsBeginImageContext(self.view.frame.size);
     [[UIImage imageNamed:@"history.png"] drawInRect:self.view.bounds];
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     self.view.backgroundColor = [UIColor colorWithPatternImage:image];
     
-    self.goToMainPageFromHistory.hidden=YES;
-    
-
+    self.backToHistoryButton.hidden=YES;
 }
+
 - (IBAction)backButton:(id)sender {
-     [self performSelectorOnMainThread:@selector(showAndHide) withObject:nil waitUntilDone:NO];
+    [self performSelectorOnMainThread:@selector(showAndHide) withObject:nil waitUntilDone:NO];
     
 }
 
 - (IBAction)goToMainPageClicked:(id)sender {
-    [self performSelectorOnMainThread:@selector(showAndHide) withObject:nil waitUntilDone:NO];
+    
+    NSString *storyBoardId = @"mainViewControllerId";
+    
+    ViewController *mainVC =
+    [self.storyboard instantiateViewControllerWithIdentifier:storyBoardId];
+    [self.navigationController pushViewController:mainVC  animated:YES];
 }
-
 
 
 -(void)showAndHide
 {
-    if (self.goToMainPageFromHistory.hidden == NO) {
-        self.backToHistoryButton.hidden=NO;
-        self.goToMainPageFromHistory.hidden = YES;
-    }else if(self.goToMainPageFromHistory.hidden == YES){
-        self.backToHistoryButton.hidden=YES;
-        self.goToMainPageFromHistory.hidden = NO;
-
-    }
+    self.backToHistoryButton.hidden = YES;
+    self.goToMainPageFromHistory.hidden = NO;    
 }
 
 
