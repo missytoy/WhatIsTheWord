@@ -9,5 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface HistoryViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UITableView *historyInfoTableView;
+@property (weak, nonatomic) IBOutlet UIButton *goToMainPageFromHistory;
+@property (weak, nonatomic) IBOutlet UIButton *backToHistoryButton;
 
 @end

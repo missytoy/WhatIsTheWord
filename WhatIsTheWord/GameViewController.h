@@ -10,4 +10,8 @@
 
 @interface GameViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UILabel *timerLabel;
+@property NSTimer *timer;
+
+-(void) count;
 @end

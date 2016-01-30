@@ -16,11 +16,15 @@ NSArray * data;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"blankbackground.png"]];
-    
+    UIGraphicsBeginImageContext(self.view.frame.size);
+    [[UIImage imageNamed:@"blankbackground.png"] drawInRect:self.view.bounds];
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    self.view.backgroundColor = [UIColor colorWithPatternImage:image];
     LocalData * localdata = [[LocalData alloc]init];
     data=localdata.categories;
-    self.categoriesTableView.dataSource = self;
+    self.categoriesTableView.dataSource = self;    
+    self.categoriesTableView.delegate=self;
     
 }
 
@@ -56,18 +60,28 @@ NSArray * data;
     return data.count;
 }
 
-//-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *) indexPath {
-//    
-//    DMPhone *phone = [self.phones objectAtIndex:indexPath.row];
-//    NSString *storyBoardId = @"detailsScene";
-//    
-//    PhoneDetailsViewController *detailsVC =
-//    [self.storyboard instantiateViewControllerWithIdentifier:storyBoardId];
-//    detailsVC.phone = phone;
-//    
-//    //         AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
-//    //    appDelegate.window.rootViewController = detailsVC;
-//    [self.navigationController pushViewController:detailsVC animated:YES];
-//}
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *) indexPath {
+    
+       NSString *categoryStr = [NSString stringWithFormat:@"%@ clicked", data[indexPath.row]];
+    
+    UIAlertController * alert=   [UIAlertController                                  alertControllerWithTitle:categoryStr
+                                  message:@"Category clicked"
+                                  preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction* yesButton = [UIAlertAction
+                                actionWithTitle:@"OK"
+                                style:UIAlertActionStyleDefault
+                                handler:^(UIAlertAction * action)
+                                {
+                                    //Handel your yes please button action here
+                                    
+                                    
+                                }];
+    
+   [alert addAction:yesButton];
+    //        [alert addAction:noButton];
+    
+    [self presentViewController:alert animated:YES completion:nil];
+}
 
 @end

@@ -7,12 +7,43 @@
 //
 
 #import "GameViewController.h"
+#import "HistoryViewController.h"
+
+int timerCount;
 
 @implementation GameViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"blankbackground.png"]];
+    UIGraphicsBeginImageContext(self.view.frame.size);
+    [[UIImage imageNamed:@"blankbackground.png"] drawInRect:self.view.bounds];
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    self.view.backgroundColor = [UIColor colorWithPatternImage:image];
+    
+    timerCount =5;
+    
+    self.timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(count) userInfo:nil repeats:	true];
+   
+    
+}
+
+-(void) count {
+    
+    timerCount =timerCount -1;
+    self.timerLabel.text = [NSString stringWithFormat:@"%d",timerCount];
+    if(timerCount == 0){
+        [self.timer invalidate];
+        self.timerLabel.text= [NSString stringWithFormat:@"60"];
+        
+        
+        NSString *storyBoardId = @"historyControllerId";
+        
+        HistoryViewController *historyVC =
+        [self.storyboard instantiateViewControllerWithIdentifier:storyBoardId];
+        [self.navigationController pushViewController:historyVC  animated:YES];
+        
+    }
 }
 
 - (void)didReceiveMemoryWarning {

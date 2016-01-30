@@ -12,12 +12,21 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"blankbackground.png"]];
     
-//   self.addPlayerNameField.backgroundColor =[UIColor colorWithPatternImage:[UIImage imageNamed:@"backtextbox.png"]];
+    UIGraphicsBeginImageContext(self.view.frame.size);
+    [[UIImage imageNamed:@"blankbackground.png"] drawInRect:self.view.bounds];
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
     
-//       self.allPlayersTextView.backgroundColor =[UIColor colorWithPatternImage:[UIImage imageNamed:@"backtextbox.png"]];
+    self.view.backgroundColor = [UIColor colorWithPatternImage:image];
     
+    
+    [self.allPlayersTextView.layer setBorderColor:[[[UIColor grayColor] colorWithAlphaComponent:0.5] CGColor]];
+    [self.allPlayersTextView.layer setBorderWidth:2.0];
+    self.allPlayersTextView.layer.cornerRadius = 10;
+    self.allPlayersTextView.clipsToBounds = YES;
+ 
+
 }
 
 - (void)didReceiveMemoryWarning {

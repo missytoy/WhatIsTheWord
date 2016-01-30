@@ -16,7 +16,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"blankbackground.png"]];
+    
+    UIGraphicsBeginImageContext(self.view.frame.size);
+    [[UIImage imageNamed:@"blankbackground.png"] drawInRect:self.view.bounds];
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    self.view.backgroundColor = [UIColor colorWithPatternImage:image];
 }
 
 - (void)didReceiveMemoryWarning {
