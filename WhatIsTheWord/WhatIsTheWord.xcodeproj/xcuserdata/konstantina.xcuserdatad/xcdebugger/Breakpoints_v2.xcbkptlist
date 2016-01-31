@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CategoriesViewController.m"
-            timestampString = "475867818.831251"
+            timestampString = "475892523.839925"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "16"
-            endingLineNumber = "16"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
             landmarkName = "@implementation CategoriesViewController"
             landmarkType = "3">
          </BreakpointContent>

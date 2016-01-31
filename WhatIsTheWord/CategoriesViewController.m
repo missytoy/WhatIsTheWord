@@ -9,6 +9,7 @@
 #import "CategoriesViewController.h"
 #import "LocalData.h"
 #import "GameViewController.h"
+#import "KKCategoryTableViewCell.h"
 
 NSArray * data;
 
@@ -37,25 +38,32 @@ NSArray * data;
 }
 
 
--(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath   {
+-(KKCategoryTableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath   {
     
-    static NSString *cellIdentifier = @"CategoryCell";
+    static NSString *cellIdentifier = @"CategoryCellCustom";
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    KKCategoryTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     if (cell ==nil) {
         
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+        NSArray *nibArray = [[NSBundle mainBundle] loadNibNamed:@"KKCategoryTableViewCell" owner:self options:nil];
+        
+        cell = [nibArray objectAtIndex:0];
+//        cell = [[KKCategoryTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
     
-    cell.textLabel.text = [NSString stringWithFormat:@"%@",data[indexPath.row] ];
+    cell.nameCategory.text = [NSString stringWithFormat:@"%@",data[indexPath.row] ];
     
-    cell.textLabel.textAlignment = NSTextAlignmentCenter;
-    cell.textLabel.font = [ UIFont fontWithName: @"Papyrus" size: 30.0 ];
-    cell.textLabel.textColor =[ UIColor whiteColor];
+    
+    UIImage *image = [UIImage imageNamed: @"food_category.png"];
+    [cell.imageCategory setImage:image];
+
+    
+    cell.nameCategory.textAlignment = NSTextAlignmentCenter;
+    cell.nameCategory.font = [ UIFont fontWithName: @"Papyrus" size: 30.0 ];
+    cell.nameCategory.textColor =[ UIColor whiteColor];
     
     [cell setBackgroundColor:[UIColor clearColor]];
-    [self.categoriesTableView setBackgroundColor:[UIColor clearColor] ];
-    
+    [self.categoriesTableView setBackgroundColor:[UIColor clearColor] ];    
     return cell;
 }
 

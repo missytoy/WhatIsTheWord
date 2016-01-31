@@ -357,18 +357,18 @@
                                 <exclude reference="c70-w6-6bj"/>
                                 <exclude reference="d9v-pu-KFG"/>
                                 <exclude reference="gzw-mT-GUq"/>
-                                <exclude reference="TZy-Qs-oam"/>
-                                <exclude reference="g8u-S1-UaX"/>
-                                <exclude reference="ylh-60-0Sp"/>
-                                <exclude reference="Jy6-8m-1c4"/>
-                                <exclude reference="LG6-UT-WWS"/>
-                                <exclude reference="4Ba-o2-aKw"/>
-                                <exclude reference="eVD-yn-13h"/>
-                                <exclude reference="f08-4m-Iy2"/>
                                 <exclude reference="OSg-Sh-aH0"/>
                                 <exclude reference="UWe-O0-juJ"/>
                                 <exclude reference="fYC-hy-AxF"/>
                                 <exclude reference="ut4-SF-rLS"/>
+                                <exclude reference="4Ba-o2-aKw"/>
+                                <exclude reference="eVD-yn-13h"/>
+                                <exclude reference="f08-4m-Iy2"/>
+                                <exclude reference="Jy6-8m-1c4"/>
+                                <exclude reference="LG6-UT-WWS"/>
+                                <exclude reference="TZy-Qs-oam"/>
+                                <exclude reference="g8u-S1-UaX"/>
+                                <exclude reference="ylh-60-0Sp"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -387,18 +387,18 @@
                                 <include reference="c70-w6-6bj"/>
                                 <include reference="d9v-pu-KFG"/>
                                 <include reference="gzw-mT-GUq"/>
-                                <include reference="TZy-Qs-oam"/>
-                                <include reference="g8u-S1-UaX"/>
-                                <include reference="ylh-60-0Sp"/>
-                                <include reference="Jy6-8m-1c4"/>
-                                <include reference="LG6-UT-WWS"/>
-                                <include reference="4Ba-o2-aKw"/>
-                                <include reference="eVD-yn-13h"/>
-                                <include reference="f08-4m-Iy2"/>
                                 <include reference="OSg-Sh-aH0"/>
                                 <include reference="UWe-O0-juJ"/>
                                 <include reference="fYC-hy-AxF"/>
                                 <include reference="ut4-SF-rLS"/>
+                                <include reference="4Ba-o2-aKw"/>
+                                <include reference="eVD-yn-13h"/>
+                                <include reference="f08-4m-Iy2"/>
+                                <include reference="Jy6-8m-1c4"/>
+                                <include reference="LG6-UT-WWS"/>
+                                <include reference="TZy-Qs-oam"/>
+                                <include reference="g8u-S1-UaX"/>
+                                <include reference="ylh-60-0Sp"/>
                             </mask>
                         </variation>
                     </view>
@@ -426,7 +426,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lRX-mP-F90">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose category" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KUM-KA-999">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="36"/>
+                                <color key="textColor" red="0.9819973173678862" green="1" blue="0.97988517960356325" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="46" y="80" width="309" height="82"/>
+                                </variation>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="180" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lRX-mP-F90">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="separatorColor" red="0.57687100812174741" green="0.15887495462821088" blue="0.39979495159738981" alpha="0.35000000000000003" colorSpace="calibratedRGB"/>
@@ -437,27 +446,18 @@
                                     <rect key="frame" x="26" y="188" width="349" height="362"/>
                                 </variation>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose category" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KUM-KA-999">
-                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="36"/>
-                                <color key="textColor" red="0.9819973173678862" green="1" blue="0.97988517960356325" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="46" y="80" width="309" height="82"/>
-                                </variation>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="lRX-mP-F90"/>
                                 <exclude reference="KUM-KA-999"/>
+                                <exclude reference="lRX-mP-F90"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
-                                <include reference="lRX-mP-F90"/>
                                 <include reference="KUM-KA-999"/>
+                                <include reference="lRX-mP-F90"/>
                             </mask>
                         </variation>
                     </view>
@@ -645,6 +645,7 @@
                         <viewControllerLayoutGuide type="bottom" id="Hpx-BI-9AS"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="QsW-xI-qwB">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GNP-KB-dg9">
@@ -720,11 +721,11 @@
                                 <exclude reference="hh1-9e-YPB"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="TkO-Le-IUk"/>
                                 <exclude reference="3gk-ie-bOY"/>
                                 <exclude reference="QgB-y4-49c"/>
                                 <exclude reference="rzb-sU-RWJ"/>
                                 <exclude reference="toc-we-zwO"/>
-                                <exclude reference="TkO-Le-IUk"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -733,11 +734,11 @@
                                 <include reference="hh1-9e-YPB"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="TkO-Le-IUk"/>
                                 <include reference="3gk-ie-bOY"/>
                                 <include reference="QgB-y4-49c"/>
                                 <include reference="rzb-sU-RWJ"/>
                                 <include reference="toc-we-zwO"/>
-                                <include reference="TkO-Le-IUk"/>
                             </mask>
                         </variation>
                     </view>
@@ -854,15 +855,15 @@
                                 <exclude reference="AdI-LG-MFJ"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="6MW-nr-vU9"/>
-                                <exclude reference="lvs-zD-XUN"/>
-                                <exclude reference="xim-QK-M5a"/>
+                                <exclude reference="3Bn-wx-Whv"/>
+                                <exclude reference="oXP-No-9xm"/>
+                                <exclude reference="NfM-vz-RAC"/>
                                 <exclude reference="PF1-J6-81h"/>
                                 <exclude reference="omB-Xt-0bJ"/>
                                 <exclude reference="yVv-9a-oDp"/>
-                                <exclude reference="NfM-vz-RAC"/>
-                                <exclude reference="3Bn-wx-Whv"/>
-                                <exclude reference="oXP-No-9xm"/>
+                                <exclude reference="6MW-nr-vU9"/>
+                                <exclude reference="lvs-zD-XUN"/>
+                                <exclude reference="xim-QK-M5a"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -872,15 +873,15 @@
                                 <include reference="AdI-LG-MFJ"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="6MW-nr-vU9"/>
-                                <include reference="lvs-zD-XUN"/>
-                                <include reference="xim-QK-M5a"/>
+                                <include reference="3Bn-wx-Whv"/>
+                                <include reference="oXP-No-9xm"/>
+                                <include reference="NfM-vz-RAC"/>
                                 <include reference="PF1-J6-81h"/>
                                 <include reference="omB-Xt-0bJ"/>
                                 <include reference="yVv-9a-oDp"/>
-                                <include reference="NfM-vz-RAC"/>
-                                <include reference="3Bn-wx-Whv"/>
-                                <include reference="oXP-No-9xm"/>
+                                <include reference="6MW-nr-vU9"/>
+                                <include reference="lvs-zD-XUN"/>
+                                <include reference="xim-QK-M5a"/>
                             </mask>
                         </variation>
                     </view>

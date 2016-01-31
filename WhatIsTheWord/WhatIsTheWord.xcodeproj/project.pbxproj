@@ -47,6 +47,8 @@
 		B5B69DEA1C55DFD0006B5A29 /* stars_category.png in Resources */ = {isa = PBXBuildFile; fileRef = B5B69DD21C55DFD0006B5A29 /* stars_category.png */; };
 		B5DB4D001C5B8CE2000D4EEB /* LocalData.m in Sources */ = {isa = PBXBuildFile; fileRef = B5DB4CFF1C5B8CE2000D4EEB /* LocalData.m */; };
 		B5DB4D031C5B8D61000D4EEB /* KKCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = B5DB4D021C5B8D61000D4EEB /* KKCategory.m */; };
+		B5F6A5F61C5D892C00BA5D12 /* KKCategoryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B5F6A5F41C5D892C00BA5D12 /* KKCategoryTableViewCell.m */; };
+		B5F6A5F71C5D892C00BA5D12 /* KKCategoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5F6A5F51C5D892C00BA5D12 /* KKCategoryTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -122,6 +124,9 @@
 		B5DB4CFF1C5B8CE2000D4EEB /* LocalData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalData.m; sourceTree = "<group>"; };
 		B5DB4D011C5B8D61000D4EEB /* KKCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKCategory.h; sourceTree = "<group>"; };
 		B5DB4D021C5B8D61000D4EEB /* KKCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKCategory.m; sourceTree = "<group>"; };
+		B5F6A5F31C5D892C00BA5D12 /* KKCategoryTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKCategoryTableViewCell.h; sourceTree = "<group>"; };
+		B5F6A5F41C5D892C00BA5D12 /* KKCategoryTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKCategoryTableViewCell.m; sourceTree = "<group>"; };
+		B5F6A5F51C5D892C00BA5D12 /* KKCategoryTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KKCategoryTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +174,7 @@
 		B5B69D791C55DD48006B5A29 = {
 			isa = PBXGroup;
 			children = (
+				B5F6A5E51C5D7F6700BA5D12 /* Views */,
 				B5DB4CFD1C5B8C7A000D4EEB /* Data */,
 				B569BD731C5ACBC4002B13C0 /* Controllers */,
 				B5B69DBA1C55DF34006B5A29 /* pictures */,
@@ -272,6 +278,16 @@
 				B5DB4D021C5B8D61000D4EEB /* KKCategory.m */,
 			);
 			name = Data;
+			sourceTree = "<group>";
+		};
+		B5F6A5E51C5D7F6700BA5D12 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B5F6A5F31C5D892C00BA5D12 /* KKCategoryTableViewCell.h */,
+				B5F6A5F41C5D892C00BA5D12 /* KKCategoryTableViewCell.m */,
+				B5F6A5F51C5D892C00BA5D12 /* KKCategoryTableViewCell.xib */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -389,6 +405,7 @@
 				B5B69DD81C55DFD0006B5A29 /* blankbackground.png in Resources */,
 				B5B69DDE1C55DFD0006B5A29 /* food_category.png in Resources */,
 				B52DBEF41C5D6F000053AE23 /* letitbegin.mp3 in Resources */,
+				B5F6A5F71C5D892C00BA5D12 /* KKCategoryTableViewCell.xib in Resources */,
 				B5B69DE31C55DFD0006B5A29 /* music_category.png in Resources */,
 				B5B69D951C55DD49006B5A29 /* LaunchScreen.storyboard in Resources */,
 				B5B69DE81C55DFD0006B5A29 /* purplebtn.png in Resources */,
@@ -431,6 +448,7 @@
 			files = (
 				B569BD761C5ACC02002B13C0 /* StartNewGameViewController.m in Sources */,
 				B5B69D8D1C55DD49006B5A29 /* ViewController.m in Sources */,
+				B5F6A5F61C5D892C00BA5D12 /* KKCategoryTableViewCell.m in Sources */,
 				B52DBEF21C5D23880053AE23 /* RankingController.m in Sources */,
 				B569BD7F1C5ADC3E002B13C0 /* GameViewController.m in Sources */,
 				B5DB4D001C5B8CE2000D4EEB /* LocalData.m in Sources */,
