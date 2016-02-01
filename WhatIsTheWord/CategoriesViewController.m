@@ -28,7 +28,6 @@ NSArray * data;
     LocalData * localdata = [[LocalData alloc]init];
     data=localdata.categories;
     
-    NSMutableArray *fs = self.players;
     self.categoriesTableView.dataSource = self;    
     self.categoriesTableView.delegate=self;
   //  self.players = [[NSMutableArray alloc]init];

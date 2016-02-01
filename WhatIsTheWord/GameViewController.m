@@ -14,6 +14,8 @@ int timerCount;
 NSArray *dataObjects;
 int score ;
 int countWords;
+int indexOfPlayer;
+
 @implementation GameViewController
 
 - (void)viewDidLoad {
@@ -24,8 +26,10 @@ int countWords;
     UIGraphicsEndImageContext();
     self.view.backgroundColor = [UIColor colorWithPatternImage:image];
     
+    self.nextPlayerButton.hidden = YES;
     timerCount =5;
     score = 0;
+    indexOfPlayer = 0;
     
     self.timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(count) userInfo:nil repeats:	true];
     
@@ -63,6 +67,25 @@ int countWords;
     self.randomWordLabel.text = dataObjects[randomNumber];
 }
 
+- (IBAction)onNextPlayerClick:(id)sender {
+    
+    UIGraphicsBeginImageContext(self.view.frame.size);
+    [[UIImage imageNamed:@"blankbackground.png"] drawInRect:self.view.bounds];
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    self.view.backgroundColor = [UIColor colorWithPatternImage:image];
+    
+    indexOfPlayer++;
+    timerCount = 5;
+    self.nextWordButton.hidden = NO;
+    self.correctWordButton.hidden = NO;
+    self.randomWordLabel.hidden = NO;
+    self.timerLabel.hidden = NO;
+    self.nextPlayerButton.hidden = YES;
+    self.timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(count) userInfo:nil repeats:	true];
+    
+}
+
 -(void) count {
     
     timerCount =timerCount -1;
@@ -70,14 +93,34 @@ int countWords;
     if(timerCount == 0){
         [self.timer invalidate];
         self.timerLabel.text= [NSString stringWithFormat:@"60"];
+       
+        NSUInteger maxPlayersCount = self.players.count -1;
+        if (maxPlayersCount == indexOfPlayer) {
+            
+                    NSString *storyBoardId = @"rankingControllerId";
+            
+                    RankingController *rankingVC =
+                    [self.storyboard instantiateViewControllerWithIdentifier:storyBoardId];
+                    rankingVC.players = self.players;
+                    [self.navigationController pushViewController:rankingVC  animated:YES];
+        }else{
+        self.nextWordButton.hidden = YES;
+        self.correctWordButton.hidden = YES;
+        self.randomWordLabel.hidden = YES;
+        self.timerLabel.hidden = YES;
+        self.nextPlayerButton.hidden = NO;
+            
+            UIGraphicsBeginImageContext(self.view.frame.size);
+            [[UIImage imageNamed:@"all_score_with_score.png"] drawInRect:self.view.bounds];
+            UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+            UIGraphicsEndImageContext();
+            self.view.backgroundColor = [UIColor colorWithPatternImage:image];
+            
+            NSString *playerNameTurn = [NSString stringWithFormat:@"%@'s turn",self.players[indexOfPlayer]];
+            
+           [self.nextPlayerButton setTitle:playerNameTurn forState:UIControlStateNormal];
         
-        
-        NSString *storyBoardId = @"rankingControllerId";
-        
-        RankingController *rankingVC =
-        [self.storyboard instantiateViewControllerWithIdentifier:storyBoardId];
-        rankingVC.players = self.players;
-        [self.navigationController pushViewController:rankingVC  animated:YES];
+        }
         
     }
 }

@@ -29,6 +29,22 @@
 }
 - (IBAction)onChooseCategoryClick:(id)sender {
     
+    if(self.players.count<2){
+        UIAlertController * alert=   [UIAlertController                                  alertControllerWithTitle:@"At least two players"                                                                                                          message:@"You should have at least two players to play the game"                                                                                                   preferredStyle:UIAlertControllerStyleAlert];
+        
+        UIAlertAction* yesButton = [UIAlertAction
+                                    actionWithTitle:@"OK"
+                                    style:UIAlertActionStyleDefault
+                                    handler:^(UIAlertAction * action)
+                                    {
+                                        //Handel your yes please button action here
+                                        
+                                        
+                                    }];
+        
+        [alert addAction:yesButton];
+        [self presentViewController:alert animated:YES completion:nil];
+    }
     NSString *storyBoardId = @"categoriesViewControllerId";
     
     CategoriesViewController *categoriesVC =

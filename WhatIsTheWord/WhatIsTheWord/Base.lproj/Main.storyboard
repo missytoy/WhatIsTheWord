@@ -480,31 +480,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E93-lg-g5s">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="185" id="E7y-pf-fTd">
-                                        <variation key="widthClass=compact" constant="200"/>
-                                    </constraint>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="28"/>
-                                <state key="normal" title="Correct" backgroundImage="purplebtn.png">
-                                    <color key="titleColor" red="0.9949174355" green="0.97014426040000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="E7y-pf-fTd"/>
-                                    </mask>
-                                </variation>
-                                <variation key="widthClass=compact">
-                                    <mask key="constraints">
-                                        <include reference="E7y-pf-fTd"/>
-                                    </mask>
-                                </variation>
-                                <connections>
-                                    <action selector="correctOnClickBtn:" destination="7L0-T6-W8y" eventType="touchUpInside" id="ZjB-SA-VvH"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UqS-fo-IAc">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <constraints>
@@ -561,6 +536,44 @@
                                     </mask>
                                 </variation>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xB4-kK-WEq">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="29"/>
+                                <state key="normal" title="Next player" backgroundImage="purplebtn.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="84" y="178" width="218" height="106"/>
+                                </variation>
+                                <connections>
+                                    <action selector="onNextPlayerClick:" destination="7L0-T6-W8y" eventType="touchUpInside" id="uDU-K8-sAo"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E93-lg-g5s">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="185" id="E7y-pf-fTd">
+                                        <variation key="widthClass=compact" constant="200"/>
+                                    </constraint>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="28"/>
+                                <state key="normal" title="Correct" backgroundImage="purplebtn.png">
+                                    <color key="titleColor" red="0.9949174355" green="0.97014426040000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="E7y-pf-fTd"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="E7y-pf-fTd"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="correctOnClickBtn:" destination="7L0-T6-W8y" eventType="touchUpInside" id="ZjB-SA-VvH"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -588,10 +601,11 @@
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="E93-lg-g5s"/>
                                 <exclude reference="UqS-fo-IAc"/>
                                 <exclude reference="wzK-re-yBx"/>
                                 <exclude reference="ApW-mk-fhI"/>
+                                <exclude reference="xB4-kK-WEq"/>
+                                <exclude reference="E93-lg-g5s"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="6aW-aa-tEu"/>
@@ -611,10 +625,11 @@
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
-                                <include reference="E93-lg-g5s"/>
                                 <include reference="UqS-fo-IAc"/>
                                 <include reference="wzK-re-yBx"/>
                                 <include reference="ApW-mk-fhI"/>
+                                <include reference="xB4-kK-WEq"/>
+                                <include reference="E93-lg-g5s"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="6aW-aa-tEu"/>
@@ -634,6 +649,9 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="correctWordButton" destination="E93-lg-g5s" id="5n3-1y-O5i"/>
+                        <outlet property="nextPlayerButton" destination="xB4-kK-WEq" id="eiN-dZ-kLG"/>
+                        <outlet property="nextWordButton" destination="UqS-fo-IAc" id="8oJ-8A-H78"/>
                         <outlet property="randomWordLabel" destination="wzK-re-yBx" id="HXt-Ac-S6u"/>
                         <outlet property="timerLabel" destination="ApW-mk-fhI" id="KvS-vH-X5L"/>
                     </connections>

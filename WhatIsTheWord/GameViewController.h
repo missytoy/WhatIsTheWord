@@ -10,9 +10,15 @@
 
 @interface GameViewController : UIViewController
 
+//IBOutlets
 @property (weak, nonatomic) IBOutlet UILabel *timerLabel;
 @property NSTimer *timer;
+@property (weak, nonatomic) IBOutlet UIButton *nextWordButton;
+@property (weak, nonatomic) IBOutlet UIButton *correctWordButton;
+
 @property (weak, nonatomic) IBOutlet UILabel *randomWordLabel;
+
+@property (weak, nonatomic) IBOutlet UIButton *nextPlayerButton;
 
 //CORE
 @property NSString *categoryName;
