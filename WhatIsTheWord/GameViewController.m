@@ -30,6 +30,8 @@ int countWords;
     self.timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(count) userInfo:nil repeats:	true];
     
     LocalData * localdata = [[LocalData alloc]init];
+    self.scores = [[NSMutableArray alloc]init];
+    
     
     if([self.categoryName  isEqual: @"Songs"]){
         
@@ -74,6 +76,7 @@ int countWords;
         
         RankingController *rankingVC =
         [self.storyboard instantiateViewControllerWithIdentifier:storyBoardId];
+        rankingVC.players = self.players;
         [self.navigationController pushViewController:rankingVC  animated:YES];
         
     }

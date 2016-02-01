@@ -12,4 +12,10 @@
 @interface RankingController : UIViewController
 @property (weak, nonatomic) IBOutlet UITextView *resultTextView;
 @property (weak, nonatomic) IBOutlet UIButton *goToMainPageFromRankingButton;
+
+
+//CORE
+@property NSArray *players;
+
+
 @end

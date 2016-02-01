@@ -22,6 +22,15 @@
     UIGraphicsEndImageContext();
     self.view.backgroundColor = [UIColor colorWithPatternImage:image];
     
+    NSString *rankingResult =@"";
+    
+    for (NSInteger i =0; i<self.players.count; i++) {
+        NSString *currentResult = self.players[i];
+        
+        rankingResult = [NSString stringWithFormat:@"%@ \n %ld. %@",rankingResult,(long)i +1 ,currentResult];
+    }
+    
+    self.resultTextView.text  = rankingResult;
 //    NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"letitbegin" ofType:@"mp3"]];
 //    AVAudioPlayer *audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:nil];
 //    [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayback error:nil];

@@ -14,9 +14,10 @@
 @property NSTimer *timer;
 @property (weak, nonatomic) IBOutlet UILabel *randomWordLabel;
 
-
+//CORE
 @property NSString *categoryName;
 @property NSArray *players;
+@property NSMutableArray *scores;
 
 -(void) count;
 
