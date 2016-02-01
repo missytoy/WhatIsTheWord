@@ -561,6 +561,31 @@
                                     </mask>
                                 </variation>
                             </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="If you don't know the word click next word button.   If someone guesses your word click on correct button" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hul-Nr-BjH">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="23"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DC2-Oe-gMY">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="45"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="127" y="66" width="147" height="65"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="to play" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ab-7x-zy5">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="53"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="93" y="102" width="214" height="65"/>
+                                </variation>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xB4-kK-WEq">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <constraints>
@@ -591,37 +616,12 @@
                                     <action selector="onNextPlayerClick:" destination="7L0-T6-W8y" eventType="touchUpInside" id="uDU-K8-sAo"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="If you don't know the word click next word button.   If someone guesses your word click on correct button" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hul-Nr-BjH">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <color key="textColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="23"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DC2-Oe-gMY">
-                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="45"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="127" y="66" width="147" height="65"/>
-                                </variation>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="to play" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ab-7x-zy5">
-                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="53"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="93" y="102" width="214" height="65"/>
-                                </variation>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="Hul-Nr-BjH" secondAttribute="trailing" constant="73" id="3up-4B-DUf"/>
                             <constraint firstItem="xB4-kK-WEq" firstAttribute="bottom" secondItem="UqS-fo-IAc" secondAttribute="bottom" id="65Q-xb-oYH">
-                                <variation key="widthClass=compact" constant="-21"/>
+                                <variation key="widthClass=compact" constant="-31"/>
                             </constraint>
                             <constraint firstItem="E93-lg-g5s" firstAttribute="leading" secondItem="UqS-fo-IAc" secondAttribute="trailing" constant="8" symbolic="YES" id="6aW-aa-tEu">
                                 <variation key="widthClass=compact" constant="-6"/>
@@ -632,7 +632,7 @@
                             <constraint firstItem="wzK-re-yBx" firstAttribute="centerX" secondItem="YZl-B4-Kkl" secondAttribute="centerX" id="HF7-jb-9EI"/>
                             <constraint firstItem="UqS-fo-IAc" firstAttribute="top" secondItem="E93-lg-g5s" secondAttribute="top" id="LHr-wE-Xso"/>
                             <constraint firstItem="xB4-kK-WEq" firstAttribute="top" secondItem="Hul-Nr-BjH" secondAttribute="bottom" constant="51" id="NkN-JA-DD0">
-                                <variation key="widthClass=compact" constant="47"/>
+                                <variation key="widthClass=compact" constant="37"/>
                             </constraint>
                             <constraint firstItem="ApW-mk-fhI" firstAttribute="trailing" secondItem="E93-lg-g5s" secondAttribute="trailing" id="S69-wU-HyA"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ApW-mk-fhI" secondAttribute="trailing" constant="-13" id="Wka-Ze-0NQ"/>
@@ -647,7 +647,7 @@
                                 <variation key="widthClass=compact" constant="-6"/>
                             </constraint>
                             <constraint firstItem="xB4-kK-WEq" firstAttribute="leading" secondItem="YZl-B4-Kkl" secondAttribute="leadingMargin" constant="35" id="wkX-6L-Izb">
-                                <variation key="widthClass=compact" constant="113"/>
+                                <variation key="widthClass=compact" constant="101"/>
                             </constraint>
                             <constraint firstItem="ApW-mk-fhI" firstAttribute="top" secondItem="t81-DI-9V8" secondAttribute="bottom" constant="8" symbolic="YES" id="y1T-zs-Mn4">
                                 <variation key="widthClass=compact" constant="52"/>
@@ -659,10 +659,10 @@
                                 <exclude reference="UqS-fo-IAc"/>
                                 <exclude reference="wzK-re-yBx"/>
                                 <exclude reference="ApW-mk-fhI"/>
-                                <exclude reference="xB4-kK-WEq"/>
                                 <exclude reference="Hul-Nr-BjH"/>
                                 <exclude reference="DC2-Oe-gMY"/>
                                 <exclude reference="6ab-7x-zy5"/>
+                                <exclude reference="xB4-kK-WEq"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="HF7-jb-9EI"/>
@@ -692,10 +692,10 @@
                                 <include reference="UqS-fo-IAc"/>
                                 <include reference="wzK-re-yBx"/>
                                 <include reference="ApW-mk-fhI"/>
-                                <include reference="xB4-kK-WEq"/>
                                 <include reference="Hul-Nr-BjH"/>
                                 <include reference="DC2-Oe-gMY"/>
                                 <include reference="6ab-7x-zy5"/>
+                                <include reference="xB4-kK-WEq"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="HF7-jb-9EI"/>

@@ -31,6 +31,12 @@ NSString *playerNameTurn;
     self.randomWordLabel.hidden = YES;
     self.timerLabel.hidden = YES;
     
+    self.howLabel.hidden = YES;
+    self.toPlayLabel.hidden = YES;
+    
+    self.currentPlayerInfoTextView.text = [NSString stringWithFormat:@"-If someone guesses your word click on correct button. \n\n-If you can't explain the word click next word button. "];
+    self.currentPlayerInfoTextView.textColor = [UIColor purpleColor];
+    self.currentPlayerInfoTextView.font = [UIFont fontWithName:@"Papyrus" size:20];
     self.scores = [[NSMutableArray alloc]init];
     indexOfPlayer = 0;
     timerCount = 5;
@@ -40,9 +46,6 @@ NSString *playerNameTurn;
     
     [self.nextPlayerButton setTitle:playerNameTurn forState:UIControlStateNormal];
 
-    
-//    self.timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(count) userInfo:nil repeats:	true];
-    
     LocalData * localdata = [[LocalData alloc]init];
     
     if([self.categoryName  isEqual: @"Songs"]){
@@ -82,8 +85,8 @@ NSString *playerNameTurn;
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     self.view.backgroundColor = [UIColor colorWithPatternImage:image];
-    self.howLabel.hidden = YES;
-    self.toPlayLabel.hidden = YES;
+//    self.howLabel.hidden = YES;
+//    self.toPlayLabel.hidden = YES;
     
     self.nextWordButton.hidden = NO;
     self.correctWordButton.hidden = NO;
@@ -125,21 +128,27 @@ NSString *playerNameTurn;
         self.timerLabel.hidden = YES;
         self.nextPlayerButton.hidden = NO;
         self.currentPlayerInfoTextView.hidden = NO;
+          
             
             self.scores[indexOfPlayer] =[NSNumber numberWithInt:currentPlayerScore];
             currentPlayerScore=0;
             
             UIGraphicsBeginImageContext(self.view.frame.size);
-            [[UIImage imageNamed:@"all_score_with_score.png"] drawInRect:self.view.bounds];
+            //all_score_with_score 
+            [[UIImage imageNamed:@"current_user_score_with_score.png"] drawInRect:self.view.bounds];
             UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
             UIGraphicsEndImageContext();
             self.view.backgroundColor = [UIColor colorWithPatternImage:image];
             self.currentPlayerInfoTextView.text =[NSString stringWithFormat:@"%@ has %@ scores",self.players[indexOfPlayer],self.scores[indexOfPlayer]];
-
+            
             indexOfPlayer++;
             NSString *playerNameTurn = [NSString stringWithFormat:@"%@'s turn",self.players[indexOfPlayer]];
             
            [self.nextPlayerButton setTitle:playerNameTurn forState:UIControlStateNormal];
+            
+            self.currentPlayerInfoTextView.textColor = [UIColor purpleColor];
+            self.currentPlayerInfoTextView.font = [UIFont fontWithName:@"Papyrus" size:20];
+
         
         }
         
