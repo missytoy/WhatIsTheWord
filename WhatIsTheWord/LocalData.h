@@ -13,5 +13,10 @@
 
 
 @property NSArray *categories;
+@property NSArray *wordsObjects;//CoreData
+@property NSArray *wordsAnimals;//CoreData
+@property NSArray *wordsSongs;//CoreData
+//@property NSMutableArray *players;//CoreData Players
+
 
 @end

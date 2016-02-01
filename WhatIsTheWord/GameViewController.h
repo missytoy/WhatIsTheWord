@@ -12,6 +12,14 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *timerLabel;
 @property NSTimer *timer;
+@property (weak, nonatomic) IBOutlet UILabel *randomWordLabel;
+
+
+@property NSString *categoryName;
+@property NSArray *players;
 
 -(void) count;
+
+-(int)getRandomNumberBetween:(int)from to:(int)to;
+
 @end

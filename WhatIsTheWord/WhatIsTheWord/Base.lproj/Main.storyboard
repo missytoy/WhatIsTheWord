@@ -233,6 +233,9 @@
                                         <include reference="b5Z-fm-glA"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="addPlayerButton:" destination="2Rm-QK-n4E" eventType="touchUpInside" id="3KT-fO-Hxx"/>
+                                </connections>
                             </button>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="I3z-V3-zgP">
                                 <rect key="frame" x="-25" y="-15" width="51" height="31"/>
@@ -253,9 +256,6 @@
                                 <rect key="frame" x="-25" y="-30" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <action selector="addPayersNameTxtEditor:" destination="WNp-ui-ROz" eventType="editingDidEnd" id="Tvu-Y4-IAt"/>
-                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Take place" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GMf-af-XDl">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
@@ -296,7 +296,7 @@
                                     </mask>
                                 </variation>
                                 <connections>
-                                    <segue destination="zjw-BP-5Xd" kind="show" id="TOw-kA-hgj"/>
+                                    <action selector="onChooseCategoryClick:" destination="2Rm-QK-n4E" eventType="touchUpInside" id="dhf-6x-1Rp"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -403,7 +403,6 @@
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="addPlayerButton" destination="KMU-xu-eT2" id="Vps-gx-IVy"/>
                         <outlet property="addPlayerNameField" destination="wtO-KT-I2q" id="WOy-2G-T8i"/>
                         <outlet property="allPlayersTextView" destination="TU9-sE-BGx" id="9bJ-5L-DDS"/>
                         <outlet property="chooseCategoryButton" destination="orC-29-Znh" id="Ku5-yO-42z"/>
@@ -417,7 +416,7 @@
         <!--Categories View Controller-->
         <scene sceneID="FlQ-2m-nd4">
             <objects>
-                <viewController id="zjw-BP-5Xd" customClass="CategoriesViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="categoriesViewControllerId" id="zjw-BP-5Xd" customClass="CategoriesViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="95J-zb-Ab8"/>
                         <viewControllerLayoutGuide type="bottom" id="nZK-gy-0ig"/>
@@ -426,15 +425,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose category" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KUM-KA-999">
-                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="36"/>
-                                <color key="textColor" red="0.9819973173678862" green="1" blue="0.97988517960356325" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="46" y="80" width="309" height="82"/>
-                                </variation>
-                            </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="180" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lRX-mP-F90">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -446,18 +436,27 @@
                                     <rect key="frame" x="26" y="188" width="349" height="362"/>
                                 </variation>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose category" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KUM-KA-999">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="36"/>
+                                <color key="textColor" red="0.9819973173678862" green="1" blue="0.97988517960356325" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="46" y="80" width="309" height="82"/>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="KUM-KA-999"/>
                                 <exclude reference="lRX-mP-F90"/>
+                                <exclude reference="KUM-KA-999"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
-                                <include reference="KUM-KA-999"/>
                                 <include reference="lRX-mP-F90"/>
+                                <include reference="KUM-KA-999"/>
                             </mask>
                         </variation>
                     </view>
@@ -502,6 +501,9 @@
                                         <include reference="E7y-pf-fTd"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="correctOnClickBtn:" destination="7L0-T6-W8y" eventType="touchUpInside" id="ZjB-SA-VvH"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UqS-fo-IAc">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -527,7 +529,16 @@
                                         <include reference="hNe-cm-aOo"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="nextOnClickBtn:" destination="7L0-T6-W8y" eventType="touchUpInside" id="SiS-yB-Jou"/>
+                                </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Justin Timberlake - What goes around comes back around" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="15" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wzK-re-yBx">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="38"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="60" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ApW-mk-fhI">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                 <constraints>
@@ -549,12 +560,6 @@
                                         <include reference="giU-Cd-Vgz"/>
                                     </mask>
                                 </variation>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Justin Timberlake - What goes around comes back around" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="15" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wzK-re-yBx">
-                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="38"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -585,8 +590,8 @@
                             <mask key="subviews">
                                 <exclude reference="E93-lg-g5s"/>
                                 <exclude reference="UqS-fo-IAc"/>
-                                <exclude reference="ApW-mk-fhI"/>
                                 <exclude reference="wzK-re-yBx"/>
+                                <exclude reference="ApW-mk-fhI"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="6aW-aa-tEu"/>
@@ -608,8 +613,8 @@
                             <mask key="subviews">
                                 <include reference="E93-lg-g5s"/>
                                 <include reference="UqS-fo-IAc"/>
-                                <include reference="ApW-mk-fhI"/>
                                 <include reference="wzK-re-yBx"/>
+                                <include reference="ApW-mk-fhI"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="6aW-aa-tEu"/>
@@ -629,6 +634,7 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="randomWordLabel" destination="wzK-re-yBx" id="HXt-Ac-S6u"/>
                         <outlet property="timerLabel" destination="ApW-mk-fhI" id="KvS-vH-X5L"/>
                     </connections>
                 </viewController>

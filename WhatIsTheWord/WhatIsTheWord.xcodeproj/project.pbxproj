@@ -49,6 +49,12 @@
 		B5DB4D031C5B8D61000D4EEB /* KKCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = B5DB4D021C5B8D61000D4EEB /* KKCategory.m */; };
 		B5F6A5F61C5D892C00BA5D12 /* KKCategoryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B5F6A5F41C5D892C00BA5D12 /* KKCategoryTableViewCell.m */; };
 		B5F6A5F71C5D892C00BA5D12 /* KKCategoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5F6A5F51C5D892C00BA5D12 /* KKCategoryTableViewCell.xib */; };
+		B5F6A5FA1C5DA16000BA5D12 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5F6A5F91C5DA16000BA5D12 /* CoreData.framework */; };
+		B5F6A5FD1C5DA19900BA5D12 /* KKCoreDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = B5F6A5FC1C5DA19900BA5D12 /* KKCoreDataHelper.m */; };
+		B5F6A6001C5DA42100BA5D12 /* Game.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B5F6A5FE1C5DA42000BA5D12 /* Game.xcdatamodeld */; };
+		B5F6A6031C5DA4BC00BA5D12 /* Player.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B5F6A6011C5DA4BC00BA5D12 /* Player.xcdatamodeld */; };
+		B5F6A6061C5DA5AC00BA5D12 /* Word.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B5F6A6041C5DA5AC00BA5D12 /* Word.xcdatamodeld */; };
+		B5F6A6091C5DA61D00BA5D12 /* Category.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B5F6A6071C5DA61D00BA5D12 /* Category.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -127,6 +133,13 @@
 		B5F6A5F31C5D892C00BA5D12 /* KKCategoryTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKCategoryTableViewCell.h; sourceTree = "<group>"; };
 		B5F6A5F41C5D892C00BA5D12 /* KKCategoryTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKCategoryTableViewCell.m; sourceTree = "<group>"; };
 		B5F6A5F51C5D892C00BA5D12 /* KKCategoryTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KKCategoryTableViewCell.xib; sourceTree = "<group>"; };
+		B5F6A5F91C5DA16000BA5D12 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		B5F6A5FB1C5DA19900BA5D12 /* KKCoreDataHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKCoreDataHelper.h; sourceTree = "<group>"; };
+		B5F6A5FC1C5DA19900BA5D12 /* KKCoreDataHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKCoreDataHelper.m; sourceTree = "<group>"; };
+		B5F6A5FF1C5DA42100BA5D12 /* Game.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Game.xcdatamodel; sourceTree = "<group>"; };
+		B5F6A6021C5DA4BC00BA5D12 /* Player.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Player.xcdatamodel; sourceTree = "<group>"; };
+		B5F6A6051C5DA5AC00BA5D12 /* Word.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Word.xcdatamodel; sourceTree = "<group>"; };
+		B5F6A6081C5DA61D00BA5D12 /* Category.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Category.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +147,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5F6A5FA1C5DA16000BA5D12 /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -174,6 +188,8 @@
 		B5B69D791C55DD48006B5A29 = {
 			isa = PBXGroup;
 			children = (
+				B5F6A5F91C5DA16000BA5D12 /* CoreData.framework */,
+				B5F6A5F81C5DA0CA00BA5D12 /* DbHelper */,
 				B5F6A5E51C5D7F6700BA5D12 /* Views */,
 				B5DB4CFD1C5B8C7A000D4EEB /* Data */,
 				B569BD731C5ACBC4002B13C0 /* Controllers */,
@@ -288,6 +304,19 @@
 				B5F6A5F51C5D892C00BA5D12 /* KKCategoryTableViewCell.xib */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		B5F6A5F81C5DA0CA00BA5D12 /* DbHelper */ = {
+			isa = PBXGroup;
+			children = (
+				B5F6A5FB1C5DA19900BA5D12 /* KKCoreDataHelper.h */,
+				B5F6A5FC1C5DA19900BA5D12 /* KKCoreDataHelper.m */,
+				B5F6A5FE1C5DA42000BA5D12 /* Game.xcdatamodeld */,
+				B5F6A6011C5DA4BC00BA5D12 /* Player.xcdatamodeld */,
+				B5F6A6041C5DA5AC00BA5D12 /* Word.xcdatamodeld */,
+				B5F6A6071C5DA61D00BA5D12 /* Category.xcdatamodeld */,
+			);
+			name = DbHelper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -448,14 +477,19 @@
 			files = (
 				B569BD761C5ACC02002B13C0 /* StartNewGameViewController.m in Sources */,
 				B5B69D8D1C55DD49006B5A29 /* ViewController.m in Sources */,
+				B5F6A6031C5DA4BC00BA5D12 /* Player.xcdatamodeld in Sources */,
 				B5F6A5F61C5D892C00BA5D12 /* KKCategoryTableViewCell.m in Sources */,
 				B52DBEF21C5D23880053AE23 /* RankingController.m in Sources */,
 				B569BD7F1C5ADC3E002B13C0 /* GameViewController.m in Sources */,
+				B5F6A6061C5DA5AC00BA5D12 /* Word.xcdatamodeld in Sources */,
 				B5DB4D001C5B8CE2000D4EEB /* LocalData.m in Sources */,
+				B5F6A5FD1C5DA19900BA5D12 /* KKCoreDataHelper.m in Sources */,
 				B5B69D8A1C55DD48006B5A29 /* AppDelegate.m in Sources */,
 				B569BD791C5ACC37002B13C0 /* CategoriesViewController.m in Sources */,
+				B5F6A6091C5DA61D00BA5D12 /* Category.xcdatamodeld in Sources */,
 				B5B69D871C55DD48006B5A29 /* main.m in Sources */,
 				B569BD7C1C5ACC74002B13C0 /* HistoryViewController.m in Sources */,
+				B5F6A6001C5DA42100BA5D12 /* Game.xcdatamodeld in Sources */,
 				B5DB4D031C5B8D61000D4EEB /* KKCategory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -701,6 +735,49 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		B5F6A5FE1C5DA42000BA5D12 /* Game.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B5F6A5FF1C5DA42100BA5D12 /* Game.xcdatamodel */,
+			);
+			currentVersion = B5F6A5FF1C5DA42100BA5D12 /* Game.xcdatamodel */;
+			path = Game.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+		B5F6A6011C5DA4BC00BA5D12 /* Player.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B5F6A6021C5DA4BC00BA5D12 /* Player.xcdatamodel */,
+			);
+			currentVersion = B5F6A6021C5DA4BC00BA5D12 /* Player.xcdatamodel */;
+			path = Player.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+		B5F6A6041C5DA5AC00BA5D12 /* Word.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B5F6A6051C5DA5AC00BA5D12 /* Word.xcdatamodel */,
+			);
+			currentVersion = B5F6A6051C5DA5AC00BA5D12 /* Word.xcdatamodel */;
+			path = Word.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+		B5F6A6071C5DA61D00BA5D12 /* Category.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B5F6A6081C5DA61D00BA5D12 /* Category.xcdatamodel */,
+			);
+			currentVersion = B5F6A6081C5DA61D00BA5D12 /* Category.xcdatamodel */;
+			path = Category.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = B5B69D7A1C55DD48006B5A29 /* Project object */;
 }

@@ -27,16 +27,12 @@ NSArray * data;
     //using data(array from localdata)
     LocalData * localdata = [[LocalData alloc]init];
     data=localdata.categories;
+    
+    NSMutableArray *fs = self.players;
     self.categoriesTableView.dataSource = self;    
     self.categoriesTableView.delegate=self;
-    
+  //  self.players = [[NSMutableArray alloc]init];
 }
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 
 -(KKCategoryTableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath   {
     
@@ -79,29 +75,15 @@ NSArray * data;
     
     GameViewController *gameVC =
     [self.storyboard instantiateViewControllerWithIdentifier:storyBoardId];
+    gameVC.categoryName = data[indexPath.row];
+    gameVC.players = self.players;
     [self.navigationController pushViewController:gameVC animated:YES];
     
-    
-//    NSString *categoryStr = [NSString stringWithFormat:@"%@ clicked", data[indexPath.row]];
-//    
-//    UIAlertController * alert=   [UIAlertController                                  alertControllerWithTitle:categoryStr
-//                                  message:@"Category clicked"
-//                                  preferredStyle:UIAlertControllerStyleAlert];
-//    
-//    UIAlertAction* yesButton = [UIAlertAction
-//                                actionWithTitle:@"OK"
-//                                style:UIAlertActionStyleDefault
-//                                handler:^(UIAlertAction * action)
-//                                {
-//                                    //Handel your yes please button action here
-//                                    
-//                                    
-//                                }];
-//    
-//   [alert addAction:yesButton];
-//    //        [alert addAction:noButton];
-//    
-//    [self presentViewController:alert animated:YES completion:nil];
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
 }
 
 @end

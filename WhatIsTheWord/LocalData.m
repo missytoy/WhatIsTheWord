@@ -15,6 +15,9 @@
     self = [super init];
     if (self) {
         self.categories = @[@"Object",@"Songs",@"Animals"];
+        self.wordsObjects =  @[@"table",@"apple",@"desk",@"apple",@"desk",@"apple",@"desk",@"apple",@"desk",@"apple",@"desk",@"apple",@"desk",@"apple",@"desk",@"apple",@"desk",@"apple",@"desk",@"apple",@"desk",@"apple",@"desk",@"apple",@"desk",@"apple",@"desk",@"apple",@"desk",@"apple",@"desk",@"apple",@"desk",@"apple",@"desk",@"apple",@"desk",@"apple",@"desk",@"apple",@"desk",@"apple",@"desk",@"apple",@"desk",@"apple",@"desk",@"apple",@"desk",@"apple",@"desk",@"apple",@"desk",@"apple",@"desk",@"apple",@"desk",@"apple",@"desk"];
+        self.wordsAnimals =  @[@"cat",@"dog",@"bird"];
+        self.wordsSongs =  @[@"Me and u",@"superman",@"mirrors"];
     }
     
     return self;
