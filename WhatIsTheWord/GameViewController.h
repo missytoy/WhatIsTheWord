@@ -19,6 +19,9 @@
 @property (weak, nonatomic) IBOutlet UILabel *randomWordLabel;
 
 @property (weak, nonatomic) IBOutlet UIButton *nextPlayerButton;
+@property (weak, nonatomic) IBOutlet UITextView *currentPlayerInfoTextView;
+@property (weak, nonatomic) IBOutlet UILabel *howLabel;
+@property (weak, nonatomic) IBOutlet UILabel *toPlayLabel;
 
 //CORE
 @property NSString *categoryName;

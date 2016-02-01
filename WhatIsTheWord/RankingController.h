@@ -16,6 +16,6 @@
 
 //CORE
 @property NSArray *players;
-
+@property NSArray *scores;
 
 @end

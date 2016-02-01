@@ -25,12 +25,14 @@
     NSString *rankingResult =@"";
     
     for (NSInteger i =0; i<self.players.count; i++) {
-        NSString *currentResult = self.players[i];
+        NSString *currentResult = [NSString stringWithFormat:@"%@ (%@ scores)", self.players[i],self.scores[i]];
         
         rankingResult = [NSString stringWithFormat:@"%@ \n %ld. %@",rankingResult,(long)i +1 ,currentResult];
     }
     
     self.resultTextView.text  = rankingResult;
+    self.resultTextView.textColor = [UIColor purpleColor];
+    self.resultTextView.font = [UIFont fontWithName:@"Papyrus" size:20];
 //    NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"letitbegin" ofType:@"mp3"]];
 //    AVAudioPlayer *audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:nil];
 //    [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayback error:nil];
