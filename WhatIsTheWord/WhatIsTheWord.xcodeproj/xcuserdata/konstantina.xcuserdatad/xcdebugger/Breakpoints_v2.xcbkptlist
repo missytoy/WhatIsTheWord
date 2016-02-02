@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HistoryViewController.m"
-            timestampString = "475871220.343608"
+            timestampString = "476067346.542005"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "38"
-            endingLineNumber = "38"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
             landmarkName = "-goToMainPageClicked:"
             landmarkType = "5">
          </BreakpointContent>

@@ -850,6 +850,23 @@
             </objects>
             <point key="canvasLocation" x="3057" y="51"/>
         </scene>
+        <!--Cameraa View Controller-->
+        <scene sceneID="Prs-ng-Ye5">
+            <objects>
+                <viewController storyboardIdentifier="CameraaViewControllerId" id="Y3E-Mz-S7f" customClass="CameraaViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wcg-6Q-Q8r"/>
+                        <viewControllerLayoutGuide type="bottom" id="jnF-vy-RhS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="y4m-Fe-8LU">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dlU-yP-0hU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3735" y="-294"/>
+        </scene>
         <!--History View Controller-->
         <scene sceneID="c5P-51-ykr">
             <objects>

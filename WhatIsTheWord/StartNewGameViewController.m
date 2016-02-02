@@ -13,7 +13,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+     self.title = @"";
     UIGraphicsBeginImageContext(self.view.frame.size);
     [[UIImage imageNamed:@"blankbackground.png"] drawInRect:self.view.bounds];
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();

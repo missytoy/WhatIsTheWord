@@ -13,6 +13,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+     self.title = @"History";
     // self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"blankbackground.png"]];
     UIGraphicsBeginImageContext(self.view.frame.size);
     [[UIImage imageNamed:@"history.png"] drawInRect:self.view.bounds];

@@ -17,7 +17,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+   
+//    [[UIApplication sharedApplication] setStatusBarHidden:YES animated:NO]
+    self.title = @"Main Page";
     UIGraphicsBeginImageContext(self.view.frame.size);
     [[UIImage imageNamed:@"blankbackground.png"] drawInRect:self.view.bounds];
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();

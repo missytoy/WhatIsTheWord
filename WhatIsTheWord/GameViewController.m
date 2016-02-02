@@ -134,7 +134,6 @@ NSString *playerNameTurn;
             currentPlayerScore=0;
             
             UIGraphicsBeginImageContext(self.view.frame.size);
-            //all_score_with_score 
             [[UIImage imageNamed:@"current_user_score_with_score.png"] drawInRect:self.view.bounds];
             UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
             UIGraphicsEndImageContext();
@@ -147,7 +146,7 @@ NSString *playerNameTurn;
            [self.nextPlayerButton setTitle:playerNameTurn forState:UIControlStateNormal];
             
             self.currentPlayerInfoTextView.textColor = [UIColor purpleColor];
-            self.currentPlayerInfoTextView.font = [UIFont fontWithName:@"Papyrus" size:20];
+            self.currentPlayerInfoTextView.font = [UIFont fontWithName:@"Papyrus" size:25];
 
         
         }

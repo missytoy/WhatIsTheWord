@@ -15,7 +15,7 @@
 - (void)viewDidLoad {
     
     [super viewDidLoad];
-    
+     self.title = @"Ranking";
     UIGraphicsBeginImageContext(self.view.frame.size);
     [[UIImage imageNamed:@"ranking.png"] drawInRect:self.view.bounds];
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
