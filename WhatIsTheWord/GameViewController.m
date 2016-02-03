@@ -10,6 +10,7 @@
 #import "RankingController.h"
 #import "LocalData.h"
 
+
 int timerCount;
 NSArray *dataObjects;
 int currentPlayerScore ;
@@ -17,10 +18,13 @@ int countWords;
 int indexOfPlayer;
 NSString *playerNameTurn;
 
+
+
 @implementation GameViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     UIGraphicsBeginImageContext(self.view.frame.size);
     [[UIImage imageNamed:@"player_first_page.png"] drawInRect:self.view.bounds];
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
@@ -65,6 +69,8 @@ NSString *playerNameTurn;
     self.randomWordLabel.text = dataObjects[randomNumber];
     
 }
+
+
 - (IBAction)correctOnClickBtn:(id)sender {
     
     NSInteger randomNumber = [self getRandomNumberBetween:0 to:countWords];

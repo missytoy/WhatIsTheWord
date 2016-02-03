@@ -8,8 +8,17 @@
 
 #import "StartNewGameViewController.h"
 #import "CategoriesViewController.h"
+#import <CoreLocation/CoreLocation.h>
 
-@implementation StartNewGameViewController
+CLLocationManager *locationManager;
+id location;
+
+@interface StartNewGameViewController () <CLLocationManagerDelegate>
+
+
+@end
+
+@implementation StartNewGameViewController 
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -25,6 +34,7 @@
     self.allPlayersTextView.layer.cornerRadius = 10;
     self.allPlayersTextView.clipsToBounds = YES;
     self.players = [[NSMutableArray alloc]init];
+    
     
 }
 - (IBAction)onChooseCategoryClick:(id)sender {
@@ -44,15 +54,44 @@
         
         [alert addAction:yesButton];
         [self presentViewController:alert animated:YES completion:nil];
+    }else{
+    
+    if(self.takePlaceSwitch.enabled ==YES){
+        locationManager = [[CLLocationManager alloc]init];
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+        locationManager.delegate = self;
+        locationManager.distanceFilter = kCLLocationAccuracyHundredMeters;
+        [locationManager requestAlwaysAuthorization];
+        [locationManager startUpdatingLocation];
+        
+        
+    }else{
+        NSString *storyBoardId = @"categoriesViewControllerId";
+        
+        CategoriesViewController *categoriesVC =
+        [self.storyboard instantiateViewControllerWithIdentifier:storyBoardId];
+        categoriesVC.players = self.players;
+        categoriesVC.location = location;
+        [self.navigationController pushViewController:categoriesVC animated:YES];
     }
+}
+}
+
+-(void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray<CLLocation *> *)locations	{
+    location = [locations lastObject];
+    
+    NSLog(@"location %@",location);
     NSString *storyBoardId = @"categoriesViewControllerId";
     
     CategoriesViewController *categoriesVC =
     [self.storyboard instantiateViewControllerWithIdentifier:storyBoardId];
     categoriesVC.players = self.players;
+    categoriesVC.location = location;
+    [locationManager stopUpdatingLocation];
     [self.navigationController pushViewController:categoriesVC animated:YES];
     
 }
+
 - (IBAction)addPlayerButton:(id)sender {
     
     if(self.addPlayerNameField.text.length > 10 ){

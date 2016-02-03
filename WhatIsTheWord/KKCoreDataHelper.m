@@ -14,7 +14,7 @@ NSString *storeFilename = @"CDatabase.sqlite";
 
 - (id)init
 {
-    NSLog(@"Running %@ '%@'", self.class, NSStringFromSelector(_cmd));
+    NSLog(@"Running f%@ '%@'", self.class, NSStringFromSelector(_cmd));
     
     self = [super init];
     

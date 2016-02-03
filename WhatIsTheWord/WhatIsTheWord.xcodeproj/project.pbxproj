@@ -10,6 +10,7 @@
 		B52DBEF21C5D23880053AE23 /* RankingController.m in Sources */ = {isa = PBXBuildFile; fileRef = B52DBEF11C5D23880053AE23 /* RankingController.m */; };
 		B52DBEF41C5D6F000053AE23 /* letitbegin.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B52DBEF31C5D6EFF0053AE23 /* letitbegin.mp3 */; };
 		B5611B131C6030FE00B14D51 /* CameraaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5611B121C6030FE00B14D51 /* CameraaViewController.m */; };
+		B5611B151C622DC900B14D51 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B5611B141C622DC900B14D51 /* Default-568h@2x.png */; };
 		B569BD761C5ACC02002B13C0 /* StartNewGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B569BD751C5ACC02002B13C0 /* StartNewGameViewController.m */; };
 		B569BD791C5ACC37002B13C0 /* CategoriesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B569BD781C5ACC37002B13C0 /* CategoriesViewController.m */; };
 		B569BD7C1C5ACC74002B13C0 /* HistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B569BD7B1C5ACC74002B13C0 /* HistoryViewController.m */; };
@@ -81,6 +82,7 @@
 		B52DBEF31C5D6EFF0053AE23 /* letitbegin.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = letitbegin.mp3; path = ../../letitbegin.mp3; sourceTree = "<group>"; };
 		B5611B111C6030FE00B14D51 /* CameraaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraaViewController.h; sourceTree = "<group>"; };
 		B5611B121C6030FE00B14D51 /* CameraaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraaViewController.m; sourceTree = "<group>"; };
+		B5611B141C622DC900B14D51 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		B569BD741C5ACC02002B13C0 /* StartNewGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartNewGameViewController.h; sourceTree = "<group>"; };
 		B569BD751C5ACC02002B13C0 /* StartNewGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartNewGameViewController.m; sourceTree = "<group>"; };
 		B569BD771C5ACC37002B13C0 /* CategoriesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoriesViewController.h; sourceTree = "<group>"; };
@@ -193,6 +195,7 @@
 		B5B69D791C55DD48006B5A29 = {
 			isa = PBXGroup;
 			children = (
+				B5611B141C622DC900B14D51 /* Default-568h@2x.png */,
 				B5F6A5F91C5DA16000BA5D12 /* CoreData.framework */,
 				B5F6A5F81C5DA0CA00BA5D12 /* DbHelper */,
 				B5F6A5E51C5D7F6700BA5D12 /* Views */,
@@ -450,6 +453,7 @@
 				B5B69DD31C55DFD0006B5A29 /* all_score_with_score.png in Resources */,
 				B5B69DE01C55DFD0006B5A29 /* ic_launcher.png in Resources */,
 				B5B69D921C55DD49006B5A29 /* Assets.xcassets in Resources */,
+				B5611B151C622DC900B14D51 /* Default-568h@2x.png in Resources */,
 				B5B69DE61C55DFD0006B5A29 /* object_category.png in Resources */,
 				B5B69D901C55DD49006B5A29 /* Main.storyboard in Resources */,
 				B5B69DEA1C55DFD0006B5A29 /* stars_category.png in Resources */,

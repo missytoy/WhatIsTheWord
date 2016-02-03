@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface StartNewGameViewController : UIViewController
+@interface StartNewGameViewController : UIViewController  
 
 //IBOutlets
 @property (weak, nonatomic) IBOutlet UITextField *addPlayerNameField;
