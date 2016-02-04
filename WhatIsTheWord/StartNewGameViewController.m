@@ -12,6 +12,8 @@
 
 CLLocationManager *locationManager;
 id location;
+bool switchIsOn;
+bool tookPlace;
 
 @interface StartNewGameViewController () <CLLocationManagerDelegate>
 
@@ -23,6 +25,8 @@ id location;
 - (void)viewDidLoad {
     [super viewDidLoad];
      self.title = @"";
+    tookPlace = NO;
+    switchIsOn = YES;
     UIGraphicsBeginImageContext(self.view.frame.size);
     [[UIImage imageNamed:@"blankbackground.png"] drawInRect:self.view.bounds];
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
@@ -37,6 +41,17 @@ id location;
     
     
 }
+- (IBAction)onTakePlaceSwitch:(id)sender {
+    UISwitch *mySwitch = (UISwitch *)sender;
+    if ([mySwitch isOn]) {
+        switchIsOn = YES;
+        NSLog(@"its on!");
+    } else {
+        switchIsOn = NO;
+        NSLog(@"its off!");
+    }
+}
+
 - (IBAction)onChooseCategoryClick:(id)sender {
     
     if(self.players.count<2){
@@ -56,7 +71,7 @@ id location;
         [self presentViewController:alert animated:YES completion:nil];
     }else{
     
-    if(self.takePlaceSwitch.enabled ==YES){
+    if(switchIsOn){
         locationManager = [[CLLocationManager alloc]init];
         locationManager.desiredAccuracy = kCLLocationAccuracyBest;
         locationManager.delegate = self;
@@ -71,7 +86,7 @@ id location;
         CategoriesViewController *categoriesVC =
         [self.storyboard instantiateViewControllerWithIdentifier:storyBoardId];
         categoriesVC.players = self.players;
-        categoriesVC.location = location;
+        categoriesVC.location = nil;
         [self.navigationController pushViewController:categoriesVC animated:YES];
     }
 }
@@ -80,17 +95,34 @@ id location;
 -(void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray<CLLocation *> *)locations	{
     location = [locations lastObject];
     
-    NSLog(@"location %@",location);
-    NSString *storyBoardId = @"categoriesViewControllerId";
     
-    CategoriesViewController *categoriesVC =
-    [self.storyboard instantiateViewControllerWithIdentifier:storyBoardId];
-    categoriesVC.players = self.players;
-    categoriesVC.location = location;
-    [locationManager stopUpdatingLocation];
-    [self.navigationController pushViewController:categoriesVC animated:YES];
+        CLGeocoder *ceo = [[CLGeocoder alloc]init];
+        
+        [ceo reverseGeocodeLocation:location
+                  completionHandler:^(NSArray *placemarks, NSError *error) {
+                      
+                      CLPlacemark *placemark = [placemarks objectAtIndex:0];
+                      
+                      NSString *locatedAt = [[placemark.addressDictionary valueForKey:@"FormattedAddressLines"] componentsJoinedByString:@", "];
+                      
+                      NSLog(@"I am currently at %@",locatedAt);
+                      
+                    if (tookPlace == NO) {
+                      NSString *storyBoardId = @"categoriesViewControllerId";
+                      
+                      CategoriesViewController *categoriesVC =
+                      [self.storyboard instantiateViewControllerWithIdentifier:storyBoardId];
+                      categoriesVC.players = self.players;
+                      categoriesVC.location = locatedAt;
+                      [locationManager stopUpdatingLocation];
+                        tookPlace = YES;
+                        [self.navigationController pushViewController:categoriesVC animated:YES];
+                    }
+                  }];
+        
     
-}
+    
+    }
 
 - (IBAction)addPlayerButton:(id)sender {
     

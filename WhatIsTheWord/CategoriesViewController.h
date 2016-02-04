@@ -10,7 +10,7 @@
 
 @interface CategoriesViewController : UIViewController <UITableViewDataSource,UITableViewDelegate>
 
-@property  id location;
+@property  NSString* location;
 
 @property NSArray *categories;
 @property NSArray *players;
