@@ -46,13 +46,21 @@
 		B5DA0F151C63BC15000343A5 /* ranking.png in Resources */ = {isa = PBXBuildFile; fileRef = B5DA0EFE1C63BC15000343A5 /* ranking.png */; };
 		B5DA0F161C63BC15000343A5 /* stars_category.png in Resources */ = {isa = PBXBuildFile; fileRef = B5DA0EFF1C63BC15000343A5 /* stars_category.png */; };
 		B5DA0F181C63BD17000343A5 /* snimka.png in Resources */ = {isa = PBXBuildFile; fileRef = B5DA0F171C63BD17000343A5 /* snimka.png */; };
+		B5DA0F8B1C63D087000343A5 /* WhatIsTheWordEntityModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B5DA0F891C63D087000343A5 /* WhatIsTheWordEntityModel.xcdatamodeld */; };
+		B5DA0F901C63D1BB000343A5 /* WordCategory+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = B5DA0F8D1C63D1BB000343A5 /* WordCategory+CoreDataProperties.m */; };
+		B5DA0F911C63D1BB000343A5 /* WordCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = B5DA0F8F1C63D1BB000343A5 /* WordCategory.m */; };
+		B5DA0F9E1C63D1E2000343A5 /* Player+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = B5DA0F931C63D1E2000343A5 /* Player+CoreDataProperties.m */; };
+		B5DA0F9F1C63D1E2000343A5 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = B5DA0F951C63D1E2000343A5 /* Player.m */; };
+		B5DA0FA01C63D1E2000343A5 /* Game+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = B5DA0F971C63D1E2000343A5 /* Game+CoreDataProperties.m */; };
+		B5DA0FA11C63D1E2000343A5 /* Game.m in Sources */ = {isa = PBXBuildFile; fileRef = B5DA0F991C63D1E2000343A5 /* Game.m */; };
+		B5DA0FA21C63D1E2000343A5 /* Word+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = B5DA0F9B1C63D1E2000343A5 /* Word+CoreDataProperties.m */; };
+		B5DA0FA31C63D1E2000343A5 /* Word.m in Sources */ = {isa = PBXBuildFile; fileRef = B5DA0F9D1C63D1E2000343A5 /* Word.m */; };
 		B5DB4D001C5B8CE2000D4EEB /* LocalData.m in Sources */ = {isa = PBXBuildFile; fileRef = B5DB4CFF1C5B8CE2000D4EEB /* LocalData.m */; };
 		B5DB4D031C5B8D61000D4EEB /* KKCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = B5DB4D021C5B8D61000D4EEB /* KKCategory.m */; };
 		B5F6A5F61C5D892C00BA5D12 /* KKCategoryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B5F6A5F41C5D892C00BA5D12 /* KKCategoryTableViewCell.m */; };
 		B5F6A5F71C5D892C00BA5D12 /* KKCategoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5F6A5F51C5D892C00BA5D12 /* KKCategoryTableViewCell.xib */; };
 		B5F6A5FA1C5DA16000BA5D12 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5F6A5F91C5DA16000BA5D12 /* CoreData.framework */; };
 		B5F6A5FD1C5DA19900BA5D12 /* KKCoreDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = B5F6A5FC1C5DA19900BA5D12 /* KKCoreDataHelper.m */; };
-		B5F6A6001C5DA42100BA5D12 /* Game.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B5F6A5FE1C5DA42000BA5D12 /* Game.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -126,6 +134,23 @@
 		B5DA0EFE1C63BC15000343A5 /* ranking.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ranking.png; sourceTree = "<group>"; };
 		B5DA0EFF1C63BC15000343A5 /* stars_category.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stars_category.png; sourceTree = "<group>"; };
 		B5DA0F171C63BD17000343A5 /* snimka.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = snimka.png; sourceTree = "<group>"; };
+		B5DA0F8A1C63D087000343A5 /* WhatIsTheWordEntityModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WhatIsTheWordEntityModel.xcdatamodel; sourceTree = "<group>"; };
+		B5DA0F8C1C63D1BB000343A5 /* WordCategory+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "WordCategory+CoreDataProperties.h"; sourceTree = "<group>"; };
+		B5DA0F8D1C63D1BB000343A5 /* WordCategory+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "WordCategory+CoreDataProperties.m"; sourceTree = "<group>"; };
+		B5DA0F8E1C63D1BB000343A5 /* WordCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordCategory.h; sourceTree = "<group>"; };
+		B5DA0F8F1C63D1BB000343A5 /* WordCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordCategory.m; sourceTree = "<group>"; };
+		B5DA0F921C63D1E2000343A5 /* Player+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Player+CoreDataProperties.h"; sourceTree = "<group>"; };
+		B5DA0F931C63D1E2000343A5 /* Player+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Player+CoreDataProperties.m"; sourceTree = "<group>"; };
+		B5DA0F941C63D1E2000343A5 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
+		B5DA0F951C63D1E2000343A5 /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
+		B5DA0F961C63D1E2000343A5 /* Game+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Game+CoreDataProperties.h"; sourceTree = "<group>"; };
+		B5DA0F971C63D1E2000343A5 /* Game+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Game+CoreDataProperties.m"; sourceTree = "<group>"; };
+		B5DA0F981C63D1E2000343A5 /* Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Game.h; sourceTree = "<group>"; };
+		B5DA0F991C63D1E2000343A5 /* Game.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Game.m; sourceTree = "<group>"; };
+		B5DA0F9A1C63D1E2000343A5 /* Word+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Word+CoreDataProperties.h"; sourceTree = "<group>"; };
+		B5DA0F9B1C63D1E2000343A5 /* Word+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Word+CoreDataProperties.m"; sourceTree = "<group>"; };
+		B5DA0F9C1C63D1E2000343A5 /* Word.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Word.h; sourceTree = "<group>"; };
+		B5DA0F9D1C63D1E2000343A5 /* Word.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Word.m; sourceTree = "<group>"; };
 		B5DB4CFE1C5B8CE2000D4EEB /* LocalData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalData.h; sourceTree = "<group>"; };
 		B5DB4CFF1C5B8CE2000D4EEB /* LocalData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalData.m; sourceTree = "<group>"; };
 		B5DB4D011C5B8D61000D4EEB /* KKCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKCategory.h; sourceTree = "<group>"; };
@@ -136,7 +161,6 @@
 		B5F6A5F91C5DA16000BA5D12 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		B5F6A5FB1C5DA19900BA5D12 /* KKCoreDataHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKCoreDataHelper.h; sourceTree = "<group>"; };
 		B5F6A5FC1C5DA19900BA5D12 /* KKCoreDataHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKCoreDataHelper.m; sourceTree = "<group>"; };
-		B5F6A5FF1C5DA42100BA5D12 /* Game.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Game.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,12 +211,13 @@
 		B5B69D791C55DD48006B5A29 = {
 			isa = PBXGroup;
 			children = (
+				B5DA0F191C63C0C7000343A5 /* CDModels */,
 				B5DA0EE61C63BAED000343A5 /* images */,
 				B5611B141C622DC900B14D51 /* Default-568h@2x.png */,
 				B5F6A5F91C5DA16000BA5D12 /* CoreData.framework */,
 				B5F6A5F81C5DA0CA00BA5D12 /* DbHelper */,
 				B5F6A5E51C5D7F6700BA5D12 /* Views */,
-				B5DB4CFD1C5B8C7A000D4EEB /* Data */,
+				B5DB4CFD1C5B8C7A000D4EEB /* Models */,
 				B569BD731C5ACBC4002B13C0 /* Controllers */,
 				B5B69D841C55DD48006B5A29 /* WhatIsTheWord */,
 				B5B69D9E1C55DD49006B5A29 /* WhatIsTheWordTests */,
@@ -284,7 +309,30 @@
 			name = images;
 			sourceTree = "<group>";
 		};
-		B5DB4CFD1C5B8C7A000D4EEB /* Data */ = {
+		B5DA0F191C63C0C7000343A5 /* CDModels */ = {
+			isa = PBXGroup;
+			children = (
+				B5DA0F8C1C63D1BB000343A5 /* WordCategory+CoreDataProperties.h */,
+				B5DA0F8D1C63D1BB000343A5 /* WordCategory+CoreDataProperties.m */,
+				B5DA0F8E1C63D1BB000343A5 /* WordCategory.h */,
+				B5DA0F8F1C63D1BB000343A5 /* WordCategory.m */,
+				B5DA0F921C63D1E2000343A5 /* Player+CoreDataProperties.h */,
+				B5DA0F931C63D1E2000343A5 /* Player+CoreDataProperties.m */,
+				B5DA0F941C63D1E2000343A5 /* Player.h */,
+				B5DA0F951C63D1E2000343A5 /* Player.m */,
+				B5DA0F961C63D1E2000343A5 /* Game+CoreDataProperties.h */,
+				B5DA0F971C63D1E2000343A5 /* Game+CoreDataProperties.m */,
+				B5DA0F981C63D1E2000343A5 /* Game.h */,
+				B5DA0F991C63D1E2000343A5 /* Game.m */,
+				B5DA0F9A1C63D1E2000343A5 /* Word+CoreDataProperties.h */,
+				B5DA0F9B1C63D1E2000343A5 /* Word+CoreDataProperties.m */,
+				B5DA0F9C1C63D1E2000343A5 /* Word.h */,
+				B5DA0F9D1C63D1E2000343A5 /* Word.m */,
+			);
+			name = CDModels;
+			sourceTree = "<group>";
+		};
+		B5DB4CFD1C5B8C7A000D4EEB /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				B5DB4CFE1C5B8CE2000D4EEB /* LocalData.h */,
@@ -292,7 +340,7 @@
 				B5DB4D011C5B8D61000D4EEB /* KKCategory.h */,
 				B5DB4D021C5B8D61000D4EEB /* KKCategory.m */,
 			);
-			name = Data;
+			name = Models;
 			sourceTree = "<group>";
 		};
 		B5F6A5E51C5D7F6700BA5D12 /* Views */ = {
@@ -310,7 +358,7 @@
 			children = (
 				B5F6A5FB1C5DA19900BA5D12 /* KKCoreDataHelper.h */,
 				B5F6A5FC1C5DA19900BA5D12 /* KKCoreDataHelper.m */,
-				B5F6A5FE1C5DA42000BA5D12 /* Game.xcdatamodeld */,
+				B5DA0F891C63D087000343A5 /* WhatIsTheWordEntityModel.xcdatamodeld */,
 			);
 			name = DbHelper;
 			sourceTree = "<group>";
@@ -474,16 +522,24 @@
 				B569BD761C5ACC02002B13C0 /* StartNewGameViewController.m in Sources */,
 				B5B69D8D1C55DD49006B5A29 /* ViewController.m in Sources */,
 				B5F6A5F61C5D892C00BA5D12 /* KKCategoryTableViewCell.m in Sources */,
+				B5DA0FA01C63D1E2000343A5 /* Game+CoreDataProperties.m in Sources */,
+				B5DA0F911C63D1BB000343A5 /* WordCategory.m in Sources */,
 				B52DBEF21C5D23880053AE23 /* RankingController.m in Sources */,
+				B5DA0F8B1C63D087000343A5 /* WhatIsTheWordEntityModel.xcdatamodeld in Sources */,
 				B569BD7F1C5ADC3E002B13C0 /* GameViewController.m in Sources */,
+				B5DA0FA21C63D1E2000343A5 /* Word+CoreDataProperties.m in Sources */,
+				B5DA0F901C63D1BB000343A5 /* WordCategory+CoreDataProperties.m in Sources */,
 				B5611B131C6030FE00B14D51 /* CameraaViewController.m in Sources */,
 				B5DB4D001C5B8CE2000D4EEB /* LocalData.m in Sources */,
 				B5F6A5FD1C5DA19900BA5D12 /* KKCoreDataHelper.m in Sources */,
+				B5DA0FA31C63D1E2000343A5 /* Word.m in Sources */,
+				B5DA0F9E1C63D1E2000343A5 /* Player+CoreDataProperties.m in Sources */,
 				B5B69D8A1C55DD48006B5A29 /* AppDelegate.m in Sources */,
 				B569BD791C5ACC37002B13C0 /* CategoriesViewController.m in Sources */,
+				B5DA0FA11C63D1E2000343A5 /* Game.m in Sources */,
 				B5B69D871C55DD48006B5A29 /* main.m in Sources */,
 				B569BD7C1C5ACC74002B13C0 /* HistoryViewController.m in Sources */,
-				B5F6A6001C5DA42100BA5D12 /* Game.xcdatamodeld in Sources */,
+				B5DA0F9F1C63D1E2000343A5 /* Player.m in Sources */,
 				B5DB4D031C5B8D61000D4EEB /* KKCategory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -731,13 +787,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		B5F6A5FE1C5DA42000BA5D12 /* Game.xcdatamodeld */ = {
+		B5DA0F891C63D087000343A5 /* WhatIsTheWordEntityModel.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				B5F6A5FF1C5DA42100BA5D12 /* Game.xcdatamodel */,
+				B5DA0F8A1C63D087000343A5 /* WhatIsTheWordEntityModel.xcdatamodel */,
 			);
-			currentVersion = B5F6A5FF1C5DA42100BA5D12 /* Game.xcdatamodel */;
-			path = Game.xcdatamodeld;
+			currentVersion = B5DA0F8A1C63D087000343A5 /* WhatIsTheWordEntityModel.xcdatamodel */;
+			path = WhatIsTheWordEntityModel.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

@@ -10,7 +10,7 @@
 
 @implementation KKCoreDataHelper
 
-NSString *storeFilename = @"CDatabase.sqlite";
+NSString *storeFilename = @"WhatIsTheWordDatabase.sqlite";
 
 - (id)init
 {

@@ -10,6 +10,15 @@
 #import "ViewController.h"
 #import "CameraaViewController.h"
 #import <AVFoundation/AVFoundation.h>
+#import "KKCoreDataHelper.h"
+#import "Game.h"
+#import "Player.h"
+
+@interface RankingController()
+@property (strong,nonatomic) KKCoreDataHelper* dbHelper;
+
+@end
+
 
 @implementation RankingController 
 
@@ -22,18 +31,13 @@
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     self.view.backgroundColor = [UIColor colorWithPatternImage:image];
+
+    [self saveResult];
+    [self displayResult];
+    [self fetchData];
+  
     
-    NSString *rankingResult =@"";
     
-    for (NSInteger i =0; i<self.players.count; i++) {
-        NSString *currentResult = [NSString stringWithFormat:@"%@ (%@ scores)", self.players[i],self.scores[i]];
-        
-        rankingResult = [NSString stringWithFormat:@"%@ \n %ld. %@",rankingResult,(long)i +1 ,currentResult];
-    }
-    
-    self.resultTextView.text  = rankingResult;
-    self.resultTextView.textColor = [UIColor purpleColor];
-    self.resultTextView.font = [UIFont fontWithName:@"Papyrus" size:20];
 //    NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"letitbegin" ofType:@"mp3"]];
 //    AVAudioPlayer *audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:nil];
 //    [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayback error:nil];
@@ -41,6 +45,62 @@
 //    [[UIApplication sharedApplication] beginReceivingRemoteControlEvents];
 //    [audioPlayer play];
 //    [super viewDidLoad];
+}
+
+-(void)fetchData{
+
+    //zagrubenqk grubeshtastnik
+    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Player" ];
+    NSSortDescriptor *sortDesriptor = [NSSortDescriptor sortDescriptorWithKey:@"score" ascending:YES];
+    
+    [request setSortDescriptors:[NSArray arrayWithObject:sortDesriptor] ];
+    
+    NSArray* seeme = [self.dbHelper.context executeFetchRequest:request error:nil];
+    
+    for (Player *player in seeme) {
+        NSLog(@"%@ %@",player.playerName,player.score);
+    }
+    
+}
+
+-(void)saveResult{
+    
+    self.dbHelper = [[KKCoreDataHelper alloc]init];
+    [self.dbHelper setupCoreData];
+    
+    Game* game = [NSEntityDescription insertNewObjectForEntityForName:@"Game" inManagedObjectContext:self.dbHelper.context];
+    
+    for (NSInteger i =0; i<self.players.count; i++) {
+        Player* player= [NSEntityDescription insertNewObjectForEntityForName:@"Player" inManagedObjectContext:self.dbHelper.context];
+        
+        [player setValue:self.players[i] forKey:@"playerName"];
+        [player setValue:self.scores[i] forKey:@"score"];
+   
+        [game addPlayersObject:player];
+    }
+    
+    
+    [self.dbHelper.context insertObject:game];
+    [self.dbHelper saveContext];
+}
+
+-(void)displayResult{
+    
+    NSString *rankingResult =@"";
+    
+    
+    for (NSInteger i =0; i<self.players.count; i++) {
+        NSString *currentResult = [NSString stringWithFormat:@"%@ (%@ scores)", self.players[i],self.scores[i]];
+        
+        
+        rankingResult = [NSString stringWithFormat:@"%@ \n %ld. %@",rankingResult,(long)i +1 ,currentResult];
+        
+    }
+    
+    
+    self.resultTextView.text  = rankingResult;
+    self.resultTextView.textColor = [UIColor purpleColor];
+    self.resultTextView.font = [UIFont fontWithName:@"Papyrus" size:20];
 }
 
 - (IBAction)takePhotoOnOtherPage:(id)sender {
