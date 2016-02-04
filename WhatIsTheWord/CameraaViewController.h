@@ -7,7 +7,20 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AVFoundation/AVFoundation.h>
 
-@interface CameraaViewController : UIViewController
+@interface CameraaViewController : UIViewController{
+    IBOutlet UIView *frameforcapture;
+    IBOutlet UIImageView *imageView;
+}
+
+
+//CORE
+@property NSArray *players;
+@property NSArray *scores;
+@property NSData *image;
+
+
+-(IBAction)takePhoto:(id)sender;
 
 @end

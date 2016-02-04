@@ -8,6 +8,7 @@
 
 #import "GameViewController.h"
 #import "RankingController.h"
+#import "CameraaViewController.h"
 #import "LocalData.h"
 
 
@@ -49,7 +50,7 @@ NSString *playerNameTurn;
     playerNameTurn = [NSString stringWithFormat:@"%@'s turn",self.players[indexOfPlayer]];
     
     [self.nextPlayerButton setTitle:playerNameTurn forState:UIControlStateNormal];
-
+    
     LocalData * localdata = [[LocalData alloc]init];
     
     if([self.categoryName  isEqual: @"Songs"]){
@@ -76,7 +77,7 @@ NSString *playerNameTurn;
     NSInteger randomNumber = [self getRandomNumberBetween:0 to:countWords];
     self.randomWordLabel.text = dataObjects[randomNumber];
     currentPlayerScore++;
-  //NSLog([NSString stringWithFormat:@"%d",score]);
+    //NSLog([NSString stringWithFormat:@"%d",score]);
 }
 - (IBAction)nextOnClickBtn:(id)sender {
     
@@ -91,8 +92,8 @@ NSString *playerNameTurn;
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     self.view.backgroundColor = [UIColor colorWithPatternImage:image];
-//    self.howLabel.hidden = YES;
-//    self.toPlayLabel.hidden = YES;
+    //    self.howLabel.hidden = YES;
+    //    self.toPlayLabel.hidden = YES;
     
     self.nextWordButton.hidden = NO;
     self.correctWordButton.hidden = NO;
@@ -100,8 +101,6 @@ NSString *playerNameTurn;
     self.timerLabel.hidden = NO;
     self.nextPlayerButton.hidden = YES;
     self.currentPlayerInfoTextView.hidden = YES;
-    
-    
     
     timerCount = 5;
     self.timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(count) userInfo:nil repeats:	true];
@@ -115,26 +114,27 @@ NSString *playerNameTurn;
     if(timerCount < 0){
         [self.timer invalidate];
         self.timerLabel.text= [NSString stringWithFormat:@"60"];
-       
+        
         NSUInteger maxPlayersCount = self.players.count -1;
         if (maxPlayersCount == indexOfPlayer) {
             
-                    NSString *storyBoardId = @"rankingControllerId";
+            NSString *storyBoardId = @"rankingControllerId";
             
-                    self.scores[indexOfPlayer] =[NSNumber numberWithInt:currentPlayerScore];
-                    RankingController *rankingVC =
-                    [self.storyboard instantiateViewControllerWithIdentifier:storyBoardId];
-                    rankingVC.players = self.players;
-                    rankingVC.scores = self.scores; 
-                    [self.navigationController pushViewController:rankingVC  animated:YES];
+            self.scores[indexOfPlayer] =[NSNumber numberWithInt:currentPlayerScore];
+            RankingController *rankingVC =
+            [self.storyboard instantiateViewControllerWithIdentifier:storyBoardId];
+            rankingVC.players = self.players;
+            rankingVC.scores = self.scores;
+            [self.navigationController pushViewController:rankingVC  animated:YES];
+            
         }else{
-        self.nextWordButton.hidden = YES;
-        self.correctWordButton.hidden = YES;
-        self.randomWordLabel.hidden = YES;
-        self.timerLabel.hidden = YES;
-        self.nextPlayerButton.hidden = NO;
-        self.currentPlayerInfoTextView.hidden = NO;
-          
+            self.nextWordButton.hidden = YES;
+            self.correctWordButton.hidden = YES;
+            self.randomWordLabel.hidden = YES;
+            self.timerLabel.hidden = YES;
+            self.nextPlayerButton.hidden = NO;
+            self.currentPlayerInfoTextView.hidden = NO;
+            
             
             self.scores[indexOfPlayer] =[NSNumber numberWithInt:currentPlayerScore];
             currentPlayerScore=0;
@@ -149,12 +149,12 @@ NSString *playerNameTurn;
             indexOfPlayer++;
             NSString *playerNameTurn = [NSString stringWithFormat:@"%@'s turn",self.players[indexOfPlayer]];
             
-           [self.nextPlayerButton setTitle:playerNameTurn forState:UIControlStateNormal];
+            [self.nextPlayerButton setTitle:playerNameTurn forState:UIControlStateNormal];
             
             self.currentPlayerInfoTextView.textColor = [UIColor purpleColor];
             self.currentPlayerInfoTextView.font = [UIFont fontWithName:@"Papyrus" size:25];
-
-        
+            
+            
         }
         
     }

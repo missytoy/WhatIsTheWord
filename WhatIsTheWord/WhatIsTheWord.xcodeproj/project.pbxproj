@@ -47,6 +47,7 @@
 		B5B69DE81C55DFD0006B5A29 /* purplebtn.png in Resources */ = {isa = PBXBuildFile; fileRef = B5B69DD01C55DFD0006B5A29 /* purplebtn.png */; };
 		B5B69DE91C55DFD0006B5A29 /* ranking.png in Resources */ = {isa = PBXBuildFile; fileRef = B5B69DD11C55DFD0006B5A29 /* ranking.png */; };
 		B5B69DEA1C55DFD0006B5A29 /* stars_category.png in Resources */ = {isa = PBXBuildFile; fileRef = B5B69DD21C55DFD0006B5A29 /* stars_category.png */; };
+		B5DA0EE11C63A10E000343A5 /* snimka.png in Resources */ = {isa = PBXBuildFile; fileRef = B5DA0EE01C63A10E000343A5 /* snimka.png */; };
 		B5DB4D001C5B8CE2000D4EEB /* LocalData.m in Sources */ = {isa = PBXBuildFile; fileRef = B5DB4CFF1C5B8CE2000D4EEB /* LocalData.m */; };
 		B5DB4D031C5B8D61000D4EEB /* KKCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = B5DB4D021C5B8D61000D4EEB /* KKCategory.m */; };
 		B5F6A5F61C5D892C00BA5D12 /* KKCategoryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B5F6A5F41C5D892C00BA5D12 /* KKCategoryTableViewCell.m */; };
@@ -54,9 +55,6 @@
 		B5F6A5FA1C5DA16000BA5D12 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5F6A5F91C5DA16000BA5D12 /* CoreData.framework */; };
 		B5F6A5FD1C5DA19900BA5D12 /* KKCoreDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = B5F6A5FC1C5DA19900BA5D12 /* KKCoreDataHelper.m */; };
 		B5F6A6001C5DA42100BA5D12 /* Game.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B5F6A5FE1C5DA42000BA5D12 /* Game.xcdatamodeld */; };
-		B5F6A6031C5DA4BC00BA5D12 /* Player.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B5F6A6011C5DA4BC00BA5D12 /* Player.xcdatamodeld */; };
-		B5F6A6061C5DA5AC00BA5D12 /* Word.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B5F6A6041C5DA5AC00BA5D12 /* Word.xcdatamodeld */; };
-		B5F6A6091C5DA61D00BA5D12 /* Category.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B5F6A6071C5DA61D00BA5D12 /* Category.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -131,6 +129,7 @@
 		B5B69DD01C55DFD0006B5A29 /* purplebtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = purplebtn.png; path = "../../ала бала ница/picture/purplebtn.png"; sourceTree = "<group>"; };
 		B5B69DD11C55DFD0006B5A29 /* ranking.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ranking.png; path = "../../ала бала ница/picture/ranking.png"; sourceTree = "<group>"; };
 		B5B69DD21C55DFD0006B5A29 /* stars_category.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = stars_category.png; path = "../../ала бала ница/picture/stars_category.png"; sourceTree = "<group>"; };
+		B5DA0EE01C63A10E000343A5 /* snimka.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = snimka.png; path = ../../snimka.png; sourceTree = "<group>"; };
 		B5DB4CFE1C5B8CE2000D4EEB /* LocalData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalData.h; sourceTree = "<group>"; };
 		B5DB4CFF1C5B8CE2000D4EEB /* LocalData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalData.m; sourceTree = "<group>"; };
 		B5DB4D011C5B8D61000D4EEB /* KKCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKCategory.h; sourceTree = "<group>"; };
@@ -142,9 +141,6 @@
 		B5F6A5FB1C5DA19900BA5D12 /* KKCoreDataHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKCoreDataHelper.h; sourceTree = "<group>"; };
 		B5F6A5FC1C5DA19900BA5D12 /* KKCoreDataHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKCoreDataHelper.m; sourceTree = "<group>"; };
 		B5F6A5FF1C5DA42100BA5D12 /* Game.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Game.xcdatamodel; sourceTree = "<group>"; };
-		B5F6A6021C5DA4BC00BA5D12 /* Player.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Player.xcdatamodel; sourceTree = "<group>"; };
-		B5F6A6051C5DA5AC00BA5D12 /* Word.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Word.xcdatamodel; sourceTree = "<group>"; };
-		B5F6A6081C5DA61D00BA5D12 /* Category.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Category.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -264,6 +260,7 @@
 		B5B69DBA1C55DF34006B5A29 /* pictures */ = {
 			isa = PBXGroup;
 			children = (
+				B5DA0EE01C63A10E000343A5 /* snimka.png */,
 				B5B69DBB1C55DFCF006B5A29 /* all_score_with_score.png */,
 				B5B69DBC1C55DFCF006B5A29 /* animal_category.png */,
 				B5B69DBD1C55DFCF006B5A29 /* backgroundoobject.png */,
@@ -320,9 +317,6 @@
 				B5F6A5FB1C5DA19900BA5D12 /* KKCoreDataHelper.h */,
 				B5F6A5FC1C5DA19900BA5D12 /* KKCoreDataHelper.m */,
 				B5F6A5FE1C5DA42000BA5D12 /* Game.xcdatamodeld */,
-				B5F6A6011C5DA4BC00BA5D12 /* Player.xcdatamodeld */,
-				B5F6A6041C5DA5AC00BA5D12 /* Word.xcdatamodeld */,
-				B5F6A6071C5DA61D00BA5D12 /* Category.xcdatamodeld */,
 			);
 			name = DbHelper;
 			sourceTree = "<group>";
@@ -442,6 +436,7 @@
 				B5B69DD81C55DFD0006B5A29 /* blankbackground.png in Resources */,
 				B5B69DDE1C55DFD0006B5A29 /* food_category.png in Resources */,
 				B52DBEF41C5D6F000053AE23 /* letitbegin.mp3 in Resources */,
+				B5DA0EE11C63A10E000343A5 /* snimka.png in Resources */,
 				B5F6A5F71C5D892C00BA5D12 /* KKCategoryTableViewCell.xib in Resources */,
 				B5B69DE31C55DFD0006B5A29 /* music_category.png in Resources */,
 				B5B69D951C55DD49006B5A29 /* LaunchScreen.storyboard in Resources */,
@@ -486,17 +481,14 @@
 			files = (
 				B569BD761C5ACC02002B13C0 /* StartNewGameViewController.m in Sources */,
 				B5B69D8D1C55DD49006B5A29 /* ViewController.m in Sources */,
-				B5F6A6031C5DA4BC00BA5D12 /* Player.xcdatamodeld in Sources */,
 				B5F6A5F61C5D892C00BA5D12 /* KKCategoryTableViewCell.m in Sources */,
 				B52DBEF21C5D23880053AE23 /* RankingController.m in Sources */,
 				B569BD7F1C5ADC3E002B13C0 /* GameViewController.m in Sources */,
 				B5611B131C6030FE00B14D51 /* CameraaViewController.m in Sources */,
-				B5F6A6061C5DA5AC00BA5D12 /* Word.xcdatamodeld in Sources */,
 				B5DB4D001C5B8CE2000D4EEB /* LocalData.m in Sources */,
 				B5F6A5FD1C5DA19900BA5D12 /* KKCoreDataHelper.m in Sources */,
 				B5B69D8A1C55DD48006B5A29 /* AppDelegate.m in Sources */,
 				B569BD791C5ACC37002B13C0 /* CategoriesViewController.m in Sources */,
-				B5F6A6091C5DA61D00BA5D12 /* Category.xcdatamodeld in Sources */,
 				B5B69D871C55DD48006B5A29 /* main.m in Sources */,
 				B569BD7C1C5ACC74002B13C0 /* HistoryViewController.m in Sources */,
 				B5F6A6001C5DA42100BA5D12 /* Game.xcdatamodeld in Sources */,
@@ -754,36 +746,6 @@
 			);
 			currentVersion = B5F6A5FF1C5DA42100BA5D12 /* Game.xcdatamodel */;
 			path = Game.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-		B5F6A6011C5DA4BC00BA5D12 /* Player.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				B5F6A6021C5DA4BC00BA5D12 /* Player.xcdatamodel */,
-			);
-			currentVersion = B5F6A6021C5DA4BC00BA5D12 /* Player.xcdatamodel */;
-			path = Player.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-		B5F6A6041C5DA5AC00BA5D12 /* Word.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				B5F6A6051C5DA5AC00BA5D12 /* Word.xcdatamodel */,
-			);
-			currentVersion = B5F6A6051C5DA5AC00BA5D12 /* Word.xcdatamodel */;
-			path = Word.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-		B5F6A6071C5DA61D00BA5D12 /* Category.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				B5F6A6081C5DA61D00BA5D12 /* Category.xcdatamodel */,
-			);
-			currentVersion = B5F6A6081C5DA61D00BA5D12 /* Category.xcdatamodel */;
-			path = Category.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

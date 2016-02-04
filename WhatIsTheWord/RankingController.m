@@ -8,6 +8,7 @@
 
 #import "RankingController.h"
 #import "ViewController.h"
+#import "CameraaViewController.h"
 #import <AVFoundation/AVFoundation.h>
 
 @implementation RankingController 
@@ -42,10 +43,20 @@
 //    [super viewDidLoad];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (IBAction)takePhotoOnOtherPage:(id)sender {
+    
+    
+    //  CameraaViewControllerId
+    NSString *storyBoardId = @"cameraaViewControllerId";
+    
+    CameraaViewController *cameraVC =
+    [self.storyboard instantiateViewControllerWithIdentifier:storyBoardId];
+    cameraVC.players = self.players;
+    cameraVC.scores = self.scores;
+    [self.navigationController pushViewController:cameraVC  animated:YES];
 }
+
+
 - (IBAction)goToMainageFromRanking:(id)sender {
     
     NSString *storyBoardId = @"mainViewControllerId";
