@@ -27,7 +27,7 @@ NSString *playerNameTurn;
     [super viewDidLoad];
     
     UIGraphicsBeginImageContext(self.view.frame.size);
-    [[UIImage imageNamed:@"player_first_page.png"] drawInRect:self.view.bounds];
+    [[UIImage imageNamed:@"howtoplay.png"] drawInRect:self.view.bounds];
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     self.view.backgroundColor = [UIColor colorWithPatternImage:image];

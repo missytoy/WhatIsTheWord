@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="53t-ij-Lld">
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
@@ -20,7 +19,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Guees the" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="9" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1E5-om-qjO">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Guees the" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="9" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1E5-om-qjO">
                                 <rect key="frame" x="168" y="28" width="265" height="56"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="czj-ge-anT"/>
@@ -42,7 +41,7 @@
                                     </mask>
                                 </variation>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WORD" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T31-dg-eDd">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="WORD" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T31-dg-eDd">
                                 <rect key="frame" x="200" y="79" width="201" height="61"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="129" id="6kI-Lm-3cL"/>
@@ -64,7 +63,7 @@
                                     </mask>
                                 </variation>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XPe-4X-MEm">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XPe-4X-MEm">
                                 <rect key="frame" x="150" y="179" width="301" height="110"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="110" id="Eot-nL-YQF">
@@ -89,7 +88,7 @@
                                     <segue destination="2Rm-QK-n4E" kind="show" id="Nc4-TH-opy"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FYB-YC-Btz">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FYB-YC-Btz">
                                 <rect key="frame" x="150" y="297" width="301" height="116"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="110" id="o8I-Cb-cw4">
@@ -744,6 +743,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GNP-KB-dg9">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" red="0.29411764705882354" green="0.082352941176470587" blue="0.29411764705882354" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hh1-9e-YPB">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <constraints>
@@ -767,14 +774,6 @@
                                     <action selector="goToMainageFromRanking:" destination="772-in-uCw" eventType="touchUpInside" id="bA6-fX-mUh"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GNP-KB-dg9">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <color key="textColor" red="0.29411764705882354" green="0.082352941176470587" blue="0.29411764705882354" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="20"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="03u-BF-mXN">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <constraints>
@@ -804,13 +803,15 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Hpx-BI-9AS" firstAttribute="top" secondItem="hh1-9e-YPB" secondAttribute="bottom" constant="39" id="HUx-S0-Fn7"/>
+                            <constraint firstItem="Hpx-BI-9AS" firstAttribute="top" secondItem="hh1-9e-YPB" secondAttribute="bottom" constant="39" id="HUx-S0-Fn7">
+                                <variation key="widthClass=compact" constant="31"/>
+                            </constraint>
                             <constraint firstItem="03u-BF-mXN" firstAttribute="top" secondItem="GNP-KB-dg9" secondAttribute="bottom" constant="26" id="TPf-0M-8DO">
-                                <variation key="widthClass=compact" constant="18"/>
+                                <variation key="widthClass=compact" constant="41"/>
                             </constraint>
                             <constraint firstAttribute="trailingMargin" secondItem="GNP-KB-dg9" secondAttribute="trailing" constant="70" id="bE6-uO-HW1"/>
                             <constraint firstItem="hh1-9e-YPB" firstAttribute="top" secondItem="03u-BF-mXN" secondAttribute="bottom" constant="8" symbolic="YES" id="dBg-QA-Sqx">
-                                <variation key="widthClass=compact" constant="16"/>
+                                <variation key="widthClass=compact" constant="1"/>
                             </constraint>
                             <constraint firstItem="hh1-9e-YPB" firstAttribute="leading" secondItem="03u-BF-mXN" secondAttribute="leading" id="eMq-XQ-SZ7">
                                 <variation key="widthClass=compact" constant="0.0"/>
@@ -821,43 +822,43 @@
                                 <variation key="widthClass=compact" constant="0.0"/>
                             </constraint>
                             <constraint firstItem="03u-BF-mXN" firstAttribute="leading" secondItem="QsW-xI-qwB" secondAttribute="leadingMargin" constant="11" id="z9z-mq-j55">
-                                <variation key="widthClass=compact" constant="27"/>
+                                <variation key="widthClass=compact" constant="83"/>
                             </constraint>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="hh1-9e-YPB"/>
                                 <exclude reference="GNP-KB-dg9"/>
+                                <exclude reference="hh1-9e-YPB"/>
                                 <exclude reference="03u-BF-mXN"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="bE6-uO-HW1"/>
-                                <exclude reference="k90-dr-Ega"/>
-                                <exclude reference="txH-NV-tMS"/>
+                                <exclude reference="HUx-S0-Fn7"/>
                                 <exclude reference="TPf-0M-8DO"/>
                                 <exclude reference="z9z-mq-j55"/>
                                 <exclude reference="dBg-QA-Sqx"/>
                                 <exclude reference="eMq-XQ-SZ7"/>
                                 <exclude reference="xx1-Ss-Bl4"/>
-                                <exclude reference="HUx-S0-Fn7"/>
+                                <exclude reference="bE6-uO-HW1"/>
+                                <exclude reference="k90-dr-Ega"/>
+                                <exclude reference="txH-NV-tMS"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
-                                <include reference="hh1-9e-YPB"/>
                                 <include reference="GNP-KB-dg9"/>
+                                <include reference="hh1-9e-YPB"/>
                                 <include reference="03u-BF-mXN"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="bE6-uO-HW1"/>
-                                <include reference="k90-dr-Ega"/>
-                                <include reference="txH-NV-tMS"/>
+                                <include reference="HUx-S0-Fn7"/>
                                 <include reference="TPf-0M-8DO"/>
                                 <include reference="z9z-mq-j55"/>
                                 <include reference="dBg-QA-Sqx"/>
                                 <include reference="eMq-XQ-SZ7"/>
                                 <include reference="xx1-Ss-Bl4"/>
-                                <include reference="HUx-S0-Fn7"/>
+                                <include reference="bE6-uO-HW1"/>
+                                <include reference="k90-dr-Ega"/>
+                                <include reference="txH-NV-tMS"/>
                             </mask>
                         </variation>
                     </view>
@@ -1004,6 +1005,9 @@
                                 <exclude reference="69e-ty-8wS"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="pXY-bi-brn"/>
+                                <exclude reference="gFQ-84-TSE"/>
+                                <exclude reference="t0O-aK-0C1"/>
                                 <exclude reference="0xf-32-q9g"/>
                                 <exclude reference="1Se-hG-c3C"/>
                                 <exclude reference="QTI-RP-3td"/>
@@ -1011,9 +1015,6 @@
                                 <exclude reference="TdJ-aY-YEf"/>
                                 <exclude reference="a9s-fd-mim"/>
                                 <exclude reference="onD-K4-6C1"/>
-                                <exclude reference="gFQ-84-TSE"/>
-                                <exclude reference="t0O-aK-0C1"/>
-                                <exclude reference="pXY-bi-brn"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -1023,6 +1024,9 @@
                                 <include reference="69e-ty-8wS"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="pXY-bi-brn"/>
+                                <include reference="gFQ-84-TSE"/>
+                                <include reference="t0O-aK-0C1"/>
                                 <include reference="0xf-32-q9g"/>
                                 <include reference="1Se-hG-c3C"/>
                                 <include reference="QTI-RP-3td"/>
@@ -1030,9 +1034,6 @@
                                 <include reference="TdJ-aY-YEf"/>
                                 <include reference="a9s-fd-mim"/>
                                 <include reference="onD-K4-6C1"/>
-                                <include reference="gFQ-84-TSE"/>
-                                <include reference="t0O-aK-0C1"/>
-                                <include reference="pXY-bi-brn"/>
                             </mask>
                         </variation>
                     </view>

@@ -27,7 +27,7 @@
     [super viewDidLoad];
      self.title = @"Ranking";
     UIGraphicsBeginImageContext(self.view.frame.size);
-    [[UIImage imageNamed:@"ranking.png"] drawInRect:self.view.bounds];
+    [[UIImage imageNamed:@"rankingg.png"] drawInRect:self.view.bounds];
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     self.view.backgroundColor = [UIColor colorWithPatternImage:image];

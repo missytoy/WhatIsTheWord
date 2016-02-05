@@ -55,6 +55,8 @@
 		B5DA0FA11C63D1E2000343A5 /* Game.m in Sources */ = {isa = PBXBuildFile; fileRef = B5DA0F991C63D1E2000343A5 /* Game.m */; };
 		B5DA0FA21C63D1E2000343A5 /* Word+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = B5DA0F9B1C63D1E2000343A5 /* Word+CoreDataProperties.m */; };
 		B5DA0FA31C63D1E2000343A5 /* Word.m in Sources */ = {isa = PBXBuildFile; fileRef = B5DA0F9D1C63D1E2000343A5 /* Word.m */; };
+		B5DA0FA61C6401C8000343A5 /* howtoplay.png in Resources */ = {isa = PBXBuildFile; fileRef = B5DA0FA41C6401C7000343A5 /* howtoplay.png */; };
+		B5DA0FA71C6401C8000343A5 /* rankingg.png in Resources */ = {isa = PBXBuildFile; fileRef = B5DA0FA51C6401C8000343A5 /* rankingg.png */; };
 		B5DB4D001C5B8CE2000D4EEB /* LocalData.m in Sources */ = {isa = PBXBuildFile; fileRef = B5DB4CFF1C5B8CE2000D4EEB /* LocalData.m */; };
 		B5DB4D031C5B8D61000D4EEB /* KKCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = B5DB4D021C5B8D61000D4EEB /* KKCategory.m */; };
 		B5F6A5F61C5D892C00BA5D12 /* KKCategoryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B5F6A5F41C5D892C00BA5D12 /* KKCategoryTableViewCell.m */; };
@@ -151,6 +153,8 @@
 		B5DA0F9B1C63D1E2000343A5 /* Word+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Word+CoreDataProperties.m"; sourceTree = "<group>"; };
 		B5DA0F9C1C63D1E2000343A5 /* Word.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Word.h; sourceTree = "<group>"; };
 		B5DA0F9D1C63D1E2000343A5 /* Word.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Word.m; sourceTree = "<group>"; };
+		B5DA0FA41C6401C7000343A5 /* howtoplay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = howtoplay.png; sourceTree = "<group>"; };
+		B5DA0FA51C6401C8000343A5 /* rankingg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rankingg.png; sourceTree = "<group>"; };
 		B5DB4CFE1C5B8CE2000D4EEB /* LocalData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalData.h; sourceTree = "<group>"; };
 		B5DB4CFF1C5B8CE2000D4EEB /* LocalData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalData.m; sourceTree = "<group>"; };
 		B5DB4D011C5B8D61000D4EEB /* KKCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKCategory.h; sourceTree = "<group>"; };
@@ -281,6 +285,8 @@
 		B5DA0EE61C63BAED000343A5 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				B5DA0FA41C6401C7000343A5 /* howtoplay.png */,
+				B5DA0FA51C6401C8000343A5 /* rankingg.png */,
 				B5DA0F171C63BD17000343A5 /* snimka.png */,
 				B5DA0EE91C63BC15000343A5 /* all_score_with_score.png */,
 				B5DA0EEA1C63BC15000343A5 /* animal_category.png */,
@@ -470,6 +476,7 @@
 				B5DA0F0C1C63BC15000343A5 /* ic_launcher.png in Resources */,
 				B5DA0F051C63BC15000343A5 /* cars_category.png in Resources */,
 				B5DA0F041C63BC15000343A5 /* blankbackground.png in Resources */,
+				B5DA0FA71C6401C8000343A5 /* rankingg.png in Resources */,
 				B5F6A5F71C5D892C00BA5D12 /* KKCategoryTableViewCell.xib in Resources */,
 				B5DA0F0D1C63BC15000343A5 /* last_games.png in Resources */,
 				B5DA0F0F1C63BC15000343A5 /* music_category.png in Resources */,
@@ -479,6 +486,7 @@
 				B5B69D951C55DD49006B5A29 /* LaunchScreen.storyboard in Resources */,
 				B5DA0F011C63BC15000343A5 /* animal_category.png in Resources */,
 				B5DA0F151C63BC15000343A5 /* ranking.png in Resources */,
+				B5DA0FA61C6401C8000343A5 /* howtoplay.png in Resources */,
 				B5DA0F141C63BC15000343A5 /* purplebtn.png in Resources */,
 				B5DA0F111C63BC15000343A5 /* new_background.jpg in Resources */,
 				B5DA0F091C63BC15000343A5 /* detailpagebacground.png in Resources */,
