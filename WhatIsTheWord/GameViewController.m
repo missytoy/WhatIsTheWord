@@ -69,21 +69,39 @@ NSString *playerNameTurn;
     NSInteger randomNumber = [self getRandomNumberBetween:0 to:countWords];
     self.randomWordLabel.text = dataObjects[randomNumber];
     
+    UISwipeGestureRecognizer *swipeLeftGestureRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipeLeft:)];
+    [swipeLeftGestureRecognizer setDirection:(UISwipeGestureRecognizerDirectionLeft)];
+    [self.view addGestureRecognizer:swipeLeftGestureRecognizer];
+    
+    
+        UISwipeGestureRecognizer *rightSwipeRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self
+                                                                                                   action:@selector(swipeRight:)];
+    
+        UISwipeGestureRecognizer *leftSwipeRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self
+                                                                                                  action:@selector(swipeLeft:)];
+        leftSwipeRecognizer.direction = UISwipeGestureRecognizerDirectionLeft;
+    
+        [self.view addGestureRecognizer:rightSwipeRecognizer];
+        [self.view addGestureRecognizer:leftSwipeRecognizer];}
+
+
+- (IBAction)swipeRight:(UISwipeGestureRecognizer *)sender {
+    [self nextWord];
+    
 }
 
+- (IBAction)swipeLeft:(UISwipeGestureRecognizer *)sender {
+    [self correctWord];
+}
 
 - (IBAction)correctOnClickBtn:(id)sender {
+    [self correctWord];
     
-    NSInteger randomNumber = [self getRandomNumberBetween:0 to:countWords];
-    self.randomWordLabel.text = dataObjects[randomNumber];
-    currentPlayerScore++;
-    //NSLog([NSString stringWithFormat:@"%d",score]);
 }
 - (IBAction)nextOnClickBtn:(id)sender {
-    
-    NSInteger randomNumber = [self getRandomNumberBetween:0 to:countWords];
-    self.randomWordLabel.text = dataObjects[randomNumber];
+    [self nextWord];
 }
+
 
 - (IBAction)onNextPlayerClick:(id)sender {
     
@@ -159,6 +177,20 @@ NSString *playerNameTurn;
         
     }
 }
+
+-(void)correctWord{
+    
+    NSInteger randomNumber = [self getRandomNumberBetween:0 to:countWords];
+    self.randomWordLabel.text = dataObjects[randomNumber];
+    currentPlayerScore++;
+}
+
+-(void)nextWord{
+    
+    NSInteger randomNumber = [self getRandomNumberBetween:0 to:countWords];
+    self.randomWordLabel.text = dataObjects[randomNumber];
+}
+
 
 -(int)getRandomNumberBetween:(int)from to:(int)to {
     

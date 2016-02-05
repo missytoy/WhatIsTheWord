@@ -529,12 +529,6 @@
                                     <action selector="nextOnClickBtn:" destination="7L0-T6-W8y" eventType="touchUpInside" id="SiS-yB-Jou"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Justin Timberlake - What goes around comes back around" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="15" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wzK-re-yBx">
-                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="38"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="60" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ApW-mk-fhI">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                 <constraints>
@@ -612,6 +606,17 @@
                                     <action selector="onNextPlayerClick:" destination="7L0-T6-W8y" eventType="touchUpInside" id="uDU-K8-sAo"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Justin Timberlake - What goes around comes back around" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="15" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wzK-re-yBx">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <gestureRecognizers/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="38"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="3PN-vt-d3g" appends="YES" id="fTj-R8-c4J"/>
+                                    <outletCollection property="gestureRecognizers" destination="u9i-Uy-Dcu" appends="YES" id="TfA-zw-HhX"/>
+                                </connections>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -653,12 +658,12 @@
                             <mask key="subviews">
                                 <exclude reference="E93-lg-g5s"/>
                                 <exclude reference="UqS-fo-IAc"/>
-                                <exclude reference="wzK-re-yBx"/>
                                 <exclude reference="ApW-mk-fhI"/>
                                 <exclude reference="Hul-Nr-BjH"/>
                                 <exclude reference="DC2-Oe-gMY"/>
                                 <exclude reference="6ab-7x-zy5"/>
                                 <exclude reference="xB4-kK-WEq"/>
+                                <exclude reference="wzK-re-yBx"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="6aW-aa-tEu"/>
@@ -686,12 +691,12 @@
                             <mask key="subviews">
                                 <include reference="E93-lg-g5s"/>
                                 <include reference="UqS-fo-IAc"/>
-                                <include reference="wzK-re-yBx"/>
                                 <include reference="ApW-mk-fhI"/>
                                 <include reference="Hul-Nr-BjH"/>
                                 <include reference="DC2-Oe-gMY"/>
                                 <include reference="6ab-7x-zy5"/>
                                 <include reference="xB4-kK-WEq"/>
+                                <include reference="wzK-re-yBx"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="6aW-aa-tEu"/>
@@ -728,6 +733,16 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oLs-DM-7MB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="left" id="3PN-vt-d3g">
+                    <connections>
+                        <action selector="swipeLeft:" destination="7L0-T6-W8y" id="mUp-OS-cJX"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="u9i-Uy-Dcu">
+                    <connections>
+                        <action selector="swipeRight:" destination="7L0-T6-W8y" id="gRs-cN-GUL"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2547" y="73"/>
         </scene>
