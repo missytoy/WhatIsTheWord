@@ -10,18 +10,13 @@
 
 @interface KKCategory : NSObject
 
-//@property (strong, nonatomic) NSString *categoryName;
-////@property (strong, nonatomic) NSString *imageStr;
-//
-//
-//-(instancetype)initWithCategoryName: (NSString*) categoryName;
-//
-//
-//+(KKCategory*) categoryWithName: (NSString*) categoryName;
+@property (strong, nonatomic) NSString *categoryName;
+@property (strong, nonatomic) NSString *imageStr;
+@property (strong, nonatomic) NSArray *words;
 
-//-(instancetype)initWithCategoryName: (NSString*) categoryName
-//                      imageCategory: (NSString*) imageStr;
-//
+-(instancetype)initWithCategoryName: (NSString*) categoryName
+                      imageCategory: (NSString*) imageStr;
+
 //
 //+(KKCategory*) categoryWithName: (NSString*) categoryName
 //                  imageCategory: (NSString*) imageStr;
