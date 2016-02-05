@@ -20,7 +20,10 @@
 @end
 
 
+bool firstTimeEntered = YES;
+
 @implementation RankingController 
+
 
 - (void)viewDidLoad {
     
@@ -32,9 +35,15 @@
     UIGraphicsEndImageContext();
     self.view.backgroundColor = [UIColor colorWithPatternImage:image];
 
-    [self saveResult];
+    if (firstTimeEntered) {
+        [self saveResult];
+       
+        //firstTimeEntered = NO;
+    }
+     [self fetchData];
+   
     [self displayResult];
-    [self fetchData];
+    
   
     
     
@@ -49,6 +58,8 @@
 
 -(void)fetchData{
 
+    self.dbHelper = [[KKCoreDataHelper alloc]init];
+    [self.dbHelper setupCoreData];
     //zagrubenqk grubeshtastnik
     NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Player" ];
     NSSortDescriptor *sortDesriptor = [NSSortDescriptor sortDescriptorWithKey:@"score" ascending:YES];
@@ -113,6 +124,8 @@
     [self.storyboard instantiateViewControllerWithIdentifier:storyBoardId];
     cameraVC.players = self.players;
     cameraVC.scores = self.scores;
+    firstTimeEntered = NO;
+
     [self.navigationController pushViewController:cameraVC  animated:YES];
 }
 
@@ -120,7 +133,7 @@
 - (IBAction)goToMainageFromRanking:(id)sender {
     
     NSString *storyBoardId = @"mainViewControllerId";
-    
+    firstTimeEntered =YES;
     ViewController *mainVC =
     [self.storyboard instantiateViewControllerWithIdentifier:storyBoardId];
     [self.navigationController pushViewController:mainVC  animated:YES];
