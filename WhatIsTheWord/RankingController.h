@@ -17,6 +17,8 @@
 //CORE
 @property NSMutableArray *players;
 @property NSData *imageForGame;
+@property  NSString* location;
+@property  NSString* categoryNameForGame;
 
 
 @end

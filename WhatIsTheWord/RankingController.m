@@ -104,7 +104,10 @@ bool firstTimeEntered = YES;
         
         [game addPlayersObject:player];
     }
-    
+    [game setValue:self.location forKey:@"location"];
+    [game setValue:self.imageForGame forKey:@"image"];
+    [game setValue:[NSDate date] forKey:@"datePlayedOn"];
+    [game setValue:self.categoryNameForGame forKey:@"categoryName"];
     
     [self.dbHelper.context insertObject:game];
     [self.dbHelper saveContext];
@@ -137,6 +140,7 @@ bool firstTimeEntered = YES;
     CameraaViewController *cameraVC =
     [self.storyboard instantiateViewControllerWithIdentifier:storyBoardId];
     cameraVC.players = self.players;
+    cameraVC.location = self.location;
     firstTimeEntered = NO;
 
     [self.navigationController pushViewController:cameraVC  animated:YES];

@@ -44,7 +44,6 @@ NSMutableArray *arrayForRandomWord;
     self.currentPlayerInfoTextView.text = [NSString stringWithFormat:@"-If someone guesses your word click on correct button. \n\n-If you can't explain the word click next word button. "];
     self.currentPlayerInfoTextView.textColor = [UIColor purpleColor];
     self.currentPlayerInfoTextView.font = [UIFont fontWithName:@"Papyrus" size:20];
-   // self.scores = [[NSMutableArray alloc]init];
     indexOfPlayer = 0;
     timerCount = 5;
     currentPlayerScore = 0;
@@ -135,6 +134,8 @@ NSMutableArray *arrayForRandomWord;
             RankingController *rankingVC =
             [self.storyboard instantiateViewControllerWithIdentifier:storyBoardId];
             rankingVC.players = self.players;
+            rankingVC.location = self.location;
+            rankingVC.categoryNameForGame = self.categoryForWords.categoryName;
             
             NSLog(@"%@",[self.players[0] playerName]);
             NSLog(@"%ld",(long)[self.players[0] scorePlayer]);
@@ -198,10 +199,5 @@ NSMutableArray *arrayForRandomWord;
 -(int)getRandomNumberBetween:(int)from to:(int)to {
     
     return (int)from + arc4random() % (to-from+1);
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 @end

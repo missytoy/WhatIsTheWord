@@ -118,6 +118,7 @@ NSArray * data;
     [self.storyboard instantiateViewControllerWithIdentifier:storyBoardId];
     gameVC.categoryForWords = data[indexPath.row];
     gameVC.players = self.players;
+    gameVC.location = self.location;
     [self.navigationController pushViewController:gameVC animated:YES];
     
 }

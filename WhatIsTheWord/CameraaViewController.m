@@ -69,6 +69,7 @@ NSData *imageForRanking;
     [self.storyboard instantiateViewControllerWithIdentifier:storyBoardId];
     rankingVC.players = self.players;
     rankingVC.imageForGame = imageForRanking;
+    rankingVC.location = self.location;
     [self.navigationController pushViewController:rankingVC  animated:YES];
     
 }

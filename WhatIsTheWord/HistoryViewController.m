@@ -30,6 +30,8 @@
     
 }
 
+
+
 - (IBAction)goToMainPageClicked:(id)sender {
     
     NSString *storyBoardId = @"mainViewControllerId";
@@ -45,10 +47,23 @@
     self.backToHistoryButton.hidden = YES;
     self.goToMainPageFromHistory.hidden = NO;    
 }
+//
+//-(void)fetchData{
+//    
+//    self.dbHelper = [[KKCoreDataHelper alloc]init];
+//    [self.dbHelper setupCoreData];
+//    //zagrubenqk grubeshtastnik
+//    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Player" ];
+//    NSSortDescriptor *sortDesriptor = [NSSortDescriptor sortDescriptorWithKey:@"score" ascending:YES];
+//    
+//    [request setSortDescriptors:[NSArray arrayWithObject:sortDesriptor] ];
+//    
+//    NSArray* seeme = [self.dbHelper.context executeFetchRequest:request error:nil];
+//    
+//    for (Player *player in seeme) {
+//        NSLog(@"%@ %@",player.playerName,player.score);
+//    }
+//    
+//}
 
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 @end
