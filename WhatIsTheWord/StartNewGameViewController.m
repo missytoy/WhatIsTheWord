@@ -9,6 +9,9 @@
 #import "StartNewGameViewController.h"
 #import "CategoriesViewController.h"
 #import <CoreLocation/CoreLocation.h>
+#import <SystemConfiguration/SystemConfiguration.h>
+#import "Reachability.h"
+
 
 CLLocationManager *locationManager;
 id location;
@@ -72,14 +75,30 @@ bool tookPlace;
     }else{
     
     if(switchIsOn){
-        locationManager = [[CLLocationManager alloc]init];
-        locationManager.desiredAccuracy = kCLLocationAccuracyBest;
-        locationManager.delegate = self;
-        locationManager.distanceFilter = kCLLocationAccuracyHundredMeters;
-        [locationManager requestAlwaysAuthorization];
-        [locationManager startUpdatingLocation];
         
-        
+        Reachability *networkReachability = [Reachability reachabilityForInternetConnection];
+        NetworkStatus networkStatus = [networkReachability currentReachabilityStatus];
+        if (networkStatus == NotReachable) {
+            NSString *storyBoardId = @"categoriesViewControllerId";
+            
+            CategoriesViewController *categoriesVC =
+            [self.storyboard instantiateViewControllerWithIdentifier:storyBoardId];
+            categoriesVC.players = self.players;
+            categoriesVC.location = nil;
+            [self.navigationController pushViewController:categoriesVC animated:YES];
+            
+        } else {
+            NSLog(@"There IS internet connection");
+            
+            locationManager = [[CLLocationManager alloc]init];
+            locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+            locationManager.delegate = self;
+            locationManager.distanceFilter = kCLLocationAccuracyHundredMeters;
+            [locationManager requestAlwaysAuthorization];
+            [locationManager startUpdatingLocation];
+        }
+
+      
     }else{
         NSString *storyBoardId = @"categoriesViewControllerId";
         

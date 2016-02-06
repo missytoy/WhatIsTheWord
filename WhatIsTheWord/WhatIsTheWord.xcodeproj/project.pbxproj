@@ -54,6 +54,8 @@
 		B5DA0FAD1C64EFDD000343A5 /* KKWord.m in Sources */ = {isa = PBXBuildFile; fileRef = B5DA0FAC1C64EFDD000343A5 /* KKWord.m */; };
 		B5DA0FB01C64F17F000343A5 /* KKPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = B5DA0FAF1C64F17F000343A5 /* KKPlayer.m */; };
 		B5DA0FB21C65653D000343A5 /* pc.png in Resources */ = {isa = PBXBuildFile; fileRef = B5DA0FB11C65653C000343A5 /* pc.png */; };
+		B5DA0FB41C66021B000343A5 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5DA0FB31C66021A000343A5 /* SystemConfiguration.framework */; };
+		B5DA0FB81C6604F2000343A5 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = B5DA0FB71C6604F2000343A5 /* Reachability.m */; };
 		B5DB4D001C5B8CE2000D4EEB /* LocalData.m in Sources */ = {isa = PBXBuildFile; fileRef = B5DB4CFF1C5B8CE2000D4EEB /* LocalData.m */; };
 		B5DB4D031C5B8D61000D4EEB /* KKCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = B5DB4D021C5B8D61000D4EEB /* KKCategory.m */; };
 		B5F6A5F61C5D892C00BA5D12 /* KKCategoryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B5F6A5F41C5D892C00BA5D12 /* KKCategoryTableViewCell.m */; };
@@ -152,6 +154,9 @@
 		B5DA0FAE1C64F17F000343A5 /* KKPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKPlayer.h; sourceTree = "<group>"; };
 		B5DA0FAF1C64F17F000343A5 /* KKPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKPlayer.m; sourceTree = "<group>"; };
 		B5DA0FB11C65653C000343A5 /* pc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pc.png; sourceTree = "<group>"; };
+		B5DA0FB31C66021A000343A5 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		B5DA0FB61C6604F2000343A5 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		B5DA0FB71C6604F2000343A5 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		B5DB4CFE1C5B8CE2000D4EEB /* LocalData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalData.h; sourceTree = "<group>"; };
 		B5DB4CFF1C5B8CE2000D4EEB /* LocalData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalData.m; sourceTree = "<group>"; };
 		B5DB4D011C5B8D61000D4EEB /* KKCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKCategory.h; sourceTree = "<group>"; };
@@ -169,6 +174,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5DA0FB41C66021B000343A5 /* SystemConfiguration.framework in Frameworks */,
 				B5F6A5FA1C5DA16000BA5D12 /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -212,8 +218,9 @@
 		B5B69D791C55DD48006B5A29 = {
 			isa = PBXGroup;
 			children = (
+				B5DA0FB51C660482000343A5 /* Resourses */,
+				B5DA0FB31C66021A000343A5 /* SystemConfiguration.framework */,
 				B5DA0F191C63C0C7000343A5 /* CDModels */,
-				B5DA0EE61C63BAED000343A5 /* images */,
 				B5611B141C622DC900B14D51 /* Default-568h@2x.png */,
 				B5F6A5F91C5DA16000BA5D12 /* CoreData.framework */,
 				B5F6A5F81C5DA0CA00BA5D12 /* DbHelper */,
@@ -327,6 +334,16 @@
 				B5DA0F9D1C63D1E2000343A5 /* Word.m */,
 			);
 			name = CDModels;
+			sourceTree = "<group>";
+		};
+		B5DA0FB51C660482000343A5 /* Resourses */ = {
+			isa = PBXGroup;
+			children = (
+				B5DA0EE61C63BAED000343A5 /* images */,
+				B5DA0FB61C6604F2000343A5 /* Reachability.h */,
+				B5DA0FB71C6604F2000343A5 /* Reachability.m */,
+			);
+			name = Resourses;
 			sourceTree = "<group>";
 		};
 		B5DB4CFD1C5B8C7A000D4EEB /* Models */ = {
@@ -518,6 +535,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5DA0FB81C6604F2000343A5 /* Reachability.m in Sources */,
 				B5DA0FAA1C64ED95000343A5 /* KKGame.m in Sources */,
 				B569BD761C5ACC02002B13C0 /* StartNewGameViewController.m in Sources */,
 				B5B69D8D1C55DD49006B5A29 /* ViewController.m in Sources */,
