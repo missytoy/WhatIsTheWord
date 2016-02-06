@@ -32,7 +32,21 @@ NSArray * data;
     self.view.backgroundColor = [UIColor colorWithPatternImage:imagee];
     
     //using data(array from localdata)
-//LocalData * localdata = [[LocalData alloc]init];
+
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSString* key = @"seeded";
+    
+    if ([defaults objectForKey:key]) {
+        const BOOL didSeededCategory = [defaults boolForKey:key];
+        if (didSeededCategory == YES) {
+            //
+        }
+    }else{
+        LocalData * localdata = [[LocalData alloc]init];
+        [localdata seedData];
+        [defaults setBool:YES forKey:key];
+        [defaults synchronize];
+    }
     //data=localdata.categories;
     
     self.categoriesTableView.dataSource = self;    

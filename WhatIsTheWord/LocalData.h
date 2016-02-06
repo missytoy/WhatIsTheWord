@@ -18,5 +18,5 @@
 @property NSArray *wordsIt;//CoreData
 @property NSArray *wordsSongs;//CoreData
 
-
+-(void)seedData;
 @end
