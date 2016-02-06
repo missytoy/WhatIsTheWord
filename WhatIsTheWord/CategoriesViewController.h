@@ -14,6 +14,7 @@
 
 @property NSArray *categories;
 @property NSArray *players;
+ 
 
 @property (weak, nonatomic) IBOutlet UITableView *categoriesTableView;
 

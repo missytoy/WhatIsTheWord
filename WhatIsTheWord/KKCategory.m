@@ -12,13 +12,13 @@
 
 
 -(instancetype)initWithCategoryName: (NSString*) categoryName
-                      imageCategory: (NSString*) imageStr{
+                      image: (NSString*) imageStr{
     
     self = [super init];
     if (self) {
         
         self.categoryName = categoryName;
-        self.imageStr = imageStr;
+        self.image= imageStr;
         self.words = [[NSMutableArray alloc]init];
     }
     

@@ -8,15 +8,15 @@
 
 #import <Foundation/Foundation.h>
 #import "KKCategory.h"
+#import "KKWord.h"
+#import "KKCoreDataHelper.h"
 
 @interface LocalData : NSObject
 
 
-@property NSArray *categories;
 @property NSArray *wordsObjects;//CoreData
 @property NSArray *wordsIt;//CoreData
 @property NSArray *wordsSongs;//CoreData
-//@property NSMutableArray *players;//CoreData Players
 
 
 @end

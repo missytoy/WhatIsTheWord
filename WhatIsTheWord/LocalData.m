@@ -7,23 +7,35 @@
 //
 
 #import "LocalData.h"
+#import "Word.h"
+#import "WordCategory.h"
+
+@interface LocalData()
+@property (strong,nonatomic) KKCoreDataHelper* dbHelper;
+
+@end
 
 @implementation LocalData
+
 
 -(instancetype) init{
     
     self = [super init];
     if (self) {
-        self.categories = @[@"Object",@"Songs",@"Animals",@"IT"];
-        self.wordsObjects =  @[  @"Microphone", @"Piano", @"Umbrella", @"Neck", @"Pillow", @"Saxophone",
-        @"Table", @"Chair", @"Glass", @"Straw", @"Wood", @"Water", @"Gas", @"Fork", @"Spoon", @"Plate", @"Stairs", @"Phone", @"Word", @"Game", @"Eye", @"Nose",        @"Glasses", @"Nail", @"Liver", @"Forum", @"Mummy", @"Window", @"Ninja", @"T-shirt", @"Skirt", @"Dress", @"Jeans",@"Lamp", @"Bulb", @"Button",
-        @"Curtain", @"Carpet", @"Snow", @"Rain", @"Car", @"Bus", @"Elevator", @"Gloves", @"Scarf", @"Computer", @"Laptop", @"Roof", @"Sofa", @"Coffee",
-        @"Traffic light", @"Abs", @"Boy", @"Girl", @"Escalator", @"Brick", @"Fire", @"Flag", @"Bottle", @"Food", @"Door",
-        @"Price", @"Drink", @"Song", @"Scene", @"Theatre", @"Cinema", @"Movie", @"Actor", @"Script", @"Projector", @"Bed", @"TV", @"Clothes", @"Drawer", @"Wardrobe",
-        @"Washing machine", @"Stove", @"Heater", @"Desk", @"Teddy bear", @"Clock", @"Cable", @"Mirror", @"Toilet", @"Hanger", @"Blackboard",
-        @"Pencil", @"Notebook", @"Ear", @"Rubber", @"Eraser", @"Family", @"Folio", @"Forehead", @"Makeup",
-        @"Tooth", @"Garden", @"Pool", @"Flower", @"Knife", @"Box", @"Bike", @"Bracelet", @"Ring", @"Necklace", @"Hat", @"Jacket", @"Shoe",
-        @"Number", @"Blanket", @"Perfume", @"Shampoo", @"Soap",@"Sink", @"Poster", @"Picture", @"Chat", @"Document", @"Flashlight", @"Money", @"Address", @"House", @"Key", @"Locker"];
+        
+        
+        self.dbHelper = [[KKCoreDataHelper alloc]init];
+        [self.dbHelper setupCoreData];
+        
+        self.wordsObjects =  @[@"Microphone", @"Piano", @"Umbrella", @"Neck", @"Pillow", @"Saxophone",
+                               @"Table", @"Chair", @"Glass", @"Straw", @"Wood", @"Water", @"Gas", @"Fork", @"Spoon", @"Plate", @"Stairs", @"Phone", @"Word", @"Game", @"Eye", @"Nose",        @"Glasses", @"Nail", @"Liver", @"Forum", @"Mummy", @"Window", @"Ninja", @"T-shirt", @"Skirt", @"Dress", @"Jeans",@"Lamp", @"Bulb", @"Button",
+                               @"Curtain", @"Carpet", @"Snow", @"Rain", @"Car", @"Bus", @"Elevator", @"Gloves", @"Scarf", @"Computer", @"Laptop", @"Roof", @"Sofa", @"Coffee",
+                               @"Traffic light", @"Abs", @"Boy", @"Girl", @"Escalator", @"Brick", @"Fire", @"Flag", @"Bottle", @"Food", @"Door",
+                               @"Price", @"Drink", @"Song", @"Scene", @"Theatre", @"Cinema", @"Movie", @"Actor", @"Script", @"Projector", @"Bed", @"TV", @"Clothes", @"Drawer", @"Wardrobe",
+                               @"Washing machine", @"Stove", @"Heater", @"Desk", @"Teddy bear", @"Clock", @"Cable", @"Mirror", @"Toilet", @"Hanger", @"Blackboard",
+                               @"Pencil", @"Notebook", @"Ear", @"Rubber", @"Eraser", @"Family", @"Folio", @"Forehead", @"Makeup",
+                               @"Tooth", @"Garden", @"Pool", @"Flower", @"Knife", @"Box", @"Bike", @"Bracelet", @"Ring", @"Necklace", @"Hat", @"Jacket", @"Shoe",
+                               @"Number", @"Blanket", @"Perfume", @"Shampoo", @"Soap",@"Sink", @"Poster", @"Picture", @"Chat", @"Document", @"Flashlight", @"Money", @"Address", @"House", @"Key", @"Locker"];
         
         self.wordsIt =  @[@"Java", @"Android",@"C#",@"Windows", @"Console", @"Web",@"HTML", @"CSS",
                           @"PHP", @"Python", @"Ruby", @"Bug", @"C++", @"Objective C", @"JavaScript", @"Program", @"StartUp", @"IOS", @"Linux",
@@ -31,7 +43,7 @@
                           @"Post", @"Get", @"Put", @"404", @"201", @"501", @"301", @"Install", @"Uninstall", @"CMD", @"Router", @"Firewall", @"Firefox", @"Edge",
                           @"Opera", @"Safari", @"Explorer", @"Chrome", @"Google", @"Video card", @"Ram", @"CPU", @"Motherboard", @"Keyboard", @"USB",
                           @"Touch pad", @"Monitor", @"ROM", @"HDD", @"SDD", @"LAN", @"WWW", @"HTTP", @"HTTPS", @"JSON", @"AJAX", @"Telerik", @"Apple", @"Microsoft", @"Steve Jobs",
-                         @"Bill Gates", @"Emulator", @"Virtual Machine", @"HP",@"Promise", @"Query", @"SELECT *", @"Async", @"Integer/int", @"String/string",@"Char/char",
+                          @"Bill Gates", @"Emulator", @"Virtual Machine", @"HP",@"Promise", @"Query", @"SELECT *", @"Async", @"Integer/int", @"String/string",@"Char/char",
                           @"Boolean/bool", @"Attribute", @"Method", @"Class", @"OOP", @"DSA", @"Function", @"JQuery", @"Angular",
                           @"Fragment", @"Intent", @"Handlebars", @"Server", @"Ping",@"Password", @"Tag", @"Github", @"Hash", @"Queue",
                           @"BigInteger", @"List", @"Stack", @"Exception", @"Debug", @"Build", @"Design Patterns", @"SOLID", @"KISS",@"YAGNI",
@@ -40,8 +52,9 @@
                           @"Code", @"Validation", @"UI", @"Data binding", @"Web site", @"TCP", @"IP", @"Wi-Fi",  @"Photoshop", @"Graphic Design",
                           @"Sublime text", @"Webstorm", @"Jetbrains", @"Visual Studio", @"Atom", @"Digital Signature" ,@"Bitcoin", @".cs",
                           @"CRUD", @".dll", @"Thread", @"goto"];
+        
         self.wordsSongs =  @[@"Eminem - My name is", @"Dr DRE - Still DRE",
-                            @"Rolling Stones - Satisfaction", @"Red Hot Chili Peppers - Californication",
+                             @"Rolling Stones - Satisfaction", @"Red Hot Chili Peppers - Californication",
                              @"2pac - California Love", @"Eminem - Lose yourself",
                              @"Eminem - Mockingbird", @"Rehanna -rehab", @"Jimi Hendrix - Voodoo child",
                              @"Miley - Can't stop", @"2pac - Changes", @"Justin Timberlake - What goes around comes back around",
@@ -50,12 +63,73 @@
                              @"Cassie - Me&u", @"Redman - put It Down", @"2pac - How do you want it",
                              @"Three days grace - Pain", @"Cher -Strong Enough",  @"The Weekend - Wicked games",
                              @"Michael Jackson - Billie Jean",@"Matt Pokora - Catch Me If You Can", @"The Doors - Riders of the storm",
-                            @"Justin T - My Love", @"Daniel Powter-Bad Day",
+                             @"Justin T - My Love", @"Daniel Powter-Bad Day",
                              @"Linkin Park - From the inside", @"Linkin Park - Numb", @"Robbie Williams - Feel",
                              @"Justin Timberlake - Cry Me A River",
                              @"The Pussycat Dolls - I Don't Need A Man", @"Robbie Williams - Something Stupid",
                              @"Robin Schulz - Waves", @"Rob Thomas - Lonely No More"];
     }
+    
+// add words for Objects category
+    
+    WordCategory* categoryObjects = [NSEntityDescription insertNewObjectForEntityForName:@"WordCategory" inManagedObjectContext:self.dbHelper.context];
+    
+    [categoryObjects setValue:@"Objects" forKey:@"categoryName"];
+    [categoryObjects setValue:@"object_category.png" forKey:@"image"];
+    
+    
+    for (NSInteger i = 0; i < self.wordsObjects.count; i++) {
+         Word* currentWord = [NSEntityDescription insertNewObjectForEntityForName:@"Word" inManagedObjectContext:self.dbHelper.context];
+        
+        [currentWord setValue:self.wordsObjects[i] forKey:@"content"];
+        [categoryObjects addWordsObject:currentWord];
+        
+    }
+    
+    
+    [self.dbHelper.context insertObject:categoryObjects];
+    
+ //IT
+            WordCategory* categoryIt = [NSEntityDescription insertNewObjectForEntityForName:@"WordCategory" inManagedObjectContext:self.dbHelper.context];
+    
+    
+    [categoryIt setValue:@"IT" forKey:@"categoryName"];
+    [categoryIt setValue:@"pc.png" forKey:@"image"];
+    
+    for (int i = 0; i < self.wordsIt.count; i++) {
+        Word* currentWord = [NSEntityDescription insertNewObjectForEntityForName:@"Word" inManagedObjectContext:self.dbHelper.context];
+        [currentWord setValue:self.wordsIt[i] forKey:@"content"];
+        
+        
+        [categoryIt addWordsObject:currentWord];
+    }
+    
+    [self.dbHelper.context insertObject:categoryIt];
+    [self.dbHelper saveContext];
+    
+// add words for Songs category
+
+        WordCategory* categorySongs = [NSEntityDescription insertNewObjectForEntityForName:@"WordCategory" inManagedObjectContext:self.dbHelper.context];
+    
+    
+    
+    [categorySongs setValue:@"Songs" forKey:@"categoryName"];
+    [categorySongs setValue:@"music_category.png" forKey:@"image"];
+    
+    for (int i = 0; i < self.wordsSongs.count; i++) {
+        Word* currentWord = [NSEntityDescription insertNewObjectForEntityForName:@"Word" inManagedObjectContext:self.dbHelper.context];
+        [currentWord setValue:self.wordsSongs[i] forKey:@"content"];
+        
+        
+        [categorySongs addWordsObject:currentWord];
+    }
+
+    
+
+    [self.dbHelper.context insertObject:categorySongs];
+    
+    [self.dbHelper saveContext];
+    
     
     return self;
 }

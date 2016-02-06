@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "WordCategory.h"
 
 @interface GameViewController : UIViewController
 
@@ -24,7 +25,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *toPlayLabel;
 
 //CORE
-@property NSString *categoryName;
+@property WordCategory* categoryForWords;
 @property NSArray *players;
 @property NSMutableArray *scores;
 

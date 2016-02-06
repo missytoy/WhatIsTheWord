@@ -15,6 +15,6 @@
 
 
 
--(instancetype) initWithName;
+-(instancetype) initWithName:(NSString*) name;
 
 @end

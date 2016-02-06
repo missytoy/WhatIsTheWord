@@ -13,6 +13,6 @@
 @property (strong,nonatomic) NSString* content;
 
 
--(instancetype) initWithContent;
+-(instancetype) initWithContent:(NSString*) content;
 
 @end

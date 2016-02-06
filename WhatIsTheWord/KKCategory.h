@@ -11,11 +11,11 @@
 @interface KKCategory : NSObject
 
 @property (strong, nonatomic) NSString *categoryName;
-@property (strong, nonatomic) NSString *imageStr;
-@property (strong, nonatomic) NSArray *words;
+@property (strong, nonatomic) NSString *image;
+@property (strong, nonatomic) NSMutableArray *words;
 
 -(instancetype)initWithCategoryName: (NSString*) categoryName
-                      imageCategory: (NSString*) imageStr;
+                      image: (NSString*) image;
 
 //
 //+(KKCategory*) categoryWithName: (NSString*) categoryName

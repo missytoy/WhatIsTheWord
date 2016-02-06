@@ -9,33 +9,61 @@
 #import "CategoriesViewController.h"
 #import "LocalData.h"
 #import "GameViewController.h"
+#import "KKCoreDataHelper.h"
+#import "WordCategory.h"
 #import "KKCategoryTableViewCell.h"
 
 NSArray * data;
 
+@interface CategoriesViewController()
+@property (strong,nonatomic) KKCoreDataHelper* dbHelper;
+
+@end
 
 @implementation CategoriesViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     UIGraphicsBeginImageContext(self.view.frame.size);
     [[UIImage imageNamed:@"blankbackground.png"] drawInRect:self.view.bounds];
-    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIImage *imagee = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
-    self.view.backgroundColor = [UIColor colorWithPatternImage:image];
+    self.view.backgroundColor = [UIColor colorWithPatternImage:imagee];
     
     //using data(array from localdata)
-    LocalData * localdata = [[LocalData alloc]init];
-    data=localdata.categories;
+//LocalData * localdata = [[LocalData alloc]init];
+    //data=localdata.categories;
     
     self.categoriesTableView.dataSource = self;    
     self.categoriesTableView.delegate=self;
   //  self.players = [[NSMutableArray alloc]init];
+    
+    
+    self.dbHelper = [[KKCoreDataHelper alloc]init];
+    [self.dbHelper setupCoreData];
+    
+    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"WordCategory" ];
+
+//    NSSortDescriptor *sortDesriptor = [NSSortDescriptor sortDescriptorWithKey:@"categoryName" ascending:YES];
+//    [request setSortDescriptors:[NSArray arrayWithObject:sortDesriptor] ];
+    
+   data = [self.dbHelper.context executeFetchRequest:request error:nil];
+ 
+    
+    for (WordCategory *category in data) {
+       NSLog(@"%@ ",category.categoryName);
+         NSLog(@"%@ ",category.image);
+      
+        
+    }
 }
 
 -(KKCategoryTableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath   {
     
-    static NSString *cellIdentifier = @"CategoryCellCustom";
+    NSLog(@"%@ ",data[indexPath.row] );
+                  
+                  static NSString *cellIdentifier = @"CategoryCellCustom";
     
     KKCategoryTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     if (cell ==nil) {
@@ -43,14 +71,14 @@ NSArray * data;
         NSArray *nibArray = [[NSBundle mainBundle] loadNibNamed:@"KKCategoryTableViewCell" owner:self options:nil];
         
         cell = [nibArray objectAtIndex:0];
-//        cell = [[KKCategoryTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
     
-    cell.nameCategory.text = [NSString stringWithFormat:@"%@",data[indexPath.row] ];
+    cell.nameCategory.text = [NSString stringWithFormat:@"%@",[data[indexPath.row] categoryName] ];
     
     
-    UIImage *image = [UIImage imageNamed: @"food_category.png"];
-    [cell.imageCategory setImage:image];
+    UIImage *imageForCategory = [UIImage imageNamed:[NSString stringWithFormat:@"%@",[data[indexPath.row] image] ]];
+    
+    [cell.imageCategory setImage:imageForCategory];
 
     
     cell.nameCategory.textAlignment = NSTextAlignmentCenter;
@@ -74,7 +102,7 @@ NSArray * data;
     
     GameViewController *gameVC =
     [self.storyboard instantiateViewControllerWithIdentifier:storyBoardId];
-    gameVC.categoryName = data[indexPath.row];
+    gameVC.categoryForWords = data[indexPath.row];
     gameVC.players = self.players;
     [self.navigationController pushViewController:gameVC animated:YES];
     

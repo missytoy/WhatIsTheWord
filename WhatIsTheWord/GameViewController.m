@@ -13,12 +13,12 @@
 
 
 int timerCount;
-NSArray *dataObjects;
+//NSArray *dataObjects;
 int currentPlayerScore ;
 int countWords;
 int indexOfPlayer;
 NSString *playerNameTurn;
-
+NSMutableArray *arrayForRandomWord;
 
 
 @implementation GameViewController
@@ -51,23 +51,11 @@ NSString *playerNameTurn;
     
     [self.nextPlayerButton setTitle:playerNameTurn forState:UIControlStateNormal];
     
-    LocalData * localdata = [[LocalData alloc]init];
-    
-    if([self.categoryName  isEqual: @"Songs"]){
-        
-        dataObjects=localdata.wordsSongs;
-        
-    }else if([self.categoryName  isEqual: @"Object"]){
-        
-        dataObjects=localdata.wordsObjects;
-        
-    }else{
-        dataObjects=localdata.wordsAnimals;
-    }
-    countWords = (int)dataObjects.count - 1;
+    countWords = (int)self.categoryForWords.words.count - 1;
     
     NSInteger randomNumber = [self getRandomNumberBetween:0 to:countWords];
-    self.randomWordLabel.text = dataObjects[randomNumber];
+    arrayForRandomWord = [NSMutableArray arrayWithArray:[self.categoryForWords.words allObjects]];
+    self.randomWordLabel.text = [arrayForRandomWord[randomNumber] content];
     
     UISwipeGestureRecognizer *swipeLeftGestureRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipeLeft:)];
     [swipeLeftGestureRecognizer setDirection:(UISwipeGestureRecognizerDirectionLeft)];
@@ -110,9 +98,6 @@ NSString *playerNameTurn;
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     self.view.backgroundColor = [UIColor colorWithPatternImage:image];
-    //    self.howLabel.hidden = YES;
-    //    self.toPlayLabel.hidden = YES;
-    
     self.nextWordButton.hidden = NO;
     self.correctWordButton.hidden = NO;
     self.randomWordLabel.hidden = NO;
@@ -181,14 +166,14 @@ NSString *playerNameTurn;
 -(void)correctWord{
     
     NSInteger randomNumber = [self getRandomNumberBetween:0 to:countWords];
-    self.randomWordLabel.text = dataObjects[randomNumber];
+    self.randomWordLabel.text = [arrayForRandomWord[randomNumber] content];
     currentPlayerScore++;
 }
 
 -(void)nextWord{
     
     NSInteger randomNumber = [self getRandomNumberBetween:0 to:countWords];
-    self.randomWordLabel.text = dataObjects[randomNumber];
+    self.randomWordLabel.text = [arrayForRandomWord[randomNumber] content];
 }
 
 
