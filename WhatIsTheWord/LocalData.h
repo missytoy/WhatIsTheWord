@@ -7,8 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "KKCategory.h"
-#import "KKWord.h"
 #import "KKCoreDataHelper.h"
 
 @interface LocalData : NSObject

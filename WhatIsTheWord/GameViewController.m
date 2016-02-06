@@ -10,6 +10,7 @@
 #import "RankingController.h"
 #import "CameraaViewController.h"
 #import "LocalData.h"
+#import "KKWord.h"
 
 
 int timerCount;

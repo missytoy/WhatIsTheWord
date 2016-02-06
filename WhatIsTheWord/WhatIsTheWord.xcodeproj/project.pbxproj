@@ -51,13 +51,13 @@
 		B5DA0FA61C6401C8000343A5 /* howtoplay.png in Resources */ = {isa = PBXBuildFile; fileRef = B5DA0FA41C6401C7000343A5 /* howtoplay.png */; };
 		B5DA0FA71C6401C8000343A5 /* rankingg.png in Resources */ = {isa = PBXBuildFile; fileRef = B5DA0FA51C6401C8000343A5 /* rankingg.png */; };
 		B5DA0FAA1C64ED95000343A5 /* KKGame.m in Sources */ = {isa = PBXBuildFile; fileRef = B5DA0FA91C64ED95000343A5 /* KKGame.m */; };
-		B5DA0FAD1C64EFDD000343A5 /* KKWord.m in Sources */ = {isa = PBXBuildFile; fileRef = B5DA0FAC1C64EFDD000343A5 /* KKWord.m */; };
 		B5DA0FB01C64F17F000343A5 /* KKPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = B5DA0FAF1C64F17F000343A5 /* KKPlayer.m */; };
 		B5DA0FB21C65653D000343A5 /* pc.png in Resources */ = {isa = PBXBuildFile; fileRef = B5DA0FB11C65653C000343A5 /* pc.png */; };
 		B5DA0FB41C66021B000343A5 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5DA0FB31C66021A000343A5 /* SystemConfiguration.framework */; };
 		B5DA0FB81C6604F2000343A5 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = B5DA0FB71C6604F2000343A5 /* Reachability.m */; };
+		B5DA0FBB1C660F52000343A5 /* KKWord.m in Sources */ = {isa = PBXBuildFile; fileRef = B5DA0FBA1C660F52000343A5 /* KKWord.m */; };
+		B5DA0FBE1C660FBD000343A5 /* KKCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = B5DA0FBD1C660FBD000343A5 /* KKCategory.m */; };
 		B5DB4D001C5B8CE2000D4EEB /* LocalData.m in Sources */ = {isa = PBXBuildFile; fileRef = B5DB4CFF1C5B8CE2000D4EEB /* LocalData.m */; };
-		B5DB4D031C5B8D61000D4EEB /* KKCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = B5DB4D021C5B8D61000D4EEB /* KKCategory.m */; };
 		B5F6A5F61C5D892C00BA5D12 /* KKCategoryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B5F6A5F41C5D892C00BA5D12 /* KKCategoryTableViewCell.m */; };
 		B5F6A5F71C5D892C00BA5D12 /* KKCategoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5F6A5F51C5D892C00BA5D12 /* KKCategoryTableViewCell.xib */; };
 		B5F6A5FA1C5DA16000BA5D12 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5F6A5F91C5DA16000BA5D12 /* CoreData.framework */; };
@@ -149,18 +149,18 @@
 		B5DA0FA51C6401C8000343A5 /* rankingg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rankingg.png; sourceTree = "<group>"; };
 		B5DA0FA81C64ED94000343A5 /* KKGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKGame.h; sourceTree = "<group>"; };
 		B5DA0FA91C64ED95000343A5 /* KKGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKGame.m; sourceTree = "<group>"; };
-		B5DA0FAB1C64EFDD000343A5 /* KKWord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKWord.h; sourceTree = "<group>"; };
-		B5DA0FAC1C64EFDD000343A5 /* KKWord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKWord.m; sourceTree = "<group>"; };
 		B5DA0FAE1C64F17F000343A5 /* KKPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKPlayer.h; sourceTree = "<group>"; };
 		B5DA0FAF1C64F17F000343A5 /* KKPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKPlayer.m; sourceTree = "<group>"; };
 		B5DA0FB11C65653C000343A5 /* pc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pc.png; sourceTree = "<group>"; };
 		B5DA0FB31C66021A000343A5 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		B5DA0FB61C6604F2000343A5 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		B5DA0FB71C6604F2000343A5 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		B5DA0FB91C660F52000343A5 /* KKWord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKWord.h; sourceTree = "<group>"; };
+		B5DA0FBA1C660F52000343A5 /* KKWord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKWord.m; sourceTree = "<group>"; };
+		B5DA0FBC1C660FBD000343A5 /* KKCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKCategory.h; sourceTree = "<group>"; };
+		B5DA0FBD1C660FBD000343A5 /* KKCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKCategory.m; sourceTree = "<group>"; };
 		B5DB4CFE1C5B8CE2000D4EEB /* LocalData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalData.h; sourceTree = "<group>"; };
 		B5DB4CFF1C5B8CE2000D4EEB /* LocalData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalData.m; sourceTree = "<group>"; };
-		B5DB4D011C5B8D61000D4EEB /* KKCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKCategory.h; sourceTree = "<group>"; };
-		B5DB4D021C5B8D61000D4EEB /* KKCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKCategory.m; sourceTree = "<group>"; };
 		B5F6A5F31C5D892C00BA5D12 /* KKCategoryTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKCategoryTableViewCell.h; sourceTree = "<group>"; };
 		B5F6A5F41C5D892C00BA5D12 /* KKCategoryTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKCategoryTableViewCell.m; sourceTree = "<group>"; };
 		B5F6A5F51C5D892C00BA5D12 /* KKCategoryTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KKCategoryTableViewCell.xib; sourceTree = "<group>"; };
@@ -351,12 +351,12 @@
 			children = (
 				B5DB4CFE1C5B8CE2000D4EEB /* LocalData.h */,
 				B5DB4CFF1C5B8CE2000D4EEB /* LocalData.m */,
-				B5DB4D011C5B8D61000D4EEB /* KKCategory.h */,
-				B5DB4D021C5B8D61000D4EEB /* KKCategory.m */,
+				B5DA0FBC1C660FBD000343A5 /* KKCategory.h */,
+				B5DA0FBD1C660FBD000343A5 /* KKCategory.m */,
+				B5DA0FB91C660F52000343A5 /* KKWord.h */,
+				B5DA0FBA1C660F52000343A5 /* KKWord.m */,
 				B5DA0FA81C64ED94000343A5 /* KKGame.h */,
 				B5DA0FA91C64ED95000343A5 /* KKGame.m */,
-				B5DA0FAB1C64EFDD000343A5 /* KKWord.h */,
-				B5DA0FAC1C64EFDD000343A5 /* KKWord.m */,
 				B5DA0FAE1C64F17F000343A5 /* KKPlayer.h */,
 				B5DA0FAF1C64F17F000343A5 /* KKPlayer.m */,
 			);
@@ -549,9 +549,10 @@
 				B5DA0F901C63D1BB000343A5 /* WordCategory+CoreDataProperties.m in Sources */,
 				B5611B131C6030FE00B14D51 /* CameraaViewController.m in Sources */,
 				B5DB4D001C5B8CE2000D4EEB /* LocalData.m in Sources */,
-				B5DA0FAD1C64EFDD000343A5 /* KKWord.m in Sources */,
 				B5F6A5FD1C5DA19900BA5D12 /* KKCoreDataHelper.m in Sources */,
+				B5DA0FBB1C660F52000343A5 /* KKWord.m in Sources */,
 				B5DA0FA31C63D1E2000343A5 /* Word.m in Sources */,
+				B5DA0FBE1C660FBD000343A5 /* KKCategory.m in Sources */,
 				B5DA0F9E1C63D1E2000343A5 /* Player+CoreDataProperties.m in Sources */,
 				B5B69D8A1C55DD48006B5A29 /* AppDelegate.m in Sources */,
 				B569BD791C5ACC37002B13C0 /* CategoriesViewController.m in Sources */,
@@ -560,7 +561,6 @@
 				B569BD7C1C5ACC74002B13C0 /* HistoryViewController.m in Sources */,
 				B5DA0FB01C64F17F000343A5 /* KKPlayer.m in Sources */,
 				B5DA0F9F1C63D1E2000343A5 /* Player.m in Sources */,
-				B5DB4D031C5B8D61000D4EEB /* KKCategory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
