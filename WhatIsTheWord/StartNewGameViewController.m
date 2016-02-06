@@ -12,6 +12,7 @@
 #import <SystemConfiguration/SystemConfiguration.h>
 #import "Reachability.h"
 
+#import "WhatIsTheWord-Swift.h"
 
 CLLocationManager *locationManager;
 id location;
@@ -41,6 +42,7 @@ bool tookPlace;
     self.allPlayersTextView.layer.cornerRadius = 10;
     self.allPlayersTextView.clipsToBounds = YES;
     self.players = [[NSMutableArray alloc]init];
+
     
     
 }
@@ -183,11 +185,16 @@ bool tookPlace;
         [self presentViewController:alert animated:YES completion:nil];
     }else{
         
+        
+        KKPlayerSwift *playerSwift = [[KKPlayerSwift alloc] init];
+        //[playerSwift setValue:@65 forKey:@"score"];
+        [playerSwift setValue:self.addPlayerNameField.text forKey:@"playerName"];
+        
         NSString *playerToAdd = [NSString stringWithFormat:@"%@ \n%@",
                                  self.allPlayersTextView.text,self.addPlayerNameField.text];
         self.allPlayersTextView.text =playerToAdd;
         
-        [self.players insertObject:self.addPlayerNameField.text atIndex:0 ];
+        [self.players insertObject:playerSwift atIndex:0 ];
              self.addPlayerNameField.text = @"";
         
     }

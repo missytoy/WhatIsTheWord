@@ -67,7 +67,7 @@ AVCaptureStillImageOutput *StillImageOutput;
     RankingController *rankingVC =
     [self.storyboard instantiateViewControllerWithIdentifier:storyBoardId];
     rankingVC.players = self.players;
-    rankingVC.scores = self.scores;
+    
     [self.navigationController pushViewController:rankingVC  animated:YES];
     
 }

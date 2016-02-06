@@ -16,8 +16,7 @@
 
 
 //CORE
-@property NSArray *players;
-@property NSArray *scores;
+@property NSMutableArray *players;
 @property NSData *image;
 
 

@@ -26,8 +26,8 @@
 
 //CORE
 @property WordCategory* categoryForWords;
-@property NSArray *players;
-@property NSMutableArray *scores;
+@property NSMutableArray *players;
+
 
 -(void) count;
 

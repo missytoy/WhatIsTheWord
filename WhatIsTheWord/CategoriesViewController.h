@@ -13,7 +13,7 @@
 @property  NSString* location;
 
 @property NSArray *categories;
-@property NSArray *players;
+@property NSMutableArray *players;
  
 
 @property (weak, nonatomic) IBOutlet UITableView *categoriesTableView;

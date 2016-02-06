@@ -13,6 +13,7 @@
 #import "KKCoreDataHelper.h"
 #import "Game.h"
 #import "Player.h"
+#import "WhatIsTheWord-Swift.h"
 
 @interface RankingController()
 @property (strong,nonatomic) KKCoreDataHelper* dbHelper;
@@ -34,17 +35,23 @@ bool firstTimeEntered = YES;
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     self.view.backgroundColor = [UIColor colorWithPatternImage:image];
-
+    
+//      NSLog(@"%@",[self.players[0] playerName]);
+//    
+//    NSInteger fd =(NSInteger) [self.players[0] scorePlayer];
+//    NSLog(@"%ld",fd);
+    
     if (firstTimeEntered) {
         [self saveResult];
        
         //firstTimeEntered = NO;
     }
-     [self fetchData];
+    
+    
+    [self fetchData];
    
     [self displayResult];
     
-  
     
     
 //    NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"letitbegin" ofType:@"mp3"]];
@@ -84,9 +91,17 @@ bool firstTimeEntered = YES;
     for (NSInteger i =0; i<self.players.count; i++) {
         Player* player= [NSEntityDescription insertNewObjectForEntityForName:@"Player" inManagedObjectContext:self.dbHelper.context];
         
-        [player setValue:self.players[i] forKey:@"playerName"];
-        [player setValue:self.scores[i] forKey:@"score"];
+        NSString *pName =[self.players[i] playerName];
+        NSNumber *pScore= [NSNumber numberWithInt:(int)[self.players[i] scorePlayer]];
+
+        
+        
+        [player setValue:pName forKey:@"playerName"];
+        [player setValue:pScore forKey:@"score"];
    
+        NSLog(@"%@ ",player.playerName);
+        NSLog(@"%@ ",player.score);
+        
         [game addPlayersObject:player];
     }
     
@@ -101,9 +116,8 @@ bool firstTimeEntered = YES;
     
     
     for (NSInteger i =0; i<self.players.count; i++) {
-        NSString *currentResult = [NSString stringWithFormat:@"%@ (%@ scores)", self.players[i],self.scores[i]];
-        
-        
+     NSString *currentResult = [NSString stringWithFormat:@"%@ (%ld scores)", [self.players[i] playerName],(long)[self.players[i] scorePlayer]];
+   
         rankingResult = [NSString stringWithFormat:@"%@ \n %ld. %@",rankingResult,(long)i +1 ,currentResult];
         
     }
@@ -123,7 +137,6 @@ bool firstTimeEntered = YES;
     CameraaViewController *cameraVC =
     [self.storyboard instantiateViewControllerWithIdentifier:storyBoardId];
     cameraVC.players = self.players;
-    cameraVC.scores = self.scores;
     firstTimeEntered = NO;
 
     [self.navigationController pushViewController:cameraVC  animated:YES];

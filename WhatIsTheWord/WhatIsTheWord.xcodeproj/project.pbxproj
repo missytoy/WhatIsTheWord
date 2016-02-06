@@ -57,6 +57,7 @@
 		B5DA0FB81C6604F2000343A5 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = B5DA0FB71C6604F2000343A5 /* Reachability.m */; };
 		B5DA0FBB1C660F52000343A5 /* KKWord.m in Sources */ = {isa = PBXBuildFile; fileRef = B5DA0FBA1C660F52000343A5 /* KKWord.m */; };
 		B5DA0FBE1C660FBD000343A5 /* KKCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = B5DA0FBD1C660FBD000343A5 /* KKCategory.m */; };
+		B5DA0FD51C6623C4000343A5 /* KKPlayerSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DA0FD41C6623C4000343A5 /* KKPlayerSwift.swift */; };
 		B5DB4D001C5B8CE2000D4EEB /* LocalData.m in Sources */ = {isa = PBXBuildFile; fileRef = B5DB4CFF1C5B8CE2000D4EEB /* LocalData.m */; };
 		B5F6A5F61C5D892C00BA5D12 /* KKCategoryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B5F6A5F41C5D892C00BA5D12 /* KKCategoryTableViewCell.m */; };
 		B5F6A5F71C5D892C00BA5D12 /* KKCategoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5F6A5F51C5D892C00BA5D12 /* KKCategoryTableViewCell.xib */; };
@@ -159,6 +160,8 @@
 		B5DA0FBA1C660F52000343A5 /* KKWord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKWord.m; sourceTree = "<group>"; };
 		B5DA0FBC1C660FBD000343A5 /* KKCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKCategory.h; sourceTree = "<group>"; };
 		B5DA0FBD1C660FBD000343A5 /* KKCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKCategory.m; sourceTree = "<group>"; };
+		B5DA0FD31C6623C2000343A5 /* WhatIsTheWord-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WhatIsTheWord-Bridging-Header.h"; sourceTree = "<group>"; };
+		B5DA0FD41C6623C4000343A5 /* KKPlayerSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KKPlayerSwift.swift; sourceTree = "<group>"; };
 		B5DB4CFE1C5B8CE2000D4EEB /* LocalData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalData.h; sourceTree = "<group>"; };
 		B5DB4CFF1C5B8CE2000D4EEB /* LocalData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalData.m; sourceTree = "<group>"; };
 		B5F6A5F31C5D892C00BA5D12 /* KKCategoryTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKCategoryTableViewCell.h; sourceTree = "<group>"; };
@@ -359,6 +362,8 @@
 				B5DA0FA91C64ED95000343A5 /* KKGame.m */,
 				B5DA0FAE1C64F17F000343A5 /* KKPlayer.h */,
 				B5DA0FAF1C64F17F000343A5 /* KKPlayer.m */,
+				B5DA0FD41C6623C4000343A5 /* KKPlayerSwift.swift */,
+				B5DA0FD31C6623C2000343A5 /* WhatIsTheWord-Bridging-Header.h */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -555,6 +560,7 @@
 				B5DA0FBE1C660FBD000343A5 /* KKCategory.m in Sources */,
 				B5DA0F9E1C63D1E2000343A5 /* Player+CoreDataProperties.m in Sources */,
 				B5B69D8A1C55DD48006B5A29 /* AppDelegate.m in Sources */,
+				B5DA0FD51C6623C4000343A5 /* KKPlayerSwift.swift in Sources */,
 				B569BD791C5ACC37002B13C0 /* CategoriesViewController.m in Sources */,
 				B5DA0FA11C63D1E2000343A5 /* Game.m in Sources */,
 				B5B69D871C55DD48006B5A29 /* main.m in Sources */,
@@ -635,6 +641,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -654,6 +661,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_MODULE_NAME = WhatIsTheWord;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -678,6 +686,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -690,6 +699,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_MODULE_NAME = WhatIsTheWord;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -699,10 +709,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = WhatIsTheWord/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = DM.WhatIsTheWord;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "WhatIsTheWord-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -710,10 +723,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = WhatIsTheWord/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = DM.WhatIsTheWord;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "WhatIsTheWord-Bridging-Header.h";
 			};
 			name = Release;
 		};

@@ -11,6 +11,7 @@
 #import "CameraaViewController.h"
 #import "LocalData.h"
 #import "KKWord.h"
+#import "WhatIsTheWord-Swift.h"
 
 
 int timerCount;
@@ -39,16 +40,17 @@ NSMutableArray *arrayForRandomWord;
     
     self.howLabel.hidden = YES;
     self.toPlayLabel.hidden = YES;
-    
+    NSLog(@"%@",[self.players[1] playerName]);
     self.currentPlayerInfoTextView.text = [NSString stringWithFormat:@"-If someone guesses your word click on correct button. \n\n-If you can't explain the word click next word button. "];
     self.currentPlayerInfoTextView.textColor = [UIColor purpleColor];
     self.currentPlayerInfoTextView.font = [UIFont fontWithName:@"Papyrus" size:20];
-    self.scores = [[NSMutableArray alloc]init];
+   // self.scores = [[NSMutableArray alloc]init];
     indexOfPlayer = 0;
     timerCount = 5;
     currentPlayerScore = 0;
     
-    playerNameTurn = [NSString stringWithFormat:@"%@'s turn",self.players[indexOfPlayer]];
+  
+    playerNameTurn = [NSString stringWithFormat:@"%@'s turn",[self.players[indexOfPlayer] playerName]];
     
     [self.nextPlayerButton setTitle:playerNameTurn forState:UIControlStateNormal];
     
@@ -124,11 +126,19 @@ NSMutableArray *arrayForRandomWord;
             
             NSString *storyBoardId = @"rankingControllerId";
             
-            self.scores[indexOfPlayer] =[NSNumber numberWithInt:currentPlayerScore];
+            NSNumber *currentScore = [NSNumber numberWithInt:currentPlayerScore];
+            
+            [self.players[indexOfPlayer] setValue:currentScore forKey:@"scorePlayer"];
+            
+            NSLog(@"%ld",(long)[self.players[indexOfPlayer] scorePlayer]);
+            
             RankingController *rankingVC =
             [self.storyboard instantiateViewControllerWithIdentifier:storyBoardId];
             rankingVC.players = self.players;
-            rankingVC.scores = self.scores;
+            
+            NSLog(@"%@",[self.players[0] playerName]);
+            NSLog(@"%ld",(long)[self.players[0] scorePlayer]);
+            
             [self.navigationController pushViewController:rankingVC  animated:YES];
             
         }else{
@@ -140,7 +150,9 @@ NSMutableArray *arrayForRandomWord;
             self.currentPlayerInfoTextView.hidden = NO;
             
             
-            self.scores[indexOfPlayer] =[NSNumber numberWithInt:currentPlayerScore];
+            NSNumber *currentScore = [NSNumber numberWithInt:currentPlayerScore];
+            
+            [self.players[indexOfPlayer] setValue:currentScore forKey:@"scorePlayer"];
             currentPlayerScore=0;
             
             UIGraphicsBeginImageContext(self.view.frame.size);
@@ -148,10 +160,15 @@ NSMutableArray *arrayForRandomWord;
             UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
             UIGraphicsEndImageContext();
             self.view.backgroundColor = [UIColor colorWithPatternImage:image];
-            self.currentPlayerInfoTextView.text =[NSString stringWithFormat:@"%@ has %@ scores",self.players[indexOfPlayer],self.scores[indexOfPlayer]];
+     
+            
+            NSString *plName =[self.players[indexOfPlayer] playerName];
+            NSInteger plScore =(NSInteger)[self.players[indexOfPlayer] scorePlayer];
+            
+            self.currentPlayerInfoTextView.text =[NSString stringWithFormat:@"%@ has %ld score",plName,plScore];
             
             indexOfPlayer++;
-            NSString *playerNameTurn = [NSString stringWithFormat:@"%@'s turn",self.players[indexOfPlayer]];
+            NSString *playerNameTurn = [NSString stringWithFormat:@"%@'s turn",[self.players[indexOfPlayer] playerName]];
             
             [self.nextPlayerButton setTitle:playerNameTurn forState:UIControlStateNormal];
             
