@@ -16,5 +16,7 @@
 
 //CORE
 @property NSMutableArray *players;
+@property NSData *imageForGame;
+
 
 @end

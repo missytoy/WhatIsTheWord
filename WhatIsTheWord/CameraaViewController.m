@@ -16,6 +16,7 @@
 
 AVCaptureSession *session;
 AVCaptureStillImageOutput *StillImageOutput;
+NSData *imageForRanking;
 
 @implementation CameraaViewController
 
@@ -67,7 +68,7 @@ AVCaptureStillImageOutput *StillImageOutput;
     RankingController *rankingVC =
     [self.storyboard instantiateViewControllerWithIdentifier:storyBoardId];
     rankingVC.players = self.players;
-    
+    rankingVC.imageForGame = imageForRanking;
     [self.navigationController pushViewController:rankingVC  animated:YES];
     
 }
@@ -91,12 +92,14 @@ AVCaptureStillImageOutput *StillImageOutput;
                 NSData *imageData = [AVCaptureStillImageOutput jpegStillImageNSDataRepresentation:imageDataSampleBuffer];
                 UIImage *image = [UIImage imageWithData:imageData];
                 imageView.image = image;
+                imageForRanking = UIImagePNGRepresentation(image);
             }
         }];
     }
     @catch (NSException *exception) {
         NSLog(@"On simulator can't take images");
         imageView.image = [UIImage imageNamed:@"snimka.png"];
+        imageForRanking = nil;
 
     }
 }
