@@ -8,11 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		B52DBEF21C5D23880053AE23 /* RankingController.m in Sources */ = {isa = PBXBuildFile; fileRef = B52DBEF11C5D23880053AE23 /* RankingController.m */; };
+		B54BAA5F1C67D16B00263331 /* btnSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B54BAA5E1C67D16A00263331 /* btnSound.mp3 */; };
 		B5611B131C6030FE00B14D51 /* CameraaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5611B121C6030FE00B14D51 /* CameraaViewController.m */; };
 		B5611B151C622DC900B14D51 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B5611B141C622DC900B14D51 /* Default-568h@2x.png */; };
 		B56355D41C6757B6007E1C3E /* letitbegin.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B56355D31C6757B6007E1C3E /* letitbegin.mp3 */; };
 		B56355DA1C6764B1007E1C3E /* KKMusicPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = B56355D91C6764B1007E1C3E /* KKMusicPlayer.m */; };
-		B56355E21C676F20007E1C3E /* btnSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B56355DB1C676F20007E1C3E /* btnSound.mp3 */; };
 		B56355E31C676F20007E1C3E /* btn.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B56355DC1C676F20007E1C3E /* btn.mp3 */; };
 		B56355E41C676F20007E1C3E /* claps.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B56355DD1C676F20007E1C3E /* claps.mp3 */; };
 		B56355E51C676F20007E1C3E /* correct.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B56355DE1C676F20007E1C3E /* correct.mp3 */; };
@@ -96,13 +96,13 @@
 /* Begin PBXFileReference section */
 		B52DBEF01C5D23870053AE23 /* RankingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RankingController.h; sourceTree = "<group>"; };
 		B52DBEF11C5D23880053AE23 /* RankingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RankingController.m; sourceTree = "<group>"; };
+		B54BAA5E1C67D16A00263331 /* btnSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = btnSound.mp3; sourceTree = "<group>"; };
 		B5611B111C6030FE00B14D51 /* CameraaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraaViewController.h; sourceTree = "<group>"; };
 		B5611B121C6030FE00B14D51 /* CameraaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraaViewController.m; sourceTree = "<group>"; };
 		B5611B141C622DC900B14D51 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		B56355D31C6757B6007E1C3E /* letitbegin.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = letitbegin.mp3; sourceTree = "<group>"; };
 		B56355D81C6764B1007E1C3E /* KKMusicPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKMusicPlayer.h; sourceTree = "<group>"; };
 		B56355D91C6764B1007E1C3E /* KKMusicPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKMusicPlayer.m; sourceTree = "<group>"; };
-		B56355DB1C676F20007E1C3E /* btnSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = btnSound.mp3; sourceTree = "<group>"; };
 		B56355DC1C676F20007E1C3E /* btn.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = btn.mp3; sourceTree = "<group>"; };
 		B56355DD1C676F20007E1C3E /* claps.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = claps.mp3; sourceTree = "<group>"; };
 		B56355DE1C676F20007E1C3E /* correct.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = correct.mp3; sourceTree = "<group>"; };
@@ -228,9 +228,9 @@
 				B56355EB1C67768F007E1C3E /* camera.mp3 */,
 				B56355EC1C67768F007E1C3E /* gun.mp3 */,
 				B56355E91C67704D007E1C3E /* flip.mp3 */,
-				B56355DB1C676F20007E1C3E /* btnSound.mp3 */,
 				B56355DC1C676F20007E1C3E /* btn.mp3 */,
 				B56355DD1C676F20007E1C3E /* claps.mp3 */,
+				B54BAA5E1C67D16A00263331 /* btnSound.mp3 */,
 				B56355DE1C676F20007E1C3E /* correct.mp3 */,
 				B56355DF1C676F20007E1C3E /* Flickingbook.mp3 */,
 				B56355E01C676F20007E1C3E /* hahasound.mp3 */,
@@ -539,10 +539,10 @@
 				B5DA0FA71C6401C8000343A5 /* rankingg.png in Resources */,
 				B5F6A5F71C5D892C00BA5D12 /* KKCategoryTableViewCell.xib in Resources */,
 				B5DA0F0D1C63BC15000343A5 /* last_games.png in Resources */,
-				B56355E21C676F20007E1C3E /* btnSound.mp3 in Resources */,
 				B5DA0F0F1C63BC15000343A5 /* music_category.png in Resources */,
 				B56355ED1C67768F007E1C3E /* camera.mp3 in Resources */,
 				B5DA0F0A1C63BC15000343A5 /* food_category.png in Resources */,
+				B54BAA5F1C67D16B00263331 /* btnSound.mp3 in Resources */,
 				B56355E61C676F20007E1C3E /* Flickingbook.mp3 in Resources */,
 				B5B69D951C55DD49006B5A29 /* LaunchScreen.storyboard in Resources */,
 				B5DA0FB21C65653D000343A5 /* pc.png in Resources */,

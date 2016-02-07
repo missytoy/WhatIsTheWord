@@ -20,37 +20,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Guees the" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="9" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1E5-om-qjO">
-                                <rect key="frame" x="168" y="28" width="265" height="56"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="56" id="czj-ge-anT"/>
-                                    <constraint firstAttribute="width" constant="265" id="jt9-UA-wYt"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="53"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="czj-ge-anT"/>
-                                        <exclude reference="jt9-UA-wYt"/>
-                                    </mask>
-                                </variation>
-                                <variation key="widthClass=compact">
-                                    <mask key="constraints">
-                                        <include reference="czj-ge-anT"/>
-                                        <include reference="jt9-UA-wYt"/>
-                                    </mask>
-                                </variation>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="WORD" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T31-dg-eDd">
                                 <rect key="frame" x="200" y="79" width="201" height="61"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="129" id="6kI-Lm-3cL"/>
-                                    <constraint firstAttribute="width" constant="251" id="uPN-lV-Z7p"/>
+                                    <constraint firstAttribute="height" constant="129" id="6kI-Lm-3cL">
+                                        <variation key="widthClass=compact" constant="106"/>
+                                    </constraint>
+                                    <constraint firstAttribute="width" constant="251" id="uPN-lV-Z7p">
+                                        <variation key="widthClass=compact" constant="300"/>
+                                    </constraint>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="61"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="74"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
+                                <size key="shadowOffset" width="6" height="7"/>
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="6kI-Lm-3cL"/>
@@ -116,29 +100,73 @@
                                     <segue destination="9fH-bD-4Ls" kind="show" id="zIA-cE-0tU"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Guees the" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="9" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1E5-om-qjO">
+                                <rect key="frame" x="168" y="28" width="265" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="czj-ge-anT">
+                                        <variation key="widthClass=compact" constant="79"/>
+                                    </constraint>
+                                    <constraint firstAttribute="width" constant="265" id="jt9-UA-wYt">
+                                        <variation key="widthClass=compact" constant="336"/>
+                                    </constraint>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="61"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
+                                <size key="shadowOffset" width="6" height="7"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="czj-ge-anT"/>
+                                        <exclude reference="jt9-UA-wYt"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="czj-ge-anT"/>
+                                        <include reference="jt9-UA-wYt"/>
+                                    </mask>
+                                </variation>
+                            </label>
                         </subviews>
                         <constraints>
                             <constraint firstItem="FYB-YC-Btz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EFr-pe-sRc"/>
-                            <constraint firstItem="T31-dg-eDd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="55" id="EnQ-yX-ylm"/>
-                            <constraint firstItem="XPe-4X-MEm" firstAttribute="top" secondItem="T31-dg-eDd" secondAttribute="bottom" constant="13" id="Hsi-ms-3n5"/>
+                            <constraint firstItem="T31-dg-eDd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="55" id="EnQ-yX-ylm">
+                                <variation key="widthClass=compact" constant="30"/>
+                            </constraint>
+                            <constraint firstItem="XPe-4X-MEm" firstAttribute="top" secondItem="T31-dg-eDd" secondAttribute="bottom" constant="13" id="Hsi-ms-3n5">
+                                <variation key="widthClass=compact" constant="-5"/>
+                            </constraint>
                             <constraint firstItem="1E5-om-qjO" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="28" id="JxV-xU-SYs"/>
                             <constraint firstItem="XPe-4X-MEm" firstAttribute="top" secondItem="T31-dg-eDd" secondAttribute="bottom" constant="39" id="NkP-yU-P2t"/>
                             <constraint firstItem="1E5-om-qjO" firstAttribute="centerX" secondItem="T31-dg-eDd" secondAttribute="centerX" id="P6Q-Gh-cib"/>
-                            <constraint firstItem="XPe-4X-MEm" firstAttribute="top" secondItem="1E5-om-qjO" secondAttribute="bottom" constant="101" id="Ste-uc-VnK"/>
+                            <constraint firstItem="XPe-4X-MEm" firstAttribute="top" secondItem="1E5-om-qjO" secondAttribute="bottom" constant="101" id="Ste-uc-VnK">
+                                <variation key="widthClass=compact" constant="84"/>
+                            </constraint>
                             <constraint firstItem="XPe-4X-MEm" firstAttribute="trailing" secondItem="FYB-YC-Btz" secondAttribute="trailing" id="Uer-zj-GAN"/>
                             <constraint firstItem="FYB-YC-Btz" firstAttribute="leading" secondItem="XPe-4X-MEm" secondAttribute="leading" id="dAN-DO-VMq"/>
-                            <constraint firstItem="1E5-om-qjO" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="45" id="dl0-vg-nmQ"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="1E5-om-qjO" secondAttribute="trailing" constant="47" id="eaV-Md-skp"/>
+                            <constraint firstItem="1E5-om-qjO" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="45" id="dl0-vg-nmQ">
+                                <variation key="widthClass=compact" constant="39"/>
+                            </constraint>
+                            <constraint firstAttribute="trailingMargin" secondItem="1E5-om-qjO" secondAttribute="trailing" constant="47" id="eaV-Md-skp">
+                                <variation key="widthClass=compact" constant="12"/>
+                            </constraint>
                             <constraint firstItem="FYB-YC-Btz" firstAttribute="top" secondItem="XPe-4X-MEm" secondAttribute="bottom" constant="8" symbolic="YES" id="fEk-KV-dHQ"/>
                             <constraint firstItem="T31-dg-eDd" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="15" id="iu2-mP-k6p"/>
                             <constraint firstItem="XPe-4X-MEm" firstAttribute="leading" secondItem="FYB-YC-Btz" secondAttribute="leading" id="mMs-eZ-1g7"/>
-                            <constraint firstItem="1E5-om-qjO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="48" id="mlH-Yt-uwh"/>
-                            <constraint firstItem="T31-dg-eDd" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="60" id="pW3-Dm-kzt"/>
+                            <constraint firstItem="1E5-om-qjO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="48" id="mlH-Yt-uwh">
+                                <variation key="widthClass=compact" constant="12"/>
+                            </constraint>
+                            <constraint firstItem="T31-dg-eDd" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="60" id="pW3-Dm-kzt">
+                                <variation key="widthClass=compact" constant="101"/>
+                            </constraint>
                             <constraint firstItem="XPe-4X-MEm" firstAttribute="centerX" secondItem="T31-dg-eDd" secondAttribute="centerX" id="puN-X8-jag"/>
                             <constraint firstItem="FYB-YC-Btz" firstAttribute="trailing" secondItem="XPe-4X-MEm" secondAttribute="trailing" id="sls-Tu-fLZ"/>
                             <constraint firstItem="XPe-4X-MEm" firstAttribute="top" secondItem="1E5-om-qjO" secondAttribute="bottom" constant="95" id="sxR-eT-Qao"/>
                             <constraint firstItem="T31-dg-eDd" firstAttribute="centerX" secondItem="XPe-4X-MEm" secondAttribute="centerX" id="ui0-1b-9lY"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="T31-dg-eDd" secondAttribute="trailing" constant="54" id="xLs-R6-SrB"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="T31-dg-eDd" secondAttribute="trailing" constant="54" id="xLs-R6-SrB">
+                                <variation key="widthClass=compact" constant="30"/>
+                            </constraint>
                             <constraint firstItem="XPe-4X-MEm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="30" id="xPW-2q-Flh"/>
                             <constraint firstItem="FYB-YC-Btz" firstAttribute="top" secondItem="XPe-4X-MEm" secondAttribute="bottom" constant="36" id="z3P-Eg-VO0">
                                 <variation key="widthClass=compact" constant="22"/>

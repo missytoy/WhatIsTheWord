@@ -96,10 +96,11 @@ bool firstTimeEntered = YES;
     
     NSString *rankingResult =@"";
     
+    
     for (NSInteger i =0; i<self.players.count; i++) {
         NSString *currentResult = [NSString stringWithFormat:@"%@ (%ld scores)", [self.players[i] playerName],(long)[self.players[i] scorePlayer]];
         
-        rankingResult = [NSString stringWithFormat:@"%@ \n %ld. %@",rankingResult,(long)i +1 ,currentResult];
+        rankingResult = [NSString stringWithFormat:@"%@ \n * %@",rankingResult,currentResult];
         
     }
     
