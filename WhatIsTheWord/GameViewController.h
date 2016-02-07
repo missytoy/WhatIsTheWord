@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "WordCategory.h"
+#import <AVFoundation/AVFoundation.h>
 
 @interface GameViewController : UIViewController
 
@@ -23,6 +24,9 @@
 @property (weak, nonatomic) IBOutlet UITextView *currentPlayerInfoTextView;
 @property (weak, nonatomic) IBOutlet UILabel *howLabel;
 @property (weak, nonatomic) IBOutlet UILabel *toPlayLabel;
+
+//music
+@property(strong,nonatomic) AVAudioPlayer* soundPlayer;
 
 //CORE
 @property WordCategory* categoryForWords;

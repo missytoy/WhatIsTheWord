@@ -10,6 +10,7 @@
 		B52DBEF21C5D23880053AE23 /* RankingController.m in Sources */ = {isa = PBXBuildFile; fileRef = B52DBEF11C5D23880053AE23 /* RankingController.m */; };
 		B5611B131C6030FE00B14D51 /* CameraaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5611B121C6030FE00B14D51 /* CameraaViewController.m */; };
 		B5611B151C622DC900B14D51 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B5611B141C622DC900B14D51 /* Default-568h@2x.png */; };
+		B56355D41C6757B6007E1C3E /* letitbegin.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B56355D31C6757B6007E1C3E /* letitbegin.mp3 */; };
 		B569BD761C5ACC02002B13C0 /* StartNewGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B569BD751C5ACC02002B13C0 /* StartNewGameViewController.m */; };
 		B569BD791C5ACC37002B13C0 /* CategoriesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B569BD781C5ACC37002B13C0 /* CategoriesViewController.m */; };
 		B569BD7C1C5ACC74002B13C0 /* HistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B569BD7B1C5ACC74002B13C0 /* HistoryViewController.m */; };
@@ -88,6 +89,7 @@
 		B5611B111C6030FE00B14D51 /* CameraaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraaViewController.h; sourceTree = "<group>"; };
 		B5611B121C6030FE00B14D51 /* CameraaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraaViewController.m; sourceTree = "<group>"; };
 		B5611B141C622DC900B14D51 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		B56355D31C6757B6007E1C3E /* letitbegin.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = letitbegin.mp3; sourceTree = "<group>"; };
 		B569BD741C5ACC02002B13C0 /* StartNewGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartNewGameViewController.h; sourceTree = "<group>"; };
 		B569BD751C5ACC02002B13C0 /* StartNewGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartNewGameViewController.m; sourceTree = "<group>"; };
 		B569BD771C5ACC37002B13C0 /* CategoriesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoriesViewController.h; sourceTree = "<group>"; };
@@ -199,6 +201,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B56355D21C67579F007E1C3E /* sounds */ = {
+			isa = PBXGroup;
+			children = (
+				B56355D31C6757B6007E1C3E /* letitbegin.mp3 */,
+			);
+			name = sounds;
+			sourceTree = "<group>";
+		};
 		B569BD731C5ACBC4002B13C0 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -342,6 +352,7 @@
 		B5DA0FB51C660482000343A5 /* Resourses */ = {
 			isa = PBXGroup;
 			children = (
+				B56355D21C67579F007E1C3E /* sounds */,
 				B5DA0EE61C63BAED000343A5 /* images */,
 				B5DA0FB61C6604F2000343A5 /* Reachability.h */,
 				B5DA0FB71C6604F2000343A5 /* Reachability.m */,
@@ -504,6 +515,7 @@
 				B5DA0FA61C6401C8000343A5 /* howtoplay.png in Resources */,
 				B5DA0F141C63BC15000343A5 /* purplebtn.png in Resources */,
 				B5DA0F111C63BC15000343A5 /* new_background.jpg in Resources */,
+				B56355D41C6757B6007E1C3E /* letitbegin.mp3 in Resources */,
 				B5DA0F091C63BC15000343A5 /* detailpagebacground.png in Resources */,
 				B5DA0F061C63BC15000343A5 /* computer.png in Resources */,
 				B5DA0F181C63BD17000343A5 /* snimka.png in Resources */,

@@ -22,11 +22,19 @@ int indexOfPlayer;
 NSString *playerNameTurn;
 NSMutableArray *arrayForRandomWord;
 
-
 @implementation GameViewController
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+//    NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"letitbegin" ofType:@"mp3"]];
+//    self.soundPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:nil];
+//
+//    [self.soundPlayer play];
+    
+
+    [self playSound:@"letitbegin"];
     
     UIGraphicsBeginImageContext(self.view.frame.size);
     [[UIImage imageNamed:@"howtoplay.png"] drawInRect:self.view.bounds];
@@ -72,7 +80,10 @@ NSMutableArray *arrayForRandomWord;
         leftSwipeRecognizer.direction = UISwipeGestureRecognizerDirectionLeft;
     
         [self.view addGestureRecognizer:rightSwipeRecognizer];
-        [self.view addGestureRecognizer:leftSwipeRecognizer];}
+        [self.view addGestureRecognizer:leftSwipeRecognizer];
+   
+
+}
 
 
 - (IBAction)swipeRight:(UISwipeGestureRecognizer *)sender {
@@ -176,6 +187,7 @@ NSMutableArray *arrayForRandomWord;
             self.currentPlayerInfoTextView.textColor = [UIColor purpleColor];
             self.currentPlayerInfoTextView.font = [UIFont fontWithName:@"Papyrus" size:25];
             
+           
             
         }
         
@@ -200,4 +212,19 @@ NSMutableArray *arrayForRandomWord;
     
     return (int)from + arc4random() % (to-from+1);
 }
+
+-(void)playSound:(NSString*) soundFileName{
+    
+    
+    
+//        NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"letitbegin" ofType:@"mp3"]];
+      NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:soundFileName ofType:@"mp3"]];
+        self.soundPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:nil];
+//        [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayback error:nil];
+//        [[AVAudioSession sharedInstance] setActive: YES error: nil];
+//        [[UIApplication sharedApplication] beginReceivingRemoteControlEvents];
+        [self.soundPlayer play];
+    
+}
+
 @end
