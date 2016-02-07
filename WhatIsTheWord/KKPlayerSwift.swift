@@ -19,5 +19,5 @@ class KKPlayerSwift: NSObject {
         self.playerName = "name"
         
     }
-        
+    
 }

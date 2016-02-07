@@ -58,15 +58,9 @@ bool firstTimeEntered = YES;
     [self.dbHelper setupCoreData];
     //zagrubenqk grubeshtastnik
     NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Player" ];
-    NSSortDescriptor *sortDesriptor = [NSSortDescriptor sortDescriptorWithKey:@"score" ascending:YES];
+    NSSortDescriptor *sortDesriptor = [NSSortDescriptor sortDescriptorWithKey:@"score" ascending:NO];
     
     [request setSortDescriptors:[NSArray arrayWithObject:sortDesriptor] ];
-    
-    //    NSArray* seeme = [self.dbHelper.context executeFetchRequest:request error:nil];
-    //
-    //    for (Player *player in seeme) {
-    //        NSLog(@"%@ %@",player.playerName,player.score);
-    //    }
 }
 
 -(void)saveResult{
@@ -116,8 +110,6 @@ bool firstTimeEntered = YES;
 
 - (IBAction)takePhotoOnOtherPage:(id)sender {
     
-    
-    //  CameraaViewControllerId
     [self.soundPlayer playSound:@"btnSound"];
     NSString *storyBoardId = @"cameraaViewControllerId";
     

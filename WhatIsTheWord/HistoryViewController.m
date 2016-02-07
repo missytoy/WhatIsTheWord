@@ -31,7 +31,7 @@ NSDateFormatter *formatter;
     
     self.title = @"History";
     [self fetchData];
-    // self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"blankbackground.png"]];
+    
     UIGraphicsBeginImageContext(self.view.frame.size);
     [[UIImage imageNamed:@"history.png"] drawInRect:self.view.bounds];
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
@@ -93,10 +93,25 @@ NSDateFormatter *formatter;
     
     NSString *playersString=@"";
     [self.soundPlayer playSound:@"Flickingbook"];
-    int counter= 1;
+   // int counter= 1;
     Game *selectedGame = (Game*)allGames[indexPath.row] ;
     
-    for (Player *player in [selectedGame players]) {
+    NSMutableArray* allPlayers = [[NSMutableArray alloc]init];
+    
+    for (Player* pl in [selectedGame players]) {
+  
+        [allPlayers addObject:pl];
+    }
+    
+    
+    NSSortDescriptor *sortDescriptor;
+    sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"score"
+                                                 ascending:NO];
+    NSArray *sortDescriptors = [NSArray arrayWithObject:sortDescriptor];
+    NSArray *sortedArray = [allPlayers sortedArrayUsingDescriptors:sortDescriptors];
+    
+    int counter = 1;
+    for (Player *player in sortedArray) {
         
         NSString* currentPlayerInfo = [NSString stringWithFormat:@"\n%d. %@ (%@ score)",counter++,player.playerName,player.score];
         
@@ -110,7 +125,7 @@ NSDateFormatter *formatter;
     NSString *dateTime = [formatter stringFromDate:date];
     
     self.detailInfoForSelectedGame.text=
-    [NSString stringWithFormat:@"   - Players:%@ \n   -  Category: %@\n   - Played on: %@\n   - Place: %@",
+    [NSString stringWithFormat:@"    - Players:%@ \n    -  Category: %@\n    - Played on: %@\n    - Place: %@",
      playersString,catName , dateTime ,currentlocation];
     if (img == nil) {
         self.imageGame.image = [UIImage imageNamed:@"snimka.png"];

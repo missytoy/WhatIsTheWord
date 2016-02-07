@@ -12,4 +12,8 @@
 
 // Insert code here to add functionality to your managed object subclass
 
+- (NSComparisonResult)compare:(Player *)otherObject {
+    return [self.score compare:otherObject.score];
+}
+
 @end
