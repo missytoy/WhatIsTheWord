@@ -28,6 +28,11 @@ bool tookPlace;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    
+    self.soundPlayer= [[KKMusicPlayer alloc]init];
+    [self.soundPlayer playSound:@"letitbegin"];
+    
      self.title = @"";
     tookPlace = NO;
     switchIsOn = YES;
@@ -59,6 +64,7 @@ bool tookPlace;
 
 - (IBAction)onChooseCategoryClick:(id)sender {
     
+        [self.soundPlayer playSound:@"btnSound"];
     if(self.players.count<2){
         UIAlertController * alert=   [UIAlertController                                  alertControllerWithTitle:@"At least two players"                                                                                                          message:@"You should have at least two players to play the game"                                                                                                   preferredStyle:UIAlertControllerStyleAlert];
         
@@ -147,6 +153,7 @@ bool tookPlace;
 
 - (IBAction)addPlayerButton:(id)sender {
     
+     [self.soundPlayer playSound:@"btnSound"];
     if(self.addPlayerNameField.text.length > 10 ){
         
         UIAlertController * alert=   [UIAlertController                                  alertControllerWithTitle:@"Name Error"                                                                                                          message:@"Player's name must be less than 11"                                                                                                   preferredStyle:UIAlertControllerStyleAlert];

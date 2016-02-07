@@ -23,6 +23,8 @@ NSData *imageForRanking;
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.soundPlayer= [[KKMusicPlayer alloc]init];
+    
     UIGraphicsBeginImageContext(self.view.frame.size);
     [[UIImage imageNamed:@"blankbackground.png"] drawInRect:self.view.bounds];
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
@@ -62,7 +64,7 @@ NSData *imageForRanking;
 }
 - (IBAction)backToRankingPageBtnClick:(id)sender {
     
-    
+    [self.soundPlayer playSound:@"btnSound"];
     NSString *storyBoardId = @"rankingControllerId";
     
     RankingController *rankingVC =
@@ -75,6 +77,12 @@ NSData *imageForRanking;
 }
 
 -(IBAction)takePhoto:(id)sender{
+    
+    NSArray* soundsForNextWord = @[@"camera",@"gun"];
+    int randNumForSound = [self getRandomNumberBetween:0 to:(int)soundsForNextWord.count-1];
+    
+    [self.soundPlayer playSound:soundsForNextWord[randNumForSound]];
+    
     AVCaptureConnection * videoConnection = nil;
     for(AVCaptureConnection *connection in StillImageOutput.connections ){
         for(AVCaptureInputPort * port in [connection inputPorts]){
@@ -103,6 +111,13 @@ NSData *imageForRanking;
         imageForRanking = nil;
 
     }
+}
+
+
+
+-(int)getRandomNumberBetween:(int)from to:(int)to {
+    
+    return (int)from + arc4random() % (to-from+1);
 }
 
 @end

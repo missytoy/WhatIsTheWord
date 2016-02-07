@@ -7,10 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "KKMusicPlayer.h"
 
 @interface ViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UIButton *startGameButton;
+
+@property(strong,nonatomic) KKMusicPlayer* soundPlayer;
 
 @end
 

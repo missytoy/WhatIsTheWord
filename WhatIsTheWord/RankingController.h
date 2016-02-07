@@ -8,11 +8,14 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import "KKMusicPlayer.h"
 
 @interface RankingController : UIViewController
 @property (weak, nonatomic) IBOutlet UITextView *resultTextView;
 @property (weak, nonatomic) IBOutlet UIButton *goToMainPageFromRankingButton;
 
+
+@property(strong,nonatomic) KKMusicPlayer* soundPlayer;
 
 //CORE
 @property NSMutableArray *players;

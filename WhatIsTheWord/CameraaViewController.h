@@ -8,12 +8,15 @@
 
 #import <UIKit/UIKit.h>
 #import <AVFoundation/AVFoundation.h>
+#import "KKMusicPlayer.h"
 
 @interface CameraaViewController : UIViewController{
     IBOutlet UIView *frameforcapture;
     IBOutlet UIImageView *imageView;
 }
 
+
+@property(strong,nonatomic) KKMusicPlayer* soundPlayer;
 
 //CORE
 @property NSMutableArray *players;

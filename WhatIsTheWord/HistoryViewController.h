@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "KKMusicPlayer.h"
 
 @interface HistoryViewController : UIViewController <UITableViewDataSource,UITableViewDelegate>
 
@@ -16,5 +17,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *backToHistoryButton;
 @property (weak, nonatomic) IBOutlet UITextView *detailInfoForSelectedGame;
 @property (weak, nonatomic) IBOutlet UIImageView *imageGame;
+
+@property(strong,nonatomic) KKMusicPlayer* soundPlayer;
 
 @end

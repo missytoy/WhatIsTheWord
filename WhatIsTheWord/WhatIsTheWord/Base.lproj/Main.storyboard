@@ -86,6 +86,7 @@
                                     </mask>
                                 </variation>
                                 <connections>
+                                    <action selector="startGameBtnOnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KbK-Gq-rc7"/>
                                     <segue destination="2Rm-QK-n4E" kind="show" id="Nc4-TH-opy"/>
                                 </connections>
                             </button>
@@ -111,6 +112,7 @@
                                     </mask>
                                 </variation>
                                 <connections>
+                                    <action selector="onHstoryBtnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="72y-oj-SXt"/>
                                     <segue destination="9fH-bD-4Ls" kind="show" id="zIA-cE-0tU"/>
                                 </connections>
                             </button>
@@ -1201,6 +1203,14 @@
                                 <exclude reference="pbd-oD-8qr"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="3Bn-wx-Whv"/>
+                                <exclude reference="oXP-No-9xm"/>
+                                <exclude reference="NfM-vz-RAC"/>
+                                <exclude reference="ZWf-Se-DFi"/>
+                                <exclude reference="u3a-7Z-ngX"/>
+                                <exclude reference="PF1-J6-81h"/>
+                                <exclude reference="omB-Xt-0bJ"/>
+                                <exclude reference="yVv-9a-oDp"/>
                                 <exclude reference="6MW-nr-vU9"/>
                                 <exclude reference="lvs-zD-XUN"/>
                                 <exclude reference="xim-QK-M5a"/>
@@ -1210,14 +1220,6 @@
                                 <exclude reference="GsI-ED-mO0"/>
                                 <exclude reference="hud-bM-vJd"/>
                                 <exclude reference="iqu-Dx-kRu"/>
-                                <exclude reference="NfM-vz-RAC"/>
-                                <exclude reference="ZWf-Se-DFi"/>
-                                <exclude reference="u3a-7Z-ngX"/>
-                                <exclude reference="PF1-J6-81h"/>
-                                <exclude reference="omB-Xt-0bJ"/>
-                                <exclude reference="yVv-9a-oDp"/>
-                                <exclude reference="3Bn-wx-Whv"/>
-                                <exclude reference="oXP-No-9xm"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -1229,6 +1231,14 @@
                                 <include reference="pbd-oD-8qr"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="3Bn-wx-Whv"/>
+                                <include reference="oXP-No-9xm"/>
+                                <include reference="NfM-vz-RAC"/>
+                                <include reference="ZWf-Se-DFi"/>
+                                <include reference="u3a-7Z-ngX"/>
+                                <include reference="PF1-J6-81h"/>
+                                <include reference="omB-Xt-0bJ"/>
+                                <include reference="yVv-9a-oDp"/>
                                 <include reference="6MW-nr-vU9"/>
                                 <include reference="lvs-zD-XUN"/>
                                 <include reference="xim-QK-M5a"/>
@@ -1238,14 +1248,6 @@
                                 <include reference="GsI-ED-mO0"/>
                                 <include reference="hud-bM-vJd"/>
                                 <include reference="iqu-Dx-kRu"/>
-                                <include reference="NfM-vz-RAC"/>
-                                <include reference="ZWf-Se-DFi"/>
-                                <include reference="u3a-7Z-ngX"/>
-                                <include reference="PF1-J6-81h"/>
-                                <include reference="omB-Xt-0bJ"/>
-                                <include reference="yVv-9a-oDp"/>
-                                <include reference="3Bn-wx-Whv"/>
-                                <include reference="oXP-No-9xm"/>
                             </mask>
                         </variation>
                     </view>

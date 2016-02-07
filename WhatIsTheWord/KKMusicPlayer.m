@@ -16,6 +16,8 @@
     self.soundPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:nil];
     [self.soundPlayer play];
     
+    NSLog(@" sound %@",soundFileName);
+    
 }
 
 @end

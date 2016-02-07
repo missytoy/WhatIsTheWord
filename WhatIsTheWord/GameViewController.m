@@ -14,8 +14,7 @@
 #import "WhatIsTheWord-Swift.h"
 
 
-int timerCount;
-//NSArray *dataObjects;
+int timerCount; 
 int currentPlayerScore ;
 int countWords;
 int indexOfPlayer;
@@ -30,7 +29,7 @@ NSMutableArray *arrayForRandomWord;
     [super viewDidLoad];
     
     self.soundPlayer= [[KKMusicPlayer alloc]init];
-    [self.soundPlayer playSound:@"letitbegin"];
+   
     
     UIGraphicsBeginImageContext(self.view.frame.size);
     [[UIImage imageNamed:@"howtoplay.png"] drawInRect:self.view.bounds];
@@ -102,6 +101,7 @@ NSMutableArray *arrayForRandomWord;
 
 - (IBAction)onNextPlayerClick:(id)sender {
     
+    [self.soundPlayer playSound:@"btnSound"];
     UIGraphicsBeginImageContext(self.view.frame.size);
     [[UIImage imageNamed:@"blankbackground.png"] drawInRect:self.view.bounds];
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
@@ -192,12 +192,20 @@ NSMutableArray *arrayForRandomWord;
 
 -(void)correctWord{
     
+    
+    [self.soundPlayer playSound:@"correct"];
+    
     NSInteger randomNumber = [self getRandomNumberBetween:0 to:countWords];
     self.randomWordLabel.text = [arrayForRandomWord[randomNumber] content];
     currentPlayerScore++;
 }
 
 -(void)nextWord{
+    
+    NSArray* soundsForNextWord = @[@"hahasound",@"flip"];
+    int randNumForSound = [self getRandomNumberBetween:0 to:(int)soundsForNextWord.count-1];
+    
+    [self.soundPlayer playSound:soundsForNextWord[randNumForSound]];
     
     NSInteger randomNumber = [self getRandomNumberBetween:0 to:countWords];
     self.randomWordLabel.text = [arrayForRandomWord[randomNumber] content];

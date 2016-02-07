@@ -26,6 +26,9 @@ NSDateFormatter *formatter;
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.soundPlayer= [[KKMusicPlayer alloc]init];
+    [self.soundPlayer playSound:@"Flickingbook"];
+    
     self.title = @"History";
     [self fetchData];
     // self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"blankbackground.png"]];
@@ -89,6 +92,7 @@ NSDateFormatter *formatter;
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *) indexPath {
     
     NSString *playersString=@"";
+    [self.soundPlayer playSound:@"Flickingbook"];
     int counter= 1;
     Game *selectedGame = (Game*)allGames[indexPath.row] ;
     
@@ -128,6 +132,7 @@ NSDateFormatter *formatter;
 
 - (IBAction)backButton:(id)sender {
     //[self performSelectorOnMainThread:@selector(showAndHide) withObject:nil waitUntilDone:NO];
+    [self.soundPlayer playSound:@"btnSound"];
     [self showAndHide];
 }
 
@@ -136,7 +141,7 @@ NSDateFormatter *formatter;
 - (IBAction)goToMainPageClicked:(id)sender {
     
     NSString *storyBoardId = @"mainViewControllerId";
-    
+    [self.soundPlayer playSound:@"btnSound"];
     ViewController *mainVC =
     [self.storyboard instantiateViewControllerWithIdentifier:storyBoardId];
     [self.navigationController pushViewController:mainVC  animated:YES];

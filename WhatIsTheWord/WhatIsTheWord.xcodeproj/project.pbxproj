@@ -12,6 +12,16 @@
 		B5611B151C622DC900B14D51 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B5611B141C622DC900B14D51 /* Default-568h@2x.png */; };
 		B56355D41C6757B6007E1C3E /* letitbegin.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B56355D31C6757B6007E1C3E /* letitbegin.mp3 */; };
 		B56355DA1C6764B1007E1C3E /* KKMusicPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = B56355D91C6764B1007E1C3E /* KKMusicPlayer.m */; };
+		B56355E21C676F20007E1C3E /* btnSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B56355DB1C676F20007E1C3E /* btnSound.mp3 */; };
+		B56355E31C676F20007E1C3E /* btn.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B56355DC1C676F20007E1C3E /* btn.mp3 */; };
+		B56355E41C676F20007E1C3E /* claps.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B56355DD1C676F20007E1C3E /* claps.mp3 */; };
+		B56355E51C676F20007E1C3E /* correct.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B56355DE1C676F20007E1C3E /* correct.mp3 */; };
+		B56355E61C676F20007E1C3E /* Flickingbook.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B56355DF1C676F20007E1C3E /* Flickingbook.mp3 */; };
+		B56355E71C676F20007E1C3E /* hahasound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B56355E01C676F20007E1C3E /* hahasound.mp3 */; };
+		B56355E81C676F20007E1C3E /* yohoo.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B56355E11C676F20007E1C3E /* yohoo.mp3 */; };
+		B56355EA1C67704D007E1C3E /* flip.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B56355E91C67704D007E1C3E /* flip.mp3 */; };
+		B56355ED1C67768F007E1C3E /* camera.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B56355EB1C67768F007E1C3E /* camera.mp3 */; };
+		B56355EE1C67768F007E1C3E /* gun.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B56355EC1C67768F007E1C3E /* gun.mp3 */; };
 		B569BD761C5ACC02002B13C0 /* StartNewGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B569BD751C5ACC02002B13C0 /* StartNewGameViewController.m */; };
 		B569BD791C5ACC37002B13C0 /* CategoriesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B569BD781C5ACC37002B13C0 /* CategoriesViewController.m */; };
 		B569BD7C1C5ACC74002B13C0 /* HistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B569BD7B1C5ACC74002B13C0 /* HistoryViewController.m */; };
@@ -92,6 +102,16 @@
 		B56355D31C6757B6007E1C3E /* letitbegin.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = letitbegin.mp3; sourceTree = "<group>"; };
 		B56355D81C6764B1007E1C3E /* KKMusicPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKMusicPlayer.h; sourceTree = "<group>"; };
 		B56355D91C6764B1007E1C3E /* KKMusicPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKMusicPlayer.m; sourceTree = "<group>"; };
+		B56355DB1C676F20007E1C3E /* btnSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = btnSound.mp3; sourceTree = "<group>"; };
+		B56355DC1C676F20007E1C3E /* btn.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = btn.mp3; sourceTree = "<group>"; };
+		B56355DD1C676F20007E1C3E /* claps.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = claps.mp3; sourceTree = "<group>"; };
+		B56355DE1C676F20007E1C3E /* correct.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = correct.mp3; sourceTree = "<group>"; };
+		B56355DF1C676F20007E1C3E /* Flickingbook.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Flickingbook.mp3; sourceTree = "<group>"; };
+		B56355E01C676F20007E1C3E /* hahasound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = hahasound.mp3; sourceTree = "<group>"; };
+		B56355E11C676F20007E1C3E /* yohoo.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = yohoo.mp3; sourceTree = "<group>"; };
+		B56355E91C67704D007E1C3E /* flip.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = flip.mp3; sourceTree = "<group>"; };
+		B56355EB1C67768F007E1C3E /* camera.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = camera.mp3; sourceTree = "<group>"; };
+		B56355EC1C67768F007E1C3E /* gun.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = gun.mp3; sourceTree = "<group>"; };
 		B569BD741C5ACC02002B13C0 /* StartNewGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartNewGameViewController.h; sourceTree = "<group>"; };
 		B569BD751C5ACC02002B13C0 /* StartNewGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartNewGameViewController.m; sourceTree = "<group>"; };
 		B569BD771C5ACC37002B13C0 /* CategoriesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoriesViewController.h; sourceTree = "<group>"; };
@@ -205,6 +225,16 @@
 		B56355D21C67579F007E1C3E /* sounds */ = {
 			isa = PBXGroup;
 			children = (
+				B56355EB1C67768F007E1C3E /* camera.mp3 */,
+				B56355EC1C67768F007E1C3E /* gun.mp3 */,
+				B56355E91C67704D007E1C3E /* flip.mp3 */,
+				B56355DB1C676F20007E1C3E /* btnSound.mp3 */,
+				B56355DC1C676F20007E1C3E /* btn.mp3 */,
+				B56355DD1C676F20007E1C3E /* claps.mp3 */,
+				B56355DE1C676F20007E1C3E /* correct.mp3 */,
+				B56355DF1C676F20007E1C3E /* Flickingbook.mp3 */,
+				B56355E01C676F20007E1C3E /* hahasound.mp3 */,
+				B56355E11C676F20007E1C3E /* yohoo.mp3 */,
 				B56355D31C6757B6007E1C3E /* letitbegin.mp3 */,
 			);
 			name = sounds;
@@ -509,25 +539,35 @@
 				B5DA0FA71C6401C8000343A5 /* rankingg.png in Resources */,
 				B5F6A5F71C5D892C00BA5D12 /* KKCategoryTableViewCell.xib in Resources */,
 				B5DA0F0D1C63BC15000343A5 /* last_games.png in Resources */,
+				B56355E21C676F20007E1C3E /* btnSound.mp3 in Resources */,
 				B5DA0F0F1C63BC15000343A5 /* music_category.png in Resources */,
+				B56355ED1C67768F007E1C3E /* camera.mp3 in Resources */,
 				B5DA0F0A1C63BC15000343A5 /* food_category.png in Resources */,
+				B56355E61C676F20007E1C3E /* Flickingbook.mp3 in Resources */,
 				B5B69D951C55DD49006B5A29 /* LaunchScreen.storyboard in Resources */,
 				B5DA0FB21C65653D000343A5 /* pc.png in Resources */,
 				B5DA0F151C63BC15000343A5 /* ranking.png in Resources */,
 				B5DA0FA61C6401C8000343A5 /* howtoplay.png in Resources */,
 				B5DA0F141C63BC15000343A5 /* purplebtn.png in Resources */,
 				B5DA0F111C63BC15000343A5 /* new_background.jpg in Resources */,
+				B56355E51C676F20007E1C3E /* correct.mp3 in Resources */,
 				B56355D41C6757B6007E1C3E /* letitbegin.mp3 in Resources */,
+				B56355EA1C67704D007E1C3E /* flip.mp3 in Resources */,
 				B5DA0F091C63BC15000343A5 /* detailpagebacground.png in Resources */,
+				B56355EE1C67768F007E1C3E /* gun.mp3 in Resources */,
 				B5DA0F061C63BC15000343A5 /* computer.png in Resources */,
 				B5DA0F181C63BD17000343A5 /* snimka.png in Resources */,
+				B56355E71C676F20007E1C3E /* hahasound.mp3 in Resources */,
+				B56355E81C676F20007E1C3E /* yohoo.mp3 in Resources */,
 				B5DA0F001C63BC15000343A5 /* all_score_with_score.png in Resources */,
 				B5B69D921C55DD49006B5A29 /* Assets.xcassets in Resources */,
 				B5611B151C622DC900B14D51 /* Default-568h@2x.png in Resources */,
+				B56355E31C676F20007E1C3E /* btn.mp3 in Resources */,
 				B5DA0F081C63BC15000343A5 /* detail.png in Resources */,
 				B5B69D901C55DD49006B5A29 /* Main.storyboard in Resources */,
 				B5DA0F0B1C63BC15000343A5 /* history.png in Resources */,
 				B5DA0F121C63BC15000343A5 /* object_category.png in Resources */,
+				B56355E41C676F20007E1C3E /* claps.mp3 in Resources */,
 				B5DA0F071C63BC15000343A5 /* current_user_score_with_score.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

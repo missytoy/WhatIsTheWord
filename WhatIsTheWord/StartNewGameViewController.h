@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "KKMusicPlayer.h"
 
 @interface StartNewGameViewController : UIViewController  
 
@@ -18,5 +19,8 @@
 
 //Info
 @property NSMutableArray *players;
+
+//music
+@property(strong,nonatomic) KKMusicPlayer* soundPlayer;
 
 @end
