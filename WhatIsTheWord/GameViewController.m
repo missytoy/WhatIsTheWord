@@ -134,7 +134,7 @@ NSMutableArray *arrayForRandomWord;
             RankingController *rankingVC =
             [self.storyboard instantiateViewControllerWithIdentifier:storyBoardId];
             rankingVC.players = self.players;
-            rankingVC.location = self.location;
+            rankingVC.locationForGame = self.locationForGame;
             rankingVC.categoryNameForGame = self.categoryForWords.categoryName;
             
             NSLog(@"%@",[self.players[0] playerName]);

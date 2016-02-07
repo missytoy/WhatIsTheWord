@@ -8,9 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HistoryViewController : UIViewController
+@interface HistoryViewController : UIViewController <UITableViewDataSource,UITableViewDelegate>
+
+
 @property (weak, nonatomic) IBOutlet UITableView *historyInfoTableView;
 @property (weak, nonatomic) IBOutlet UIButton *goToMainPageFromHistory;
 @property (weak, nonatomic) IBOutlet UIButton *backToHistoryButton;
+@property (weak, nonatomic) IBOutlet UITextView *detailInfoForSelectedGame;
+@property (weak, nonatomic) IBOutlet UIImageView *imageGame;
 
 @end

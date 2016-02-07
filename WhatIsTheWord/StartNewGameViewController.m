@@ -86,7 +86,7 @@ bool tookPlace;
             CategoriesViewController *categoriesVC =
             [self.storyboard instantiateViewControllerWithIdentifier:storyBoardId];
             categoriesVC.players = self.players;
-            categoriesVC.location = nil;
+            categoriesVC.locationForGame= nil;
             [self.navigationController pushViewController:categoriesVC animated:YES];
             
         } else {
@@ -107,7 +107,7 @@ bool tookPlace;
         CategoriesViewController *categoriesVC =
         [self.storyboard instantiateViewControllerWithIdentifier:storyBoardId];
         categoriesVC.players = self.players;
-        categoriesVC.location = nil;
+        categoriesVC.locationForGame = nil;
         [self.navigationController pushViewController:categoriesVC animated:YES];
     }
 }
@@ -134,7 +134,7 @@ bool tookPlace;
                       CategoriesViewController *categoriesVC =
                       [self.storyboard instantiateViewControllerWithIdentifier:storyBoardId];
                       categoriesVC.players = self.players;
-                      categoriesVC.location = locatedAt;
+                      categoriesVC.locationForGame = locatedAt;
                       [locationManager stopUpdatingLocation];
                         tookPlace = YES;
                         [self.navigationController pushViewController:categoriesVC animated:YES];

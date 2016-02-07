@@ -14,7 +14,7 @@
 @property (strong,nonatomic) NSMutableArray* players;
 @property (strong,nonatomic) NSDate* playedOn;
 @property (strong,nonatomic) NSData* image;
-@property (strong,nonatomic) NSString* location;
+@property (strong,nonatomic) NSString* locationNew;
 
 
 -(instancetype) init;

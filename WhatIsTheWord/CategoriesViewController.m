@@ -58,17 +58,12 @@ NSArray * data;
     [self.dbHelper setupCoreData];
     
     NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"WordCategory" ];
-
-//    NSSortDescriptor *sortDesriptor = [NSSortDescriptor sortDescriptorWithKey:@"categoryName" ascending:YES];
-//    [request setSortDescriptors:[NSArray arrayWithObject:sortDesriptor] ];
     
    data = [self.dbHelper.context executeFetchRequest:request error:nil];
- 
     
     for (WordCategory *category in data) {
        NSLog(@"%@ ",category.categoryName);
          NSLog(@"%@ ",category.image);
-      
         
     }
 }
@@ -76,8 +71,8 @@ NSArray * data;
 -(KKCategoryTableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath   {
     
     NSLog(@"%@ ",data[indexPath.row] );
-                  
-                  static NSString *cellIdentifier = @"CategoryCellCustom";
+   
+    static NSString *cellIdentifier = @"CategoryCellCustom";
     
     KKCategoryTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     if (cell ==nil) {
@@ -118,7 +113,7 @@ NSArray * data;
     [self.storyboard instantiateViewControllerWithIdentifier:storyBoardId];
     gameVC.categoryForWords = data[indexPath.row];
     gameVC.players = self.players;
-    gameVC.location = self.location;
+    gameVC.locationForGame = self.locationForGame;
     [self.navigationController pushViewController:gameVC animated:YES];
     
 }

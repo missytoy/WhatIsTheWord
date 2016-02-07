@@ -18,7 +18,7 @@
 //CORE
 @property NSMutableArray *players;
 @property NSData *image;
-@property  NSString* location;
+@property  NSString* locationForGame;
 
 -(IBAction)takePhoto:(id)sender;
 
