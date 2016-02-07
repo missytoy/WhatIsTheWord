@@ -12,11 +12,11 @@
 
 -(void)playSound:(NSString*) soundFileName{
     
-    NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:soundFileName ofType:@"mp3"]];
-    self.soundPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:nil];
-    [self.soundPlayer play];
-    
-    NSLog(@" sound %@",soundFileName);
+//    NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:soundFileName ofType:@"mp3"]];
+//    self.soundPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:nil];
+//    [self.soundPlayer play];
+//    
+//    NSLog(@" sound %@",soundFileName);
     
 }
 

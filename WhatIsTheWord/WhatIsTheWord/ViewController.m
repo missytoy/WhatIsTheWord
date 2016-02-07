@@ -18,9 +18,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
    
-     self.soundPlayer= [[KKMusicPlayer alloc]init];
     
-//    [[UIApplication sharedApplication] setStatusBarHidden:YES animated:NO]
+     self.soundPlayer= [[KKMusicPlayer alloc]init];
     self.title = @"Main Page";
     UIGraphicsBeginImageContext(self.view.frame.size);
     [[UIImage imageNamed:@"blankbackground.png"] drawInRect:self.view.bounds];
@@ -35,5 +34,6 @@
 - (IBAction)onHstoryBtnClick:(id)sender {
      [self.soundPlayer playSound:@"btnSound"];
 }
+
 
 @end

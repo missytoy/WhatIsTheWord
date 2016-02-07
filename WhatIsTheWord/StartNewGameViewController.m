@@ -15,7 +15,7 @@
 #import "WhatIsTheWord-Swift.h"
 
 CLLocationManager *locationManager;
-id location;
+CLLocation* location;
 bool switchIsOn;
 bool tookPlace;
 
@@ -24,7 +24,7 @@ bool tookPlace;
 
 @end
 
-@implementation StartNewGameViewController 
+@implementation StartNewGameViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -33,7 +33,7 @@ bool tookPlace;
     self.soundPlayer= [[KKMusicPlayer alloc]init];
     [self.soundPlayer playSound:@"letitbegin"];
     
-     self.title = @"";
+    self.title = @"";
     tookPlace = NO;
     switchIsOn = YES;
     UIGraphicsBeginImageContext(self.view.frame.size);
@@ -47,24 +47,23 @@ bool tookPlace;
     self.allPlayersTextView.layer.cornerRadius = 10;
     self.allPlayersTextView.clipsToBounds = YES;
     self.players = [[NSMutableArray alloc]init];
-
-    
     
 }
+
 - (IBAction)onTakePlaceSwitch:(id)sender {
     UISwitch *mySwitch = (UISwitch *)sender;
     if ([mySwitch isOn]) {
         switchIsOn = YES;
-        NSLog(@"its on!");
+      
     } else {
         switchIsOn = NO;
-        NSLog(@"its off!");
+        
     }
 }
 
 - (IBAction)onChooseCategoryClick:(id)sender {
     
-        [self.soundPlayer playSound:@"btnSound"];
+    [self.soundPlayer playSound:@"btnSound"];
     if(self.players.count<2){
         UIAlertController * alert=   [UIAlertController                                  alertControllerWithTitle:@"At least two players"                                                                                                          message:@"You should have at least two players to play the game"                                                                                                   preferredStyle:UIAlertControllerStyleAlert];
         
@@ -81,79 +80,89 @@ bool tookPlace;
         [alert addAction:yesButton];
         [self presentViewController:alert animated:YES completion:nil];
     }else{
-    
-    if(switchIsOn){
         
-        Reachability *networkReachability = [Reachability reachabilityForInternetConnection];
-        NetworkStatus networkStatus = [networkReachability currentReachabilityStatus];
-        if (networkStatus == NotReachable) {
+        if(switchIsOn){
+            
+            Reachability *networkReachability = [Reachability reachabilityForInternetConnection];
+            NetworkStatus networkStatus = [networkReachability currentReachabilityStatus];
+            if (networkStatus == NotReachable) {
+                NSString *storyBoardId = @"categoriesViewControllerId";
+                
+                CategoriesViewController *categoriesVC =
+                [self.storyboard instantiateViewControllerWithIdentifier:storyBoardId];
+                categoriesVC.players = self.players;
+                categoriesVC.locationForGame= nil;
+                [self.navigationController pushViewController:categoriesVC animated:YES];
+                
+            } else {
+                NSLog(@"There IS internet connection");
+                
+                locationManager = [[CLLocationManager alloc]init];
+                locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+                locationManager.delegate = self;
+                locationManager.distanceFilter = kCLLocationAccuracyHundredMeters;
+                [locationManager requestAlwaysAuthorization];
+                [locationManager startUpdatingLocation];
+            }
+            
+            
+        }else{
             NSString *storyBoardId = @"categoriesViewControllerId";
             
             CategoriesViewController *categoriesVC =
             [self.storyboard instantiateViewControllerWithIdentifier:storyBoardId];
             categoriesVC.players = self.players;
-            categoriesVC.locationForGame= nil;
+            categoriesVC.locationForGame = nil;
             [self.navigationController pushViewController:categoriesVC animated:YES];
-            
-        } else {
-            NSLog(@"There IS internet connection");
-            
-            locationManager = [[CLLocationManager alloc]init];
-            locationManager.desiredAccuracy = kCLLocationAccuracyBest;
-            locationManager.delegate = self;
-            locationManager.distanceFilter = kCLLocationAccuracyHundredMeters;
-            [locationManager requestAlwaysAuthorization];
-            [locationManager startUpdatingLocation];
         }
-
-      
-    }else{
-        NSString *storyBoardId = @"categoriesViewControllerId";
-        
-        CategoriesViewController *categoriesVC =
-        [self.storyboard instantiateViewControllerWithIdentifier:storyBoardId];
-        categoriesVC.players = self.players;
-        categoriesVC.locationForGame = nil;
-        [self.navigationController pushViewController:categoriesVC animated:YES];
     }
-}
 }
 
 -(void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray<CLLocation *> *)locations	{
     location = [locations lastObject];
     
-    
-        CLGeocoder *ceo = [[CLGeocoder alloc]init];
-        
-        [ceo reverseGeocodeLocation:location
-                  completionHandler:^(NSArray *placemarks, NSError *error) {
-                      
-                      CLPlacemark *placemark = [placemarks objectAtIndex:0];
-                      
-                      NSString *locatedAt = [[placemark.addressDictionary valueForKey:@"FormattedAddressLines"] componentsJoinedByString:@", "];
-                      
-                      NSLog(@"I am currently at %@",locatedAt);
-                      
-                    if (tookPlace == NO) {
-                      NSString *storyBoardId = @"categoriesViewControllerId";
-                      
-                      CategoriesViewController *categoriesVC =
-                      [self.storyboard instantiateViewControllerWithIdentifier:storyBoardId];
-                      categoriesVC.players = self.players;
-                      categoriesVC.locationForGame = locatedAt;
-                      [locationManager stopUpdatingLocation];
-                        tookPlace = YES;
-                        [self.navigationController pushViewController:categoriesVC animated:YES];
-                    }
-                  }];
-        
-    
-    
+    double log = location.coordinate.longitude;
+    double lat = location.coordinate.latitude;
+    if (tookPlace == NO) {
+        [self getGoogleAdrressFromLatLong:lat lon:log];
+        tookPlace = YES;
     }
+    //        CLGeocoder *ceo = [[CLGeocoder alloc]init];
+    //
+    //        [ceo reverseGeocodeLocation:location
+    //                  completionHandler:^(NSArray *placemarks, NSError *error) {
+    //
+    //                      CLPlacemark *placemark = [placemarks objectAtIndex:0];
+    //
+    //                      NSString *locatedAt = [[placemark.addressDictionary valueForKey:@"FormattedAddressLines"] componentsJoinedByString:@", "];
+    //
+    //                      NSLog(@"I am currently at %@",locatedAt);
+    //
+    //                    if (tookPlace == NO) {
+    //
+    //                      //  [self getGoogleAdrressFromLatLong:42.650851 lon:23.377242];
+    ////                      NSString *storyBoardId = @"categoriesViewControllerId";
+    ////
+    ////
+    ////
+    ////
+    ////                      CategoriesViewController *categoriesVC =
+    ////                      [self.storyboard instantiateViewControllerWithIdentifier:storyBoardId];
+    ////                      categoriesVC.players = self.players;
+    ////                      categoriesVC.locationForGame = locatedAt;
+    ////                      [locationManager stopUpdatingLocation];
+    ////                        tookPlace = YES;
+    ////                        [self.navigationController pushViewController:categoriesVC animated:YES];
+    //                    }
+    //                  }];
+    
+    
+    
+}
 
 - (IBAction)addPlayerButton:(id)sender {
     
-     [self.soundPlayer playSound:@"btnSound"];
+    [self.soundPlayer playSound:@"btnSound"];
     if(self.addPlayerNameField.text.length > 10 ){
         
         UIAlertController * alert=   [UIAlertController                                  alertControllerWithTitle:@"Name Error"                                                                                                          message:@"Player's name must be less than 11"                                                                                                   preferredStyle:UIAlertControllerStyleAlert];
@@ -163,7 +172,7 @@ bool tookPlace;
                                     style:UIAlertActionStyleDefault
                                     handler:^(UIAlertAction * action)
                                     {
-                                        //Handel your yes please button action here
+                                        //Handel Yes action
                                         
                                         
                                     }];
@@ -176,7 +185,7 @@ bool tookPlace;
     }else if(self.addPlayerNameField.text.length <1){
         
         UIAlertController * alert=   [UIAlertController                                  alertControllerWithTitle:@"Name Error"
-           message:@"Player's name can't be empty"preferredStyle:UIAlertControllerStyleAlert];
+                                                                                                          message:@"Player's name can't be empty"preferredStyle:UIAlertControllerStyleAlert];
         
         UIAlertAction* yesButton = [UIAlertAction
                                     actionWithTitle:@"OK"
@@ -194,7 +203,6 @@ bool tookPlace;
         
         
         KKPlayerSwift *playerSwift = [[KKPlayerSwift alloc] init];
-        //[playerSwift setValue:@65 forKey:@"score"];
         [playerSwift setValue:self.addPlayerNameField.text forKey:@"playerName"];
         
         NSString *playerToAdd = [NSString stringWithFormat:@"%@ \n%@",
@@ -202,14 +210,42 @@ bool tookPlace;
         self.allPlayersTextView.text =playerToAdd;
         
         [self.players insertObject:playerSwift atIndex:0 ];
-             self.addPlayerNameField.text = @"";
+        self.addPlayerNameField.text = @"";
         
     }
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
+-(void)getGoogleAdrressFromLatLong : (CGFloat)lat lon:(CGFloat)lon{
+    //[self showLoadingView:@"Loading.."];
+    
+    NSError *error = nil;
+    
+    NSString *lookUpString  = [NSString stringWithFormat:@"https://maps.googleapis.com/maps/api/geocode/json?latlng=%f,%f&key=AIzaSyB6DUf9Jr8CHXH9YzA-U3wj5pykZ8_gdQw", lat,lon];
+    
+    
+    lookUpString = [lookUpString stringByReplacingOccurrencesOfString:@" " withString:@"+"];
+    
+    NSData *jsonResponse = [NSData dataWithContentsOfURL:[NSURL URLWithString:lookUpString]];
+    
+    NSDictionary *jsonDict = [NSJSONSerialization JSONObjectWithData:jsonResponse options:kNilOptions error:&error];
+    
+//  NSLog(@"%@",jsonDict);
+    
+    NSArray* jsonResults = [jsonDict objectForKey:@"results"];
+//    NSLog(@"novo %@",jsonResults[0]);
+//    
+//    NSLog(@"novo %@",[jsonResults[0] objectForKey:@"formatted_address"]);
+    
+    NSString *storyBoardId = @"categoriesViewControllerId";
+    CategoriesViewController *categoriesVC =
+    [self.storyboard instantiateViewControllerWithIdentifier:storyBoardId];
+    categoriesVC.players = self.players;
+    categoriesVC.locationForGame = [jsonResults[0] objectForKey:@"formatted_address"];
+    [locationManager stopUpdatingLocation];
+    tookPlace = YES;
+    [self.navigationController pushViewController:categoriesVC animated:YES];
+    
 }
 
 @end

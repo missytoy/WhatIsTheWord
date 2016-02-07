@@ -19,14 +19,5 @@ class KKPlayerSwift: NSObject {
         self.playerName = "name"
         
     }
-    
-//    func setName(name:String){
-//         self.playerName = name
-//    }
-    
-    
-    func run(){
-        print("fdsf");
-    }
-    
+        
 }
