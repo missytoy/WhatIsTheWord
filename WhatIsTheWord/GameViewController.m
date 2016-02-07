@@ -22,19 +22,15 @@ int indexOfPlayer;
 NSString *playerNameTurn;
 NSMutableArray *arrayForRandomWord;
 
+
 @implementation GameViewController
 
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-//    NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"letitbegin" ofType:@"mp3"]];
-//    self.soundPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:nil];
-//
-//    [self.soundPlayer play];
-    
-
-    [self playSound:@"letitbegin"];
+    self.soundPlayer= [[KKMusicPlayer alloc]init];
+    [self.soundPlayer playSound:@"letitbegin"];
     
     UIGraphicsBeginImageContext(self.view.frame.size);
     [[UIImage imageNamed:@"howtoplay.png"] drawInRect:self.view.bounds];
@@ -213,18 +209,6 @@ NSMutableArray *arrayForRandomWord;
     return (int)from + arc4random() % (to-from+1);
 }
 
--(void)playSound:(NSString*) soundFileName{
-    
-    
-    
-//        NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"letitbegin" ofType:@"mp3"]];
-      NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:soundFileName ofType:@"mp3"]];
-        self.soundPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:nil];
-//        [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayback error:nil];
-//        [[AVAudioSession sharedInstance] setActive: YES error: nil];
-//        [[UIApplication sharedApplication] beginReceivingRemoteControlEvents];
-        [self.soundPlayer play];
-    
-}
+
 
 @end

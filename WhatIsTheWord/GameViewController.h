@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "WordCategory.h"
 #import <AVFoundation/AVFoundation.h>
+#import "KKMusicPlayer.h"
 
 @interface GameViewController : UIViewController
 
@@ -26,7 +27,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *toPlayLabel;
 
 //music
-@property(strong,nonatomic) AVAudioPlayer* soundPlayer;
+@property(strong,nonatomic) KKMusicPlayer* soundPlayer;
 
 //CORE
 @property WordCategory* categoryForWords;
