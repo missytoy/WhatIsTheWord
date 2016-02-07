@@ -40,6 +40,7 @@ NSDateFormatter *formatter;
     
     self.backToHistoryButton.hidden=YES;
     self.imageGame.hidden = YES;
+    self.bigImage.hidden = YES;
     self.detailInfoForSelectedGame.hidden = YES;
     
     self.historyInfoTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
@@ -52,7 +53,52 @@ NSDateFormatter *formatter;
     
     [formatter setTimeZone:timeZone];
     [formatter setDateFormat : @"dd.MM.yy HH:mm"];
+    
+    
+    UILongPressGestureRecognizer* gestureLongPres = [[UILongPressGestureRecognizer alloc]initWithTarget:self action:@selector(handleLongPressOnImg:)];
+    [self.imageGame addGestureRecognizer:gestureLongPres];
+    
+    UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTapGestureBackOnHistory:)];
+    tapGesture.numberOfTapsRequired = 2;
+    [self.bigImage addGestureRecognizer:tapGesture];
 }
+
+- (void)handleTapGestureBackOnHistory:(UITapGestureRecognizer *)sender {
+    if (sender.state == UIGestureRecognizerStateRecognized) {
+        UIGraphicsBeginImageContext(self.view.frame.size);
+        [[UIImage imageNamed:@"history.png"] drawInRect:self.view.bounds];
+        UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+        UIGraphicsEndImageContext();
+        self.view.backgroundColor = [UIColor colorWithPatternImage:image];
+        
+        self.historyInfoTableView.hidden = NO;
+        self.goToMainPageFromHistory.hidden=NO;
+        self.bigImage.hidden = YES;
+    }
+}
+
+
+-(IBAction)handleLongPressOnImg:(UILongPressGestureRecognizer*)recognizer{
+    
+    UIGraphicsBeginImageContext(self.view.frame.size);
+    [[UIImage imageNamed:@"blankbackground.png"] drawInRect:self.view.bounds];
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    self.view.backgroundColor = [UIColor colorWithPatternImage:image];
+    
+    UIImageView* clickedImgView = (UIImageView*)recognizer.view;
+    self.bigImage.image = clickedImgView.image;
+    
+    self.backToHistoryButton.hidden = YES;
+    self.goToMainPageFromHistory.hidden = YES;
+    self.historyInfoTableView.hidden = YES;
+    self.detailInfoForSelectedGame.hidden = YES;
+    self.imageGame.hidden = YES;
+    
+    self.bigImage.hidden = NO;
+    [self.view bringSubviewToFront:self.bigImage];
+}
+
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath   {
     
@@ -65,7 +111,6 @@ NSDateFormatter *formatter;
     }
     
     Game *game = (Game*)allGames[indexPath.row] ;
-    
     
     NSString *dateTime = [formatter stringFromDate:[game datePlayedOn]];
     
@@ -93,7 +138,7 @@ NSDateFormatter *formatter;
     
     NSString *playersString=@"";
     [self.soundPlayer playSound:@"Flickingbook"];
-   // int counter= 1;
+    
     Game *selectedGame = (Game*)allGames[indexPath.row] ;
     
     NSMutableArray* allPlayers = [[NSMutableArray alloc]init];
@@ -152,7 +197,6 @@ NSDateFormatter *formatter;
 }
 
 
-
 - (IBAction)goToMainPageClicked:(id)sender {
     
     NSString *storyBoardId = @"mainViewControllerId";
@@ -198,78 +242,3 @@ NSDateFormatter *formatter;
     
 }
 @end
-
-
-//-(KKCategoryTableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath   {
-//
-//    NSLog(@"%@ ",allGames[indexPath.row] );
-//
-//    static NSString *cellIdentifier = @"CategoryCellCustom";
-//
-//    KKCategoryTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
-//    if (cell ==nil) {
-//
-//        NSArray *nibArray = [[NSBundle mainBundle] loadNibNamed:@"KKCategoryTableViewCell" owner:self options:nil];
-//
-//        cell = [nibArray objectAtIndex:0];
-//    }
-//    NSLog(@"%@",[allGames[indexPath.row] categoryName]);
-//
-////    cell.nameCategory.text = [NSString stringWithFormat:@"%@",[allGames[indexPath.row] categoryName] ];
-//
-//      cell.nameCategory.text = @"maimunka bee";
-//
-//    UIImage *imageForGame;
-//
-//    if([allGames[indexPath.row] image]){
-//        imageForGame= [UIImage imageNamed:[NSString stringWithFormat:@"%@",[allGames[indexPath.row] image] ]];
-//    }else{
-//
-//        imageForGame = [UIImage imageNamed:@"snimka.png"];
-//    }
-//
-//    imageForGame = [UIImage imageNamed:@"snimka.png"];// //
-//    NSLog(@"%@ ",imageForGame);
-//    [cell.imageCategory setImage:imageForGame];
-//
-////
-////    cell.nameCategory.textAlignment = NSTextAlignmentCenter;
-////    cell.nameCategory.font = [ UIFont fontWithName: @"Papyrus" size: 30.0 ];
-////    cell.nameCategory.textColor =[ UIColor whiteColor];
-////
-////    [cell setBackgroundColor:[UIColor clearColor]];
-////    [self.historyInfoTableView setBackgroundColor:[UIColor clearColor] ];
-////
-//    //[self.historyInfoTableView reloadData];
-//    return cell;
-//}
-//
-
-
-
-
-
-
-
-
-//    KKCategoryTableViewCell *imecne = (KKCategoryTableViewCell*) [tableView cellForRowAtIndexPath:indexPath];
-
-//   NSLog(imecne.nameCategory.text);
-
-//    -(KKCategoryTableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath   {
-//
-//        static NSString *cellIdentifier = @"CategoryCellCustom";
-//
-//        KKCategoryTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
-//        if (cell ==nil) {
-//
-//            NSArray *nibArray = [[NSBundle mainBundle] loadNibNamed:@"KKCategoryTableViewCell" owner:self options:nil];
-//
-//            cell = [nibArray objectAtIndex:0];
-//        }
-//
-//        cell.nameCategory.text = @"que pasa be";
-//        cell.nameCategory.hidden= NO;
-//        cell.textLabel.text = [allGames[indexPath.row] categoryName];
-//        return cell;
-//    }

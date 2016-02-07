@@ -17,6 +17,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *backToHistoryButton;
 @property (weak, nonatomic) IBOutlet UITextView *detailInfoForSelectedGame;
 @property (weak, nonatomic) IBOutlet UIImageView *imageGame;
+@property (weak, nonatomic) IBOutlet UIImageView *bigImage;
 
 @property(strong,nonatomic) KKMusicPlayer* soundPlayer;
 

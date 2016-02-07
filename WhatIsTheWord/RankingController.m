@@ -34,7 +34,7 @@ bool firstTimeEntered = YES;
     [self.soundPlayer playSound:@"claps"];
     
     UIGraphicsBeginImageContext(self.view.frame.size);
-    [[UIImage imageNamed:@"rankingg.png"] drawInRect:self.view.bounds];
+    [[UIImage imageNamed:@"current_user_score_with_score.png"] drawInRect:self.view.bounds];
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     self.view.backgroundColor = [UIColor colorWithPatternImage:image];
