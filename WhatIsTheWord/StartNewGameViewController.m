@@ -41,6 +41,8 @@ bool tookPlace;
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     
+    self.navigationController.navigationBar.barTintColor = [UIColor purpleColor];
+    
     self.view.backgroundColor = [UIColor colorWithPatternImage:image];
     [self.allPlayersTextView.layer setBorderColor:[[[UIColor grayColor] colorWithAlphaComponent:0.5] CGColor]];
     [self.allPlayersTextView.layer setBorderWidth:2.0];
